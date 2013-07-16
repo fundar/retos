@@ -20,20 +20,8 @@ Server Requirements
     PHP 5.1.X or higher
     Databases supported: MySQL, MySQLi, MsSQL, Oracle, PostgreSQL and SQLite 
 
-Credits
--------------------------
-ZanPHP was developed by Carlos Santana (CEO of MilkZoft). ZanPHP was developed in 2009, but was until July 2011 that took the decision to release as free software.
-Currently developing ZanPHP is maintained by the development team and contributors of MilkZoft community.
-Is achieved by implementing best practices to develop applications faster and with higher quality. 
-
 Getting Started
 -------------------------
-To start working with ZanPHP, the first necessary step is to download it. Get ZanPHP is easy, simply download it from: https://github.com/MilkZoft/ZanPHP or git clone with the command:
-
-git clone git@github.com:MilkZoft/ZanPHP.git
-
-The next step is to set a constants of 2 configuration files. These files are located at: /core/config
-
 The first file to modify is the /core/config/config.constants.php which should change the following constants:
 
     _domain: serves to specify the domain that our site will have.
