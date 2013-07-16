@@ -13,4 +13,11 @@ class Default_Model extends ZP_Model {
 		
 		$this->helpers();
 	}
+	
+	public function test() {
+		$query = "select * from users";
+		$data  = $this->Db->query($query);
+		
+		die(var_dump($data));
+	}
 }
