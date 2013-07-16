@@ -13,12 +13,4 @@ class Default_Model extends ZP_Model {
 		
 		$this->helpers();
 	}
-	
-	public function getAgencies() {
-		$query = "select * from agency";
-		$data  = $this->Db->query($query);
-		
-		die(var_dump($data));
-		return $data;
-	}
 }

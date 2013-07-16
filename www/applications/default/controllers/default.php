@@ -16,7 +16,6 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-		$agencies = $this->Default_Model->getAgencies();
 		$vars["view"] = $this->view("home", TRUE);
 			
 		$this->render("content", $vars);
