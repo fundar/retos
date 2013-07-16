@@ -3,6 +3,7 @@ CREATE TABLE users (
 	name	varchar(255),
 	email	varchar(255),
 	pwd		varchar(50),
+	id_user varchar(255),
 	type	varchar(50) default 'normal',
 	PRIMARY KEY(user_id)
 );

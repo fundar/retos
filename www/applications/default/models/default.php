@@ -14,10 +14,26 @@ class Default_Model extends ZP_Model {
 		$this->helpers();
 	}
 	
-	public function test() {
-		$query = "select * from users";
-		$data  = $this->Db->query($query);
+	public function saveUser($user) {
+		if($user["type"] == "github") {
+			$fields = "name, email, id_user, type";
+			$values = "'" . $user["name"] . "','" . $user["email"] . "','" . $user["id_user"] . "','" . $user["type"] . "'";
+		}
 		
-		die(var_dump($data));
+		$query  = "insert into users (" . $fields .") values (" . $values . ")";
+		$data   = $this->Db->query($query);
+		
+		return true;
+	}
+	
+	public function getUser($user) {
+		$query  = "select * from users where id_user='" . $user["id_user"] . "' and type='" . $user["type"] . "'";
+		$data   = $this->Db->query($query);
+		
+		if($data) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }
