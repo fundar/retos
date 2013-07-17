@@ -389,8 +389,8 @@ class ZP_Load {
 	public function library($name, $className = NULL, $params = array(), $application = NULL) {	
 		if(file_exists(_corePath ."/libraries/$application/$name.php")) {
 			include_once _corePath ."/libraries/$application/$name.php";	
-		} elseif(file_exists(_corePath ."/libraries/$className/$name.php")) {
-			include_once _corePath ."/libraries/$lib/$name.php";	
+		} elseif(file_exists(_corePath ."/libraries/$name/$name.php")) {
+			include_once _corePath ."/libraries/$name/$name.php";	
 		} elseif(file_exists("www/applications/$application/libraries/$name.php")) {
 			include_once "www/applications/$application/libraries/$name.php";				
 		} else {
