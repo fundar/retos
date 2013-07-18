@@ -15,7 +15,7 @@ CREATE TABLE posts (
 	user_id		integer,
 	category_id integer,
 	title	    varchar(255),
-	desc	  	text,
+	descr	  	text,
 	image_url 	varchar(50),
 	votes 	  	integer default 0,
 	status    	boolean default true,
