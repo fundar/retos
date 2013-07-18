@@ -15,10 +15,16 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function saveUser($user) {
-		if($user["type"] == "github") {
-			$fields = "name, email, id_user, type";
-			$values = "'" . $user["name"] . "','" . $user["email"] . "','" . $user["id_user"] . "','" . $user["type"] . "'";
+		$fields = "";
+		$values = "";
+		
+		foreach($user as $key => $value) {
+			$fields .= $key   . ",";
+			$values .= "'" . $value . "',";
 		}
+		
+		$fields = rtrim($fields, ",");
+		$values = rtrim($values, ",");
 		
 		$query  = "insert into users (" . $fields .") values (" . $values . ")";
 		$data   = $this->Db->query($query);
@@ -30,10 +36,13 @@ class Default_Model extends ZP_Model {
 		$query  = "select * from users where id_user='" . $user["id_user"] . "' and type='" . $user["type"] . "'";
 		$data   = $this->Db->query($query);
 		
-		if($data) {
-			return true;
-		} else {
-			return false;
-		}
+		return $data;
+	}
+	
+	public function getUserByID($user_id) {
+		$query  = "select * from users where user_id=" . $user_id;
+		$data   = $this->Db->query($query);
+		
+		return $data;
 	}
 }

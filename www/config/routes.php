@@ -8,17 +8,24 @@ if(!defined("_access")) {
 
 $routes = array(
 	0 => array(
-			"pattern"	  => "/^auth/",
-			"application" => "default",
-			"controller"  => "default",
-			"method"	  => "auth",
-			"params"	  => array(segment(1))
-		),
+		"pattern"	  => "/^auth/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "auth",
+		"params"	  => array(segment(1))
+	),
 	1 => array(
-			"pattern"	  => "/^callback/",
-			"application" => "default",
-			"controller"  => "default",
-			"method"	  => "callback",
-			"params"	  => array(segment(1))
-		),
+		"pattern"	  => "/^callback/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "callback",
+		"params"	  => array(segment(1))
+	),
+	2 => array(
+		"pattern"	  => "/^logout/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "logout",
+		"params"	  => array()
+	)
 );

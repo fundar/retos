@@ -14,11 +14,10 @@ class Default_Controller extends ZP_Controller {
 		$this->Twitter_Controller = $this->controller("Twitter_Controller");
 		
 		$this->Templates->theme();
-		
-		session_start();
 	}
 	
 	public function index() {
+		$vars["user"] = $this->isUser();
 		$vars["view"] = $this->view("home", true);
 			
 		$this->render("content", $vars);
@@ -26,8 +25,8 @@ class Default_Controller extends ZP_Controller {
 	
 	public function auth($type = false) {
 		if(isset($_SESSION['access_token'])) {
-			header('Location:' . get("webURL") . "/callback/twitter");
-		} else {
+			header('Location:' . get("webURL") . "/callback/" . $type);
+		} else {			
 			if($type == "github") {
 				$this->Github_Controller->redirect();
 			} elseif($type == "twitter") {
@@ -39,28 +38,71 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function callback($type = false) {
-		if($type == "github") {
-			$user = $this->Github_Controller->getUser();
-		} elseif($type == "twitter") {
-			if(empty($_SESSION['access_token']) || empty($_SESSION['access_token']['oauth_token']) || empty($_SESSION['access_token']['oauth_token_secret'])) {
-				$user = $this->Twitter_Controller->getToken();
-			} else {
+		if(isset($_SESSION['access_token'])) {
+			if($type == "github") {
+				$user = $this->Github_Controller->getUser();
+			} elseif($type == "twitter") {
 				$user = $this->Twitter_Controller->getUser();
+			} else {
+				header('Location:' . get("webURL"));
 			}
-		}		
-		
-		if(!$this->Default_Model->getUser($user)) {
-			$this->Default_Model->saveUser($user);
+		} else {
+			if($type == "github") {
+				$user = $this->Github_Controller->getToken();
+				
+				if($user) {
+					$user = $this->Github_Controller->getUser();
+				} else {
+					header('Location:' . get("webURL"));
+				}
+			} elseif($type == "twitter") {
+				$user = $this->Twitter_Controller->getToken();
+				
+				if($user) {
+					$user = $this->Twitter_Controller->getUser();
+				} else {
+					header('Location:' . get("webURL"));
+				}
+				
+			} else {
+				header('Location:' . get("webURL"));
+			}	
 		}
-	
-		//session - login / logout
+		
+		$data = $this->Default_Model->getUser($user);
+		
+		if($data) {
+			$_SESSION['user_id'] = $data[0]["user_id"];
+		} else {
+			$this->Default_Model->saveUser($user);
+			$user = $this->Default_Model->getUser($user);
+			
+			$_SESSION['user_id'] = $user[0]["user_id"];
+		}
+		
+		header('Location:' . get("webURL"));
 	}
 	
-	private function login() {
-		
+	
+	public function isUser() {
+		if(isset($_SESSION['access_token'])) {
+			$user_id = $_SESSION['user_id'];
+			$user	 = $this->Default_Model->getUserByID($_SESSION['user_id']);
+			
+			if($user) {
+				return $user;
+			} else {
+				return false;
+			}
+		} else {
+			return false;
+		}
 	}
 	
-	private function logout() {
+	public function logout() {
+		session_unset(); 
+		session_destroy();
 		
+		header('Location:' . get("webURL"));
 	}
 }

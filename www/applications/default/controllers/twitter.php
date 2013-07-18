@@ -43,10 +43,6 @@ class Twitter_Controller extends ZP_Controller {
 	public function getToken() {
 		if(isset($_REQUEST['oauth_token']) && $_SESSION['oauth_token'] !== $_REQUEST['oauth_token']) {
 			$_SESSION['oauth_status'] = 'oldtoken';
-			
-			session_start();
-			session_destroy();
-			
 			header('Location:' . get("webURL") . "/auth/twitter");
 		}
 		
@@ -54,7 +50,7 @@ class Twitter_Controller extends ZP_Controller {
 
 		/* Save the access tokens. Normally these would be saved in a database for future use. */
 		$_SESSION['access_token'] = $access_token;
-
+		
 		/* Remove no longer needed request tokens */
 		unset($_SESSION['oauth_token']);
 		unset($_SESSION['oauth_token_secret']);
@@ -63,8 +59,9 @@ class Twitter_Controller extends ZP_Controller {
 		if(200 == $this->Twitter_Api->http_code) {
 			/* The user has been verified and the access tokens can be saved for future use */
 			$_SESSION['status'] = 'verified';
-			header('Location:' . get("webURL") . "/callback/twitter");
+			return true;
 		} else {
+			session_destroy();
 			/* Save HTTP status for error dialog on connnect page.*/
 			header('Location:' . get("webURL") . "/auth/twitter");
 		}
@@ -74,6 +71,16 @@ class Twitter_Controller extends ZP_Controller {
 		/* If method is set change API call made. Test is called by default. */
 		$content = $this->Twitter_Api->get('account/verify_credentials');
 		
-		die(var_dump($content));
+		if($content & isset($content->name)) {
+			$user["email"]     = "";
+			$user["name"]      = $content->name;
+			$user["type"]      = "twitter";
+			$user["image_url"] = str_replace("normal", "bigger", $content->profile_image_url);
+			$user["id_user"]   = $content->id;
+			
+			return $user;
+		}
+		
+		return false;
 	}
 }

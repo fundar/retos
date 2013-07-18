@@ -21,11 +21,28 @@ class Github_Controller extends ZP_Controller {
 		);
 
 		$url = $this->Github_Api->getAccessUrl($access_config);
-		
 		header('Location:' . $url);
 	}
 	
 	public function getUser() {
+		$command = "/user";
+		$res	 = $this->Github_Api->apiCall($command);
+		
+		if(!$res) {
+			echo "Could not get access token. Errors: <br />";
+			header('Location:' . get("webURL"));
+		}
+		
+		$user["email"]     = $res["email"];
+		$user["name"]      = $res["name"];
+		$user["type"]      = "github";
+		$user["image_url"] = $res["avatar_url"];
+		$user["id_user"]   = $res["id"];
+		
+		return $user;
+	}
+	
+	public function getToken() {
 		$post = array (
 			'redirect_uri'  => GITHUB_CALLBACK_URL,
 			'client_id'     => GITHUB_ID,
@@ -35,21 +52,7 @@ class Github_Controller extends ZP_Controller {
 		$res = $this->Github_Api->setAccessToken($post);
 		
 		if($res) {
-			$command = "/user";
-			$res	 = $this->Github_Api->apiCall($command);
-			
-			if(!$res) {
-				echo "Could not get access token. Errors: <br />";
-				header('Location:' . get("webURL"));
-			}	
-			
-			$user["email"]   = $res["email"];
-			$user["name"]    = $res["name"];
-			$user["type"]    = "github";
-			$user["id_user"] = $res["id"];
-			
-			return $user;
-			
+			return true;
 		} else {
 			echo "Could not get access token. Errors: <br />";
 			header('Location:' . get("webURL"));

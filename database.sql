@@ -1,10 +1,12 @@
 CREATE TABLE users (
-	user_id serial,
-	name	varchar(255),
-	email	varchar(255),
-	pwd		varchar(50),
-	id_user varchar(255),
-	type	varchar(50) default 'normal',
+	user_id  serial,
+	name	  varchar(255),
+	email	  varchar(255),
+	pwd		  varchar(50),
+	id_user   varchar(255),
+	image_url varchar(255),
+	admin     boolean default false, 	  
+	type	  varchar(50) default 'normal',
 	PRIMARY KEY(user_id)
 );
 
