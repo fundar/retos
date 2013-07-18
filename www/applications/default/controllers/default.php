@@ -115,6 +115,10 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function viewPost($slug) {
+		if($slug == "") {
+			header('Location:' . get("webURL"));
+		}
+		
 		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
 		$vars["view"] = $this->view("single", true);
 		
@@ -128,6 +132,14 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
+	public function like($post_id) {
+		if(is_numeric($post_id)) {
+			/*Validar cookie*/
+			echo $this->Default_Model->likePost($post_id);
+		} else {
+			echo "false";
+		}
+	}
 	
 	/*Validate user & logout*/
 	public function isUser() {

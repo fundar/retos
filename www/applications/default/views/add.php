@@ -4,8 +4,10 @@
 	<?php } ?>
 	
 	T&iacute;tulo: <input type="text" name="title" value="" /><br/>
-	Abstract: <input type="text" name="abstract" value="" /><br/>
-	Descripci&oacute;n: <input type="text" name="descr" value="" /><br/>
+	
+	Abstract: <textarea name="abstract"></textarea><br/>
+	Descripci&oacute;n: <textarea name="descr"></textarea><br/>
+	
 	Imagen: <input type="file" name="file" /><br/>
 	
 	<select name="category_id">

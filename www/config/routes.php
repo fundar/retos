@@ -48,5 +48,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "viewPost",
 		"params"	  => array(segment(1))
+	),
+	6 => array(
+		"pattern"	  => "/^like/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "like",
+		"params"	  => array(segment(1))
 	)
 );

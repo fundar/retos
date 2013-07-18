@@ -32,12 +32,24 @@
 	<?php if(is_array($posts)) { ?>
 		<?php foreach($posts as $post) { ?>		
 			<div class="post">
-				<p><img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>"></p>
-				<p class="title"><?php echo utf8_decode($post["title"]);?></p>
+				<p>
+					<a href="/reto/<?php echo utf8_decode($post["slug"]);?>" title="<?php echo utf8_decode($post["title"]);?>">
+						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>">
+					</a>
+				</p>
+				
+				<p class="title">
+					<a href="/reto/<?php echo utf8_decode($post["slug"]);?>" title="<?php echo utf8_decode($post["title"]);?>">
+						<?php echo utf8_decode($post["title"]);?>
+					</a>
+				</p>
+				
 				<p class="abstract"><?php echo utf8_decode($post["abstract"]);?></p>
 				<p class="descr"><?php echo utf8_decode($post["descr"]);?></p>
 				<p class="descr">Categoria: <?php echo utf8_decode($post["category"]);?></p>
-			</div>
+				
+				<p><a href="/like/<?php echo $post["slug"];?>" title="Like">Like</a></p>
+			</div><br/><br/>
 		<?php } ?>
 	<?php } else { ?>
 		<p>se el primero en agregar un reto</p>
