@@ -15,21 +15,9 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function saveUser($user) {
-		$fields = "";
-		$values = "";
+		$data = $this->Db->insert("users", $user, "user_id");
 		
-		foreach($user as $key => $value) {
-			$fields .= $key   . ",";
-			$values .= "'" . $value . "',";
-		}
-		
-		$fields = rtrim($fields, ",");
-		$values = rtrim($values, ",");
-		
-		$query  = "insert into users (" . $fields .") values (" . $values . ")";
-		$data   = $this->Db->query($query);
-		
-		return true;
+		return $data;
 	}
 	
 	public function getUser($user) {
@@ -44,5 +32,89 @@ class Default_Model extends ZP_Model {
 		$data   = $this->Db->query($query);
 		
 		return $data;
+	}
+	
+	/*Categories*/
+	public function categories() {
+		$query  = "select * from categories";
+		$data   = $this->Db->query($query);
+		
+		return $data;
+	}
+	
+	/*Posts*/
+	public function addPost($user) {	
+		$data["user_id"]     = $user[0]["user_id"];
+		$data["category_id"] = $_POST["category_id"];
+		$data["title"]       = $_POST["title"];
+		$data["descr"]       = $_POST["descr"];
+		$data["image_url"]   = $this->upload();
+		
+		if($data["title"] == "") {
+			return array("error" => true);
+		} elseif($data["descr"] == "") {
+			return array("error" => true);
+		} elseif($data["category_id"] == "") {
+			return array("error" => true);
+		}
+		
+		$data["slug"] = slug($data["title"]);
+		
+		if(!$data["image_url"]) {
+			unset($data["image_url"]);
+		}
+		
+		$result = $this->Db->insert("posts", $data, "post_id");
+		
+		if($result) {
+			return $this->getPost($result);
+		}
+		
+		return false;
+	}
+	
+	
+	public function getPost($post_id) {
+		$query  = "select * from posts where post_id=" . $post_id;
+		$data   = $this->Db->query($query);
+		
+		return $data;
+	}
+	
+	public function getPostBySlug($slug) {
+		$query  = "select * from posts where slug='" . $slug . "' limit 1";
+		$data   = $this->Db->query($query);
+		
+		if($data and is_array($data)) {
+			return $data[0];
+		}
+		
+		return false;
+	}
+	
+	private function upload() {
+		$allowedExts = array("gif", "jpeg", "jpg", "png");
+		$temp        = explode(".", $_FILES["file"]["name"]);
+		$extension   = end($temp);
+		
+		if ((($_FILES["file"]["type"] == "image/gif")
+		|| ($_FILES["file"]["type"] == "image/jpeg")
+		|| ($_FILES["file"]["type"] == "image/jpg")
+		|| ($_FILES["file"]["type"] == "image/pjpeg")
+		|| ($_FILES["file"]["type"] == "image/x-png")
+		|| ($_FILES["file"]["type"] == "image/png"))
+		&& ($_FILES["file"]["size"] < 90000)
+		&& in_array($extension, $allowedExts)) {
+			if($_FILES["file"]["error"] > 0) {
+				return false;
+			} else {
+				$this->Files = $this->core("Files");
+				$upload = $this->Files->uploadImage("www/lib/uploads/");
+				
+				return $upload["medium"];
+			}
+		} else {
+			return false;
+		}
 	}
 }

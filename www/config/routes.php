@@ -27,5 +27,26 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "logout",
 		"params"	  => array()
+	),
+	3 => array(
+		"pattern"	  => "/^add/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "add",
+		"params"	  => array()
+	),
+	4 => array(
+		"pattern"	  => "/^edit/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "edit",
+		"params"	  => array(segment(1))
+	),
+	5 => array(
+		"pattern"	  => "/^reto/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "view",
+		"params"	  => array(segment(1))
 	)
 );

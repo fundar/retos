@@ -36,7 +36,7 @@ class githubapi {
      *                     using his account according to scope
      */
     public function getAccessUrl ($config) {
-
+		
         $_SESSION['state'] = $config['state'];     
         $url = 'https://github.com/login/oauth/authorize';
         $query =  http_build_query($config);
@@ -65,7 +65,7 @@ class githubapi {
             $c = new mycurl('https://github.com/login/oauth/access_token');
             $post['code'] = $_GET['code'];
             $post['state'] = $_SESSION['state'];
-
+			
             $c->setPost($post);
             $c->createCurl();
             $resp = $c->getWebPage();

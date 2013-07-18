@@ -802,7 +802,7 @@ class ZP_Db extends ZP_Load {
      * @param string $values
      * @return object or boolean value
      */		
-	public function insert($table = NULL, $data = NULL) {
+	public function insert($table = NULL, $data = NULL, $field_id = NULL) {
 		if(!$table) {
 			if(!$this->table or !$this->fields or !$this->values) {
 				return FALSE;
@@ -839,11 +839,12 @@ class ZP_Db extends ZP_Load {
 		}	
 	
 		$this->Rs = $this->Database->query($query);
-
+		
 		if($this->Rs) {
-			$insertID = ($this->PDO) ? $this->Database->lastInsertId() : $this->Database->insertID();
+			$query    = "select $field_id from $table order by $field_id desc limit 1";
+			$insertID = $this->query($query);
 						
-			return $insertID;
+			return $insertID[0][$field_id];
 		}
 		
 		return FALSE;

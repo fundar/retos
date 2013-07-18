@@ -84,6 +84,18 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	
+	/*Posts*/
+	public function add() {
+		$this->Posts_Controller = $this->controller("Posts_Controller");
+		$this->Posts_Controller->add();
+	}
+	
+	public function view($slug) {
+		$this->Posts_Controller = $this->controller("Posts_Controller");
+		$this->Posts_Controller->view($slug);
+	}
+	
+	/*Validate user & logout*/
 	public function isUser() {
 		if(isset($_SESSION['access_token'])) {
 			$user_id = $_SESSION['user_id'];
