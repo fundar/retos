@@ -46,3 +46,5 @@ body {
 .topbar .btn {
 	border: 0;
 }
+
+.like-post { cursor:pointer; text-decoration: underline; }

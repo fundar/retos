@@ -48,9 +48,30 @@
 				<p class="descr"><?php echo utf8_decode($post["descr"]);?></p>
 				<p class="descr">Categoria: <?php echo utf8_decode($post["category"]);?></p>
 				
-				<p><a href="/like/<?php echo $post["slug"];?>" title="Like">Like</a></p>
+				<p>
+					<span class="like-post" value="<?php echo $post["post_id"];?>">Like</span>
+					&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
+				</p>
 			</div><br/><br/>
 		<?php } ?>
+		
+		<script type="text/javascript">
+			$(document).ready( function () {
+				$(".like-post").click( function () {
+					id = $(this).attr("value");
+					
+					$.ajax({
+						url: "/like/" + id
+					}).done(function (data) {
+						if(data == "false") {
+							
+						} else {
+							$(".vote" + id).text(data);
+						}
+					});
+				});
+			});
+		</script>
 	<?php } else { ?>
 		<p>se el primero en agregar un reto</p>
 	<?php } ?>

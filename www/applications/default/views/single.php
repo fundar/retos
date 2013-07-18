@@ -6,7 +6,7 @@
 		<p class="descr"><?php echo utf8_decode($post["descr"]);?></p>
 		<p class="descr">Categoria: <?php echo utf8_decode($post["category"]);?></p>
 		<p>
-			<a href="#" class="like-post" value="<?php echo $post["post_id"];?>" title="Like">Like</a>
+			<span class="like-post" value="<?php echo $post["post_id"];?>">Like</span>
 			&nbsp;<span class="votes"><?php echo $post["votes"];?></span>
 		</p>
 	</div>
@@ -23,8 +23,8 @@
 	<script type="text/javascript">
 		$(document).ready( function () {
 			$(".like-post").click( function () {
-				id    = $(this).attr("value");
-				count = like_post(id);
+				id = $(this).attr("value");
+				like_post(id);
 			});
 		});
 		
@@ -32,11 +32,13 @@
 			$.ajax({
 				url: "/like/" + id
 			}).done(function (data) {
-				$(".votes").text(data);
+				if(data == "false") {
+					
+				} else {
+					$(".votes").text(data);
+				}
 			});
 		}
-		
-		
 	</script>
 <?php } else { ?>
 	<p>

@@ -134,8 +134,12 @@ class Default_Controller extends ZP_Controller {
 	
 	public function like($post_id) {
 		if(is_numeric($post_id)) {
-			/*Validar cookie*/
-			echo $this->Default_Model->likePost($post_id);
+			if(isset($_COOKIE['vote'])) {
+				echo "false";
+			} else {
+				setcookie("vote", "post_id", time() + 365 * 24 * 60 * 60);
+				echo $this->Default_Model->likePost($post_id);
+			}
 		} else {
 			echo "false";
 		}
