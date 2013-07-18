@@ -143,14 +143,14 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function likePost($post_id) {
-		$query  = "update posts set votes=(votes+1) where post_id=1 and status=true";
+		$query  = "update posts set votes=(votes+1) where post_id=" . $post_id . " and status=true";
 		$data   = $this->Db->query($query);
 		
 		return $this->getVotes($post_id);
 	}
 	
 	public function getVotes($post_id) {
-		$query  = "select votes from posts where post_id=1 and status=true";
+		$query  = "select votes from posts where post_id=" . $post_id . " and status=true";
 		$data   = $this->Db->query($query);
 		
 		if($data) {
