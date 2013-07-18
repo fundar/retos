@@ -16,6 +16,7 @@ CREATE TABLE posts (
 	category_id integer,
 	title	    varchar(255),
 	slug	    varchar(255),
+	abstract    text,
 	descr	  	text,
 	image_url 	varchar(150),
 	votes 	  	integer default 0,

@@ -15,9 +15,21 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function saveUser($user) {
-		$data = $this->Db->insert("users", $user, "user_id");
+		$fields = "";
+		$values = "";
 		
-		return $data;
+		foreach($user as $key => $value) {
+			$fields .= $key   . ",";
+			$values .= "'" . $value . "',";
+		}
+		
+		$fields = rtrim($fields, ",");
+		$values = rtrim($values, ",");
+		
+		$query  = "insert into users (" . $fields .") values (" . $values . ")";
+		$data   = $this->Db->query($query);
+		
+		return true;
 	}
 	
 	public function getUser($user) {
@@ -47,10 +59,13 @@ class Default_Model extends ZP_Model {
 		$data["user_id"]     = $user[0]["user_id"];
 		$data["category_id"] = $_POST["category_id"];
 		$data["title"]       = $_POST["title"];
+		$data["abstract"]    = $_POST["abstract"];
 		$data["descr"]       = $_POST["descr"];
 		$data["image_url"]   = $this->upload();
 		
 		if($data["title"] == "") {
+			return array("error" => true);
+		} elseif($data["abstract"] == "") {
 			return array("error" => true);
 		} elseif($data["descr"] == "") {
 			return array("error" => true);
@@ -61,7 +76,7 @@ class Default_Model extends ZP_Model {
 		$data["slug"] = slug($data["title"]);
 		
 		if(!$data["image_url"]) {
-			unset($data["image_url"]);
+			return array("error" => true);
 		}
 		
 		$result = $this->Db->insert("posts", $data, "post_id");
@@ -75,14 +90,23 @@ class Default_Model extends ZP_Model {
 	
 	
 	public function getPost($post_id) {
-		$query  = "select * from posts where post_id=" . $post_id;
+		$query  = "select * from posts where post_id=" . $post_id . " and status=true";
+		$data   = $this->Db->query($query);
+		
+		return $data;
+	}
+	
+	public function getAllPost() {
+		$query  = "select posts.*, categories.name as category from posts join categories on posts.category_id=categories.category_id ";
+		$query .= "where posts.status=true";
 		$data   = $this->Db->query($query);
 		
 		return $data;
 	}
 	
 	public function getPostBySlug($slug) {
-		$query  = "select * from posts where slug='" . $slug . "' limit 1";
+		$query  = "select posts.*, categories.name as category from posts join categories on posts.category_id=categories.category_id ";
+		$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
 		$data   = $this->Db->query($query);
 		
 		if($data and is_array($data)) {
@@ -103,7 +127,7 @@ class Default_Model extends ZP_Model {
 		|| ($_FILES["file"]["type"] == "image/pjpeg")
 		|| ($_FILES["file"]["type"] == "image/x-png")
 		|| ($_FILES["file"]["type"] == "image/png"))
-		&& ($_FILES["file"]["size"] < 90000)
+		&& ($_FILES["file"]["size"] < 900000)
 		&& in_array($extension, $allowedExts)) {
 			if($_FILES["file"]["error"] > 0) {
 				return false;
@@ -111,7 +135,7 @@ class Default_Model extends ZP_Model {
 				$this->Files = $this->core("Files");
 				$upload = $this->Files->uploadImage("www/lib/uploads/");
 				
-				return $upload["medium"];
+				return $upload["small"];
 			}
 		} else {
 			return false;

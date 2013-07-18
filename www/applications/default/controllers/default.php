@@ -2,6 +2,9 @@
 /**
  * Access from index.php:
  */
+if(!defined("_access")) {
+	die("Error: You don't have permission to access here...");
+}
 
 class Default_Controller extends ZP_Controller {
 	
@@ -10,6 +13,7 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->Templates     	  = $this->core("Templates");
 		$this->Default_Model 	  = $this->model("Default_Model");
+		
 		$this->Github_Controller  = $this->controller("Github_Controller");
 		$this->Twitter_Controller = $this->controller("Twitter_Controller");
 		
@@ -17,9 +21,10 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function index() {
-		$vars["user"] = $this->isUser();
-		$vars["view"] = $this->view("home", true);
-			
+		$vars["user"]  = $this->isUser();
+		$vars["posts"] = $this->Default_Model->getAllPost();
+		$vars["view"]  = $this->view("home", true);
+		
 		$this->render("content", $vars);
 	}
 	
@@ -86,14 +91,43 @@ class Default_Controller extends ZP_Controller {
 	
 	/*Posts*/
 	public function add() {
-		$this->Posts_Controller = $this->controller("Posts_Controller");
-		$this->Posts_Controller->add();
+		$user = $this->isUser();
+		
+		if($user) {
+			if(isset($_POST["send"])) {
+				$post = $this->Default_Model->addPost($user);
+				
+				if(is_array($post) and isset($post["error"])) {
+					$vars["error"] = $post["error"];
+				} else {
+					header('Location:' . get("webURL") . "/reto/" . $post[0]["slug"]);
+				}
+			}
+			
+			$vars["user"]       = $user;
+			$vars["categories"] = $this->Default_Model->categories();
+			$vars["view"]       = $this->view("add", true);
+			
+			$this->render("content", $vars);
+		} else {
+			header('Location:' . get("webURL"));
+		}
 	}
 	
-	public function view($slug) {
-		$this->Posts_Controller = $this->controller("Posts_Controller");
-		$this->Posts_Controller->view($slug);
+	public function viewPost($slug) {
+		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
+		$vars["view"] = $this->view("single", true);
+		
+		$this->render("content", $vars);
 	}
+	
+	public function edit($slug) {
+		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
+		$vars["view"] = $this->view("single", true);
+		
+		$this->render("content", $vars);
+	}
+	
 	
 	/*Validate user & logout*/
 	public function isUser() {

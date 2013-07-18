@@ -4,6 +4,7 @@
 	<?php } ?>
 	
 	T&iacute;tulo: <input type="text" name="title" value="" /><br/>
+	Abstract: <input type="text" name="abstract" value="" /><br/>
 	Descripci&oacute;n: <input type="text" name="descr" value="" /><br/>
 	Imagen: <input type="file" name="file" /><br/>
 	

@@ -107,17 +107,21 @@ class ZP_Images extends ZP_Load {
 			$size = $dir . $filename ."_s.". $extension;
 			
 			$this->load($dir . $filename .".". $extension);
-
+			
+			$this->resize(_maxSmall, _minSmall);
+			
+			/*
 			if($this->getWidth() < $this->getHeight()) {
 				$this->resizeToHeight(_minSmall);
 			} else {
 				$this->resizeToWidth(_maxSmall);
 			}
+			*/
 		} elseif($size === "miniature") {
 			$size = $dir . $filename . "_min.". $extension;
 			
 			$this->load($dir . $filename .".". $extension);
-
+			
 			if($this->getWidth() < $this->getHeight()) {
 				$this->resizeToHeight(_minMini);
 			} else {

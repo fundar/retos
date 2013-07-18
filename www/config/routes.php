@@ -33,7 +33,7 @@ $routes = array(
 		"application" => "default",
 		"controller"  => "default",
 		"method"	  => "add",
-		"params"	  => array()
+		"params"	  => array(segment(1))
 	),
 	4 => array(
 		"pattern"	  => "/^edit/",
@@ -46,7 +46,7 @@ $routes = array(
 		"pattern"	  => "/^reto/",
 		"application" => "default",
 		"controller"  => "default",
-		"method"	  => "view",
+		"method"	  => "viewPost",
 		"params"	  => array(segment(1))
 	)
 );
