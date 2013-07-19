@@ -5,6 +5,7 @@ CREATE TABLE users (
 	pwd		  varchar(50),
 	id_user   varchar(255),
 	image_url varchar(255),
+	url 	  varchar(255),
 	admin     boolean default false, 	  
 	type	  varchar(50) default 'normal',
 	PRIMARY KEY(user_id)

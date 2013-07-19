@@ -199,7 +199,7 @@ class Default_Model extends ZP_Model {
 	public function getCommentsByPost($post_id) {
 		/*falta validar el status en la consulta*/
 		
-		$query  = "select comments.*, users.name from comments join users on comments.user_id=users.user_id ";
+		$query  = "select comments.*, users.name, users.url from comments join users on comments.user_id=users.user_id ";
 		$query .= " where post_id=" . $post_id;
 		$data   = $this->Db->query($query);
 		

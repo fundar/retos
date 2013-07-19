@@ -4,3 +4,5 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php
+RewriteCond %{HTTP_HOST} ^www.conectadf.mx$ [NC]
+RewriteRule ^(.*)$ http://conectadf.mx/$1 [L,R=301]

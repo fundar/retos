@@ -21,8 +21,12 @@
 			<?php foreach($comments as $comment) { ?>
 				<div class="comment">
 					<p>
-						<span><?php echo $comment["name"];?></span>:<br/>
-						<?php echo $comment["comment"];?>
+						<span>
+							<a href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
+								<?php echo utf8_decode($comment["name"]);?>
+							</a>
+						</span>:<br/>
+						<?php echo utf8_decode($comment["comment"]);?>
 					</p>
 				</div>
 			<?php } ?>
@@ -43,6 +47,8 @@
 		Necesitas estar conectado para comentar
 	<?php } ?>
 	
+	
+	<!-- JS & Ajax -->
 	<script type="text/javascript">
 		$(document).ready( function () {
 			$(".like-post").click( function () {
@@ -62,9 +68,12 @@
 			$.post("/reto/" + slug, { slug: vslug, comment: vcomment })
 			.done(function(data) {
 				if(data == "true") {
-					html  = '<div class="comment"><p><span><?php echo $user[0]["name"];?></span>:<br/>';
+					html = '<div class="comment"><p><span>';
+					html += '<a href="<?php echo $user[0]["url"];?>" title="<?php echo utf8_decode($user[0]["name"]);?>">';
+					html += '<?php echo utf8_decode($user[0]["name"]);?></a></span>:<br/>';
 					html += vcomment + '</p></div>';
 					
+					$("#post-comment").val("");
 					$('#comments').append(html);
 				}
 			});

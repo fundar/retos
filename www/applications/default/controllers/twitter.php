@@ -76,6 +76,7 @@ class Twitter_Controller extends ZP_Controller {
 			$user["name"]      = $content->name;
 			$user["type"]      = "twitter";
 			$user["image_url"] = str_replace("normal", "bigger", $content->profile_image_url);
+			$user["url"]       = "http://twitter.com/" .  $content->screen_name;
 			$user["id_user"]   = $content->id;
 			
 			return $user;

@@ -37,6 +37,7 @@ class Github_Controller extends ZP_Controller {
 		$user["name"]      = $res["name"];
 		$user["type"]      = "github";
 		$user["image_url"] = $res["avatar_url"];
+		$user["url"]       = $res["html_url"];
 		$user["id_user"]   = $res["id"];
 		
 		return $user;

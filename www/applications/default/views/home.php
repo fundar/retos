@@ -1,5 +1,9 @@
 <?php if($user and is_array($user)) { ?>
-	<p>Bienvenido: <?php echo $user[0]["name"];?></p> 
+	<p>Bienvenido: 
+		<a href="<?php echo $user[0]["url"];?>" title="<?php echo utf8_decode($user[0]["name"]);?>">
+			<?php echo utf8_decode($user[0]["name"]);?>
+		</a>
+	</p> 
 	
 	<p>
 		Tipo: <?php echo $user[0]["type"];?>
