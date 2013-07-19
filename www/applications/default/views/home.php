@@ -33,8 +33,9 @@
 <?php if(is_array($posts)) { ?>
 	<div class="large-12 columns">
 		<h3>Ideas</h3>	
-		<?php foreach($posts as $post) { ?>
-			<div class="row">
+		
+		<div class="row">
+			<?php foreach($posts as $post) { ?>
 				<!-- Retos th. Fila 1 -->  
 				<div class="large-3 small-6 columns">
 					<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
@@ -49,8 +50,8 @@
 						&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
 					</p>
 				</div>
-			</div>
-		<?php } ?>
+			<?php } ?>
+		</div>
 	</div>
 	
 	<script type="text/javascript">
