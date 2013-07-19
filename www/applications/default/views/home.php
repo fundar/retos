@@ -29,39 +29,29 @@
 		<a class="btn-auth btn-twitter" href="/auth/twitter" title="Sign in with Twitter">Sign in with <b>Twitter</b></a>
 	</p>
 <?php } ?>
-
-<p>Posts</p>
 	
 <?php if(is_array($posts)) { ?>
-	<?php foreach($posts as $post) { ?>		
-		<div class="post">
-			<p>
-				<a href="/reto/<?php echo utf8_decode($post["slug"]);?>" title="<?php echo utf8_decode($post["title"]);?>">
-					<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>">
-				</a>
-			</p>
-			
-			<p class="title">
-				<a href="/reto/<?php echo utf8_decode($post["slug"]);?>" title="<?php echo utf8_decode($post["title"]);?>">
-					<?php echo utf8_decode($post["title"]);?>
-				</a>
-			</p>
-			
-			<p class="abstract"><?php echo utf8_decode($post["abstract"]);?></p>
-			<p class="descr"><?php echo utf8_decode($post["descr"]);?></p>
-			<p class="descr">Categoria: <?php echo utf8_decode($post["category"]);?></p>
-			
-			<p>
-				<span class="like-post" value="<?php echo $post["post_id"];?>">Like</span>
-				&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
-				
-				<br/>
-				
-				<span>Comentarios</span>
-				&nbsp;<span><?php echo $post["count"];?></span>
-			</p>
-		</div><br/><br/>
-	<?php } ?>
+	<div class="large-12 columns">
+		<h3>Ideas</h3>	
+		<?php foreach($posts as $post) { ?>
+			<div class="row">
+				<!-- Retos th. Fila 1 -->  
+				<div class="large-3 small-6 columns">
+					<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
+					<h6 class="panel">
+						<?php echo utf8_decode($post["title"]);?>
+					</h6>
+					
+					<p class="panel callout">
+						Comentarios <?php echo $post["count"];?>
+						
+						<span class="like-post" value="<?php echo $post["post_id"];?>"> Like</span>
+						&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
+					</p>
+				</div>
+			</div>
+		<?php } ?>
+	</div>
 	
 	<script type="text/javascript">
 		$(document).ready( function () {
@@ -80,6 +70,4 @@
 			});
 		});
 	</script>
-<?php } else { ?>
-	<p>se el primero en agregar un reto</p>
 <?php } ?>
