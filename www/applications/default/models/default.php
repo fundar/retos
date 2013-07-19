@@ -46,6 +46,13 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
+	public function getUserAdmin($user_id) {
+		$query  = "select * from users where admin=true and user_id=" . $user_id;
+		$data   = $this->Db->query($query);
+		
+		return $data;
+	}
+	
 	/*Categories*/
 	public function categories() {
 		$query  = "select * from categories";
@@ -97,8 +104,10 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getAllPost() {
-		$query  = "select posts.*, categories.name as category from posts join categories on posts.category_id=categories.category_id ";
-		$query .= "where posts.status=true";
+		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
+		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts ";
+		$query .= "join categories on posts.category_id=categories.category_id ";
+		$query .= "where posts.status=true order by post_id desc";
 		$data   = $this->Db->query($query);
 		
 		return $data;
@@ -111,6 +120,17 @@ class Default_Model extends ZP_Model {
 		
 		if($data and is_array($data)) {
 			return $data[0];
+		}
+		
+		return false;
+	}
+	
+	public function getPostIDBySlug($slug) {
+		$query  = "select post_id from posts where slug='" . $slug . "' and posts.status=true limit 1";
+		$data   = $this->Db->query($query);
+		
+		if($data and is_array($data)) {
+			return $data[0]["post_id"];
 		}
 		
 		return false;
@@ -158,5 +178,38 @@ class Default_Model extends ZP_Model {
 		} else {
 			return false;
 		}
+	}
+	
+	/*comments*/
+	public function setComment($user_id, $slug, $comment) {
+		$post_id = $this->getPostIDBySlug($slug);
+		
+		if(!$post_id) {
+			return false;
+		}
+		$fields  = "post_id, user_id, comment";
+		$values  = $post_id . "," . $user_id . ",'" . $comment . "'";
+		
+		$query  = "insert into comments (" . $fields .") values (" . $values . ")";
+		$data   = $this->Db->query($query);
+		
+		return true;
+	}
+	
+	public function getCommentsByPost($post_id) {
+		/*falta validar el status en la consulta*/
+		
+		$query  = "select comments.*, users.name from comments join users on comments.user_id=users.user_id ";
+		$query .= " where post_id=" . $post_id;
+		$data   = $this->Db->query($query);
+		
+		return $data;
+	}
+	
+	public function countCommentsByPost($post_id) {
+		$query  = "select count(*) comments where post_id=" . $post_id;
+		$data   = $this->Db->query($query);
+		
+		return $data;
 	}
 }

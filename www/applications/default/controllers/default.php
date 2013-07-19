@@ -91,7 +91,7 @@ class Default_Controller extends ZP_Controller {
 	
 	/*Posts*/
 	public function add() {
-		$user = $this->isUser();
+		$user = $this->isUser(true);
 		
 		if($user) {
 			if(isset($_POST["send"])) {
@@ -115,21 +115,62 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function viewPost($slug) {
+		
+		/*Comentarios - Ajax*/
+		if(isset($_POST["comment"]) and isset($_POST["slug"])) {
+			if($_POST["comment"] != "" and $slug == $_POST["slug"]) {
+				$user = $this->isUser();
+				
+				if($user) {
+					$comment = $this->Default_Model->setComment($user[0]["user_id"], $slug, $_POST["comment"]);
+					
+					if($comment) {
+						echo "true";
+					} else {
+						echo "false";
+					}
+				} else {
+					echo "false";
+				}
+			} else {
+				echo "false";
+			}			
+			
+			die();
+		}
+		
+		
+		/*view post*/
 		if($slug == "") {
 			header('Location:' . get("webURL"));
 		}
 		
+		$vars["user"] = $this->isUser();
 		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
+		
+		if(isset($vars["post"]["post_id"])) {
+			$vars["comments"] = $this->Default_Model->getCommentsByPost($vars["post"]["post_id"]);
+		} else {
+			$vars["comments"] = false;
+		}
+		
 		$vars["view"] = $this->view("single", true);
 		
 		$this->render("content", $vars);
 	}
 	
 	public function edit($slug) {
-		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
-		$vars["view"] = $this->view("single", true);
+		$user = $this->isUser(true);
 		
-		$this->render("content", $vars);
+		if($user) {
+			$vars["user"] = $user;
+			$vars["post"] = $this->Default_Model->getPostBySlug($slug);
+			$vars["view"] = $this->view("single", true);
+			
+			$this->render("content", $vars);
+		} else {
+			header('Location:' . get("webURL"));
+		}
 	}
 	
 	public function like($post_id) {
@@ -146,10 +187,15 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	/*Validate user & logout*/
-	public function isUser() {
+	public function isUser($admin = false) {
 		if(isset($_SESSION['access_token'])) {
 			$user_id = $_SESSION['user_id'];
-			$user	 = $this->Default_Model->getUserByID($_SESSION['user_id']);
+			
+			if($admin) {
+				$user = $this->Default_Model->getUserAdmin($_SESSION['user_id']);
+			} else { 
+				$user = $this->Default_Model->getUserByID($_SESSION['user_id']);
+			}
 			
 			if($user) {
 				return $user;

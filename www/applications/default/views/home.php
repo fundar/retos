@@ -10,17 +10,11 @@
 	</p>
 	
 	
-	<p>
-		<a href="/add" title="Add project">Add project</a>
-	</p>
-	
-	<p>
-		<a href="/view/" title="View project">View project</a>
-	</p>
-	
-	<p>
-		<a href="/edit/" title="Add project">Edit project</a>
-	</p>
+	<?php if($user[0]["admin"] == "t") { ?>
+		<p>
+			<a href="/add" title="Add project">Add project</a>
+		</p>
+	<?php } ?>
 	
 	<p>
 		<a href="/logout" title="logout">logout</a>
@@ -56,6 +50,11 @@
 			<p>
 				<span class="like-post" value="<?php echo $post["post_id"];?>">Like</span>
 				&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
+				
+				<br/>
+				
+				<span>Comentarios</span>
+				&nbsp;<span><?php echo $post["count"];?></span>
 			</p>
 		</div><br/><br/>
 	<?php } ?>
