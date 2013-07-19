@@ -1,3 +1,3 @@
-<div class="span10">
+<div class="row">
 	<?php $this->load(isset($view) ? $view : NULL, TRUE); ?>
 </div>
