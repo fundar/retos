@@ -35,7 +35,13 @@
 		<h3>Ideas</h3>	
 		
 		<div class="row">
+			<?php $i=1;?>
 			<?php foreach($posts as $post) { ?>
+				<?php if($i == 5) { ?>
+					<?php $i=0; ?>
+					<div class="row top">
+				<?php } ?>
+				
 				<!-- Retos th. Fila 1 -->  
 				<div class="large-3 small-6 columns">
 					<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
@@ -50,6 +56,12 @@
 						&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
 					</p>
 				</div>
+				
+				<?php if($i==0) { ?>
+					</div>
+				<?php } ?>
+				
+				<?php $i++; ?>
 			<?php } ?>
 		</div>
 	</div>
