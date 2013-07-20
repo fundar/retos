@@ -22,7 +22,7 @@
 				<li><a href="#">Buscar</a></li>
 				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/twitter.jpg"></a></li>
 				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/facebook.jpg"></a></li>
-				<li class="ingreso"><a href="#">Ingresar</a></li>
+			<li class="ingreso"><a href="#">Ingresar</a></li>
 			  </ul>
 				
 			</div>
@@ -37,7 +37,7 @@
 		</div>
 		<div class="large-7 columns">
 		<ul class="button-group right">
-		<li><a href="/" class="button">Home</a></li>
+		<li><a href="#" class="button">Home</a></li>
 		<li><a href="#" class="button">Convocatoria</a></li>
 		<li><a href="#" class="button">Sube tu idea</a></li>
 		<li><a href="#" class="button">Preguntas frecuentes</a></li>
@@ -51,6 +51,6 @@
 		  <!-- Destacado -->
 		<div class="row">
 		<div class="large-12 columns">
-		<img src="<?php echo $this->themePath; ?>/img/destacado.jpg"/>
+		<img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;">
 		</div>
-		</div>
+</diV>

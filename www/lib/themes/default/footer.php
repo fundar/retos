@@ -1,23 +1,24 @@
+            
 <!-- Footer -->
-  
-  <footer id="footer">
+<footer id="footer">
     <div class="row">
-    <div class="large-12 columns">
-      <hr />
-      <div class="row">
-        <div class="large-12 columns derechos">
-          <p class=""><img class="logo-conectaDF" src="<?php echo $this->themePath; ?>/img/omidyar-network.png"></p>
+ 
+     
+                <div class="large-12 columns">
+	                <a  href="#"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
+		</div>
+		<div class="row">
+			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a></div>
+			<div class="large-6 columns colaboradores bordo">En alianza con:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a><a href="#"><img src="img/fundar.jpg"></a><a href="#"><img src="img/laboratorio-para-la-ciudad.jpg"></a></div>
+			<div class="large-3 columns colaboradores">Un evento de:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a></div>
+		</div>
+         
         </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right code">
-            <li><a  href="#">Coded by FundarLabs</a></li>
-            <li><a  href="#">Designed by</a></li>
 
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
+ 
+
+
+</footer>
     <footer id="footer2">
     <div class="row">
     <div class="large-12 columns">
@@ -41,7 +42,6 @@
         </div>
       </div>
     </div> 
-  </footer>
 
   <script>
   document.write('<script src=' +
