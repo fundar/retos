@@ -152,7 +152,7 @@ select {
   
 #footer {
     background: none repeat scroll 0 0 #EDEDED;
-    height: 300px;
+    height: 315px;
     margin-top: 180px;
     width: 100%;
 }
@@ -166,14 +166,15 @@ select {
 }
 .derechos {
     font-size:11px;
-    color:#6c6c70;
+    color:#bbb;
 }
 .code {
     font-size:11px;
     color:#6c6c70;
 }
-.logo-conectaDF{
-    float:right;
+.logo-conectaDF {
+    float: right;
+    padding-top: 20px;
 }
 .pie2{
   margin-top:10px !important;
@@ -195,6 +196,26 @@ select {
 }
 .bordo{
   border-right:1px solid #cfcfcf;
+  height:106px;
+}
+.redes {
+
+    color: #6C727F;
+    display: block;
+    font-size: 13px;
+    line-height: 17px;
+    margin: 38px 0;
+    padding-left: 36px;
+}
+
+.fb{
+      background: url("img/facebook.png") no-repeat scroll 0 6px transparent;
+}
+.tw{
+      background: url("img/tw.png") no-repeat scroll 0 6px transparent;
+}
+.correo{
+      background: url("img/correo.png") no-repeat scroll 0 6px transparent;
 }
 
 @media only screen {
@@ -1100,11 +1121,11 @@ td {
 
 /* Default Link Styles */
 a {
-  color: #2ba6cb;
+  color: #fd8a0b;
   text-decoration: none;
   line-height: inherit; }
   a:hover, a:focus {
-    color: #2795b6; }
+    color:#fda039; }
   a img {
     border: none; }
 
