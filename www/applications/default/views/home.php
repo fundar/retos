@@ -6,10 +6,6 @@
 	</p> 
 	
 	<p>
-		Tipo: <?php echo $user[0]["type"];?>
-	</p>
-	
-	<p>
 		<img src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" />
 	</p>
 	
@@ -44,10 +40,15 @@
 				
 				<!-- Retos th. Fila 1 -->  
 				<div class="large-3 small-6 columns">
-					<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
-					<h6 class="panel">
-						<?php echo utf8_decode($post["title"]);?>
-					</h6>
+					<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
+						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
+					</a>
+					
+					<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
+						<h6 class="panel">
+							<?php echo utf8_decode($post["title"]);?>
+						</h6>
+					</a>
 					
 					<p class="panel callout">
 						Comentarios <?php echo $post["count"];?>
