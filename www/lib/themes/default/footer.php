@@ -5,7 +5,7 @@
  
      
                 <div class="large-12 columns">
-	                <a  href="#"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
+	                <a  href="http://www.setravi.df.gob.mx"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
 		</div>
 		<div class="row">
 			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br>
