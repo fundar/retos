@@ -85,14 +85,13 @@ select {
 
 /* Grid HTML Classes */
 #header {
-    height:28px;
+    background: url("img/top-shadow.jpg") no-repeat scroll center 28px #FFFFFF;
+    height: 42px;
     width: 100%;
-    background: url(img/top-shadow.jpg) no-repeat scroll center 0 #fff;
-    
 }
 #header2 {
-    background: none repeat scroll 0 0 #f7f7f7;
-    height: 140px;
+    background: url("img/vertical_top_shadow.jpg") repeat scroll 0 bottom #FFFFFF;
+    height: 124px;
     width: 100%;
 }
 #header#homepage {
@@ -151,11 +150,12 @@ select {
   width: 100%;
   float: left; }
   
-#footer{
-    background: none repeat scroll 0 0 #ededed;
-    height:300px;
+#footer {
+    background: none repeat scroll 0 0 #EDEDED;
+    height: 300px;
+    margin-top: 180px;
     width: 100%;
-}  
+}
 #footer > .derechos li > a{
     font-size:11px;
     color:#6c6c70;
@@ -182,7 +182,20 @@ select {
     background: none repeat scroll 0 0 #fff;
     height:155px;
     width: 100%;
-}  
+}
+.logo-1 {
+    display: block;
+    margin: 25px auto;
+}
+.colaboradores {
+    color: #737F86;
+    font-size: 11px;
+    line-height: 32px;
+    text-align: center;
+}
+.bordo{
+  border-right:1px solid #cfcfcf;
+}
 
 @media only screen {
   .column,
