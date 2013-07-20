@@ -29,29 +29,40 @@
 
 
 </footer>
-    <footer id="footer2">
-    <div class="row">
-    <div class="large-12 columns">
-	<div class="row pie2">
-          <div class="small-8 columns">
-		
-	  </div>
-          <div class="small-4 columns"><img class="logo-conectaDF" src="<?php echo $this->themePath; ?>/img/ConectaDF_logo-pie.png"></div>
-</div>
-      <hr />
-      <div class="row">
-        <div class="large-6 columns derechos">
-          <p class="">&copy; 2013 CONECTADF | Todos los derechos reservados.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right code">
-            <li><a  href="#">Coded by FundarLabs</a></li>
-            <li><a  href="#">Designed by</a></li>
+<footer id="footer2">
+	<div class="row">
+		<div class="large-12 columns">
+		<div class="row pie2">
+		  <div class="small-3 columns">
 
-          </ul>
-        </div>
-      </div>
-    </div> 
+		<p class="redes fb">&Uacute;nete a nuestra comunidad:<br>
+		<a href="#">facebook.com/domain</a></p>
+		</div>
+		<div class="small-3 columns">
+		<p class="redes tw">S&iacute;guenos en:<br>
+		<a href="#">facebook.com/domain</a></p>
+		</div>
+		<div class="small-3 columns">
+		<p class="redes correo">Si prefieres escrbenos a:<br>
+		<span><a <a href="mailto:info@retomovilidad.com?Subject=Hello%20again">info@retomovilidad.com</a></span></p>
+		</div>
+			 <div class="small-3 columns"><img class="logo-conectaDF" src="<?php echo $this->themePath; ?>/img/ConectaDF_logo-pie.png"></div>
+		</div>
+		<hr />
+		<div class="row">
+		<div class="large-6 columns derechos">
+		  <p class="">&copy; 2013 CONECTADF | Todos los derechos reservados.</p>
+		</div>
+		<div class="large-6 columns">
+		  <ul class="inline-list right code">
+			<li><a  href="#">Coded by FundarLabs</a></li>
+			<li><a  href="#">Designed by</a></li>
+
+		  </ul>
+		</div>
+		</div>
+	</div> 
+</footer>
 
   <script>
   document.write('<script src=' +
