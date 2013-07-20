@@ -8,9 +8,19 @@
 	                <a  href="#"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
 		</div>
 		<div class="row">
-			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a></div>
-			<div class="large-6 columns colaboradores bordo">En alianza con:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a><a href="#"><img src="img/fundar.jpg"></a><a href="#"><img src="img/laboratorio-para-la-ciudad.jpg"></a></div>
-			<div class="large-3 columns colaboradores">Un evento de:<br><a href="#"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a></div>
+			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br>
+				<a href="http://www.omidyar.com"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a>
+			</div>
+			
+			<div class="large-6 columns colaboradores bordo">En alianza con:<br>
+				<a href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
+				<a href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
+				<a href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
+			</div>
+			
+			<div class="large-3 columns colaboradores">Un evento de:<br>
+				<a href="http://opendata.mx"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a>
+			</div>
 		</div>
          
         </div>
