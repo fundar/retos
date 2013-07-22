@@ -53,7 +53,7 @@
 							
 							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
-							<span>Conecta con:</span>
+							<span>Conecta con:</span><br />
 						
 							<a href="/auth/github" title="Sign in with GitHub">
 								<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
