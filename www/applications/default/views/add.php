@@ -22,11 +22,3 @@
 	
 	<input type="submit" name="send" value="enviar" />
 </form>
-
-<p>
-	<a href="/" title="Home">Home</a>
-</p>
-
-<p>
-	<a href="/logout" title="logout">logout</a>
-</p>
