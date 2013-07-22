@@ -52,7 +52,11 @@
 					
 					<div class="panel callout stats  reto">
 						<ul class="social-stats">
-							<li><p class="like like-post vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
+							<li>
+								<p class="like like-post vote<?php echo $post["post_id"];?>" value="<?php echo $post["post_id"];?>">
+									<?php echo $post["votes"];?>
+								</p>
+							</li>
 							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
 						</ul>			
 					</div>
