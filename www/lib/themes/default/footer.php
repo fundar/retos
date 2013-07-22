@@ -37,11 +37,11 @@
 		  <div class="small-3 columns">
 
 		<p class="redes fb">&Uacute;nete a nuestra comunidad:<br>
-		<a href="#">facebook.com/domain</a></p>
+		<a href="https://www.facebook.com/groups/opendatamx">facebook.com/groups/opendatamx</a></p>
 		</div>
 		<div class="small-3 columns">
 		<p class="redes tw">S&iacute;guenos en:<br>
-		<a href="#">facebook.com/domain</a></p>
+		<a href="http://twitter.com/opendatamx">twitter.com/opendatamx</a></p>
 		</div>
 		<div class="small-3 columns">
 		<p class="redes correo">Si prefieres escrbenos a:<br>
