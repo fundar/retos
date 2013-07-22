@@ -43,11 +43,11 @@
 					
 					<div id="dialog">
 						<a href="/auth/github" title="Sign in with GitHub">
-							<img src="<?php echo $this->themePath; ?>/img/github-conecta.png">
+							<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
 						</a>
 						
 						<a href="/auth/twitter" title="Sign in with Twitter">
-							<img src="<?php echo $this->themePath; ?>/img/twitter-conecta.png">
+							<img src="<?php echo $this->themePath; ?>/css/img/twitter-conecta.png">
 						</a>
 					</div>
 				</div>
