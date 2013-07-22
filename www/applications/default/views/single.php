@@ -21,7 +21,7 @@
 						<div class="panel callout stats  reto">
 							<ul class="social-stats">
 							<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
-							<li><p class="opinion"><?php echo $post["votes"];?> Comentarios</p></li>
+							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
 							</ul>			
 			                        </div>
 						<h4 class="nombredelreto">
