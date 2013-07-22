@@ -31,7 +31,9 @@
 		</div>		
 		<div class="small-11 small-centered columns top-single"> 		
 			        <!-- Explicación reto-->
-				<p class="detalle">Categor&iacute;a: <?php echo utf8_decode($post["category"]);?></p>
+				<p class="detalle">Categor&iacute;a:</p>
+				
+				<p><?php echo utf8_decode($post["category"]);?></p>
 				
 				<p class="detalle">DETALLE</p>
 				
