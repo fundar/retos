@@ -51,7 +51,7 @@
 						
 							<img class="avatar" src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" /><br /><br />
 							
-							<a href="/logout" title="logout">logout</a>
+							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
 							<span>Conecta con:</span>
 						
