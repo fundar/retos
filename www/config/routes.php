@@ -55,5 +55,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "like",
 		"params"	  => array(segment(1))
+	),
+	7 => array(
+		"pattern"	  => "/^faqs/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "faqs",
+		"params"	  => array()
 	)
 );

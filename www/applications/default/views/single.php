@@ -1,5 +1,52 @@
 <?php if($post and is_array($post)) { ?>
-	<!-- Post -->
+	<div class="large-12 columns top-single">
+		        <!-- Contenido-->  
+		        <h3><?php echo utf8_decode($post["title"]);?></h3>
+			<div class="row">
+				<div class="large-12 columns ">				
+				<p class="cita">
+				<?php echo utf8_decode($post["abstract"]);?>	
+				</p>
+				</div>
+			</div>
+		        </div>			
+	
+        <div class="row"><!-- Resumen reto--> 
+                <div class="small-11 small-centered columns top-single"> 
+			        <div class="row top-single">
+					  <div class="large-7 columns ilustracion">
+						<img  src="img/reto-post.jpg">
+					  </div>
+                                          <div class="large-5 columns panel-retos parrafo">
+						<div class="panel callout stats  reto">
+							<ul class="social-stats">
+							<li><p class="like"><?php echo $post["votes"];?></p></li>
+							<li><p class="opinion"><?php echo $post["votes"];?> Comentarios</p></li>
+							</ul>			
+			                        </div>
+						<h4 class="nombredelreto">
+							<?php echo utf8_decode($post["title"]);?>
+						</h4>
+						<p class="elresumen">
+							<?php echo utf8_decode($post["abstract"]);?>
+					  </div>
+				</div>
+		</div>		
+		<div class="small-11 small-centered columns top-single"> 		
+			        <!-- Explicación reto-->
+				<p>
+					<?php echo utf8_decode($post["abstract"]);?>
+				</p>
+				
+				<p class="detalle">DETALLE</p>
+				
+				<p>
+					<?php echo utf8_decode($post["descr"]);?>
+				</p>	
+			</div>
+		</div>
+	</div><!-- contenido sepués de cita -->
+	
 	<div class="post">
 		<p><img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>"></p>
 		<p class="title"><?php echo utf8_decode($post["title"]);?></p>
@@ -93,8 +140,7 @@
 	</script>
 <?php } else { ?>
 	<p>
-		No existe
+		Contenido no disponible!
 	</p>
 <?php } ?>
 
-<a href="/">Home</a>
