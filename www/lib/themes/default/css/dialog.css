@@ -1,1 +1,11 @@
-#dialog { display:none; top:50px; left;800px; }
+#dialog { 
+	background-color: #fff;
+    display: none;
+    height: 91px;
+    left: 794px;
+    position: absolute;
+    top: 34px;
+    z-index: 10;
+}
+
+#dialog a { margin-bottom:10px; }
