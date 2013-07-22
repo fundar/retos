@@ -16,6 +16,7 @@
 				<a href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
 				<a href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
 				<a href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
+				<a href="http://uc.edu.mx/" style="display: none;"><img src="<?php echo $this->themePath; ?>/img/uc.jpg"></a>
 			</div>
 			
 			<div class="large-3 columns colaboradores">Un evento de:<br>
