@@ -42,7 +42,7 @@
 					</ul>
 					
 					<div id="dialog">
-						<p>Conecta con:</p>
+						<span>Conecta con:</span>
 						
 						<a href="/auth/github" title="Sign in with GitHub">
 							<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
