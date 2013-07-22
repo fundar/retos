@@ -50,12 +50,12 @@
 						</h6>
 					</a>
 					
-					<p class="panel callout">
-						Comentarios <?php echo $post["count"];?>
-						
-						<span class="like-post" value="<?php echo $post["post_id"];?>"> Like</span>
-						&nbsp;<span class="votes vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></span>
-					</p>
+					<div class="panel callout stats  reto">
+						<ul class="social-stats">
+							<li><p class="like like-post vote<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
+							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
+						</ul>			
+					</div>
 				</div>
 				
 				<?php if($i==0) { ?>
