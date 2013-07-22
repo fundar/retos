@@ -5,7 +5,7 @@
 		<div class="row">
 			<?php foreach($posts as $post) { ?>
 				<!-- Retos th. Fila 1 -->  
-				<div class="large-3 small-6 columns">
+				<div class="large-3 small-6 columns bottom-retoth">
 					<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
 						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
 					</a>

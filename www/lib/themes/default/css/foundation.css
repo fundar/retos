@@ -197,9 +197,9 @@ select {
     line-height: 32px;
     text-align: center;
 }
-.bordo{
-  border-right:1px solid #cfcfcf;
-  height:106px;
+.bordo {
+    border-right: 1px solid #CFCFCF;
+    height: 175px;
 }
 .redes {
 
@@ -2957,6 +2957,19 @@ label.error {
 .aire{
    margin-top:70px;
 }
+
+.hashtag {
+    border-right: 1px solid #BDBDBD;
+    display: block;
+    height: 18px;
+    margin-bottom: 0;
+    margin-top: 4px;
+    padding-right: 9px;
+    padding-top: 0;
+}
+.bottom-retoth{
+   margin-bottom:40px;
+}
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
@@ -4234,11 +4247,12 @@ kbd {
   padding: 0;
   list-style: none;
   overflow: hidden; }
-  .inline-list > li {
-    list-style: none;
+.inline-list > li {
+    display: block;
     float: left;
-    margin-left: 1.375em;
-    display: block; }
+    list-style: none outside none;
+    margin-left: 0.375em;
+}
 .inline-list > li > * {
     color: #BBBBBB;
     display: block;
@@ -4885,6 +4899,3 @@ a.th {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
-
-
-.like-post { cursor: pointer;}
