@@ -50,7 +50,7 @@
 		<!-- End Header and Nav -->
 		  
 		  <!-- Destacado -->
-		 <?php if(!isset(segment(1))) { ?>
+		 <?php if(!segment(1)) { ?>
 			<div class="row">
 			<div class="large-12 columns">
 				<img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;">
