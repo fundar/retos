@@ -201,7 +201,38 @@ class Default_Model extends ZP_Model {
 		/*falta validar el status en la consulta*/
 		
 		$query  = "select comments.*, users.name, users.url from comments join users on comments.user_id=users.user_id ";
-		$query .= " where post_id=" . $post_id;
+		$query .= " where parent_id=0 and post_id=" . $post_id;
+		$data   = $this->Db->query($query);
+		
+		
+		if($data) {
+			$i = 0;
+			foreach($data as $key => $comment) {
+				$comments[$i] = $comment;
+				
+				$childs = $this->getParentComments($comment["comment_id"]);
+				
+				if($childs) {
+					$i++;
+					
+					foreach($childs as $child) {
+						$comments[$i] = $child;
+						$i++;
+					}
+				}
+				
+				$i++;
+			}
+			
+			return $comments;
+		}
+		
+		return false;
+	}
+	
+	public function getParentComments($comment_id) {
+		$query  = "select comments.*, users.name, users.url from comments join users on comments.user_id=users.user_id ";
+		$query .= " where parent_id=" . $comment_id;
 		$data   = $this->Db->query($query);
 		
 		return $data;

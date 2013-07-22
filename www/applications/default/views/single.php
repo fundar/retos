@@ -54,16 +54,20 @@
 		<div id="comments">
 			<?php if(is_array($comments)) { ?>
 				<?php foreach($comments as $comment) { ?>
-					<div class="comment">
+					<?php if($comment["parent_id"] == 0) { ?>
+						<div class="comment">
+					<?php } else { ?>
+						<div class="comment2">
+					<?php } ?>
 						<p>
 							<span>
 								<a class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
 									<?php echo utf8_decode($comment["name"]);?>
 								</a>
-							</span>: 
+							</span>
 							
 							<?php if($user and is_array($user)) { ?>
-								<!-- <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a> -->
+								- <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
 							<?php } ?>
 							
 							<br/>

@@ -28,5 +28,6 @@
 
 #comments { width:100%; }
 .comment { width:100%; }
+.comment2 { width:100%; margin-left:30px; }
 
 .twitter-share-button { margin-top:2px !important; float:right; }
