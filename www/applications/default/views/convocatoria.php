@@ -18,9 +18,25 @@
 		
 		<!-- Contenido-->  
 		<div class="large-12 columns">
+			<p><strong>Bases de participación</strong></p>
 			<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempus ipsum sapien, vel tempor velit suscipit vel. Donec ac facilisis neque, eget varius nisi. Praesent at nibh eget tellus dignissim lacinia. Pellentesque in consequat mauris, id iaculis nibh. Cras luctus felis iaculis, placerat metus lacinia, rhoncus dolor. Phasellus erat nunc, laoreet id ligula nec, consequat congue libero. Praesent tristique est neque, ullamcorper volutpat leo dapibus venenatis. Integer a magna et magna pharetra euismod. Phasellus porta velit quis nunc venenatis eleifend. Curabitur nunc mi, tempus vel pellentesque quis, imperdiet eget purus. Nullam laoreet neque sit amet feugiat varius. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus urna enim, auctor vel faucibus in, tincidunt eu nisl. Morbi id tempor nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur molestie blandit odio.					
+				- El objetivo del reto es convocar a la ciudadanía a crear aplicaciones móviles, sitios web y desarrollos de hardware que mediante estrategias de tercerización masiva (crowdsourcing), generen, difundan o analicen datos para mejorar políticas y servicios públicos en materia de movilidad urbana en el Distrito Federal.
+				
+				<br/>- ConectaDF es un reto abierto a todo público. Se podrá participar de manera individual o por equipos.
+				<br/>- Existen 4 categorías de participación:
+				<br/>Móvil. Aplicaciones para teléfonos celulares o tabletas.
+				<br/>Web. Páginas y aplicaciones para navegadores.
+				<br/>Hardware. Proyectos que involucren sensores electrónicos de especificación abierta (arduino).
+				<br/>Híbrido. Alguna combinación de las anteriores categorías
+
+				<br/><br/>- Los desarrollos deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. El sito conectadf.mx servirá como plataforma de discusión e ideación de propuestas de generación de datos así como de estrategias que puedan incentivar la adopción masiva por parte de la ciudadanía.
+				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviados desde la siguiente URL [Carlos: agregar un conectadf.mx/submit con los campos necesarios: Nombre del representante, nombre de particpantes de equipo, ] y deberán incluir lo siguiente.
+				<br/>- Los datos de contacto de los participantes
+				<br/>- Un texto descriptivo de la aplicación donde se detallen como contribuye a la problemática de la movilidad urbana, sus funcionalidades y valor agregado.
+				<br/>- Un video demostrativo del desarrollo en funcionamiento. El video deberá enfocarse en mostrar el grado de ejecución de a idea y los detalles de funcionamiento del desarrollo. Aquellos videos que se enfoquen solamente en 
+				<br/>- Cualquier otro recurso de demostración que los participantes consideren necesarios para la mejor evaluación de la idea propuesta por parte del jurado. (se sugieren servicios de distribución de demos como Kickfolio o TestFlight).
 			</p>
+			
 			<p>
 			Mauris nisi urna, sodales a bibendum eget, suscipit ac turpis. Vivamus diam tellus, consectetur at dolor non, varius ultricies purus. Etiam varius nulla vitae lorem pulvinar sodales. Vivamus magna mi, dignissim fringilla urna vitae, fringilla pretium lectus. Aliquam pretium orci orci, at iaculis augue egestas ultricies. Pellentesque in massa quis massa consectetur varius. Nulla imperdiet tincidunt mi. Quisque vehicula venenatis suscipit. Suspendisse potenti. Nullam cursus dapibus eros quis malesuada. Praesent non eros massa.
 			</p>
