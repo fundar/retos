@@ -31,7 +31,7 @@
 						</li>
 						
 						<li>
-							<a href="http://twitter.com/opendatamx">
+							<a href="https://www.facebook.com/groups/opendatamx">
 								<img src="<?php echo $this->themePath; ?>/img/facebook.jpg">
 							</a>
 						</li>
