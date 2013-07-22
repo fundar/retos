@@ -25,3 +25,5 @@
 #dialog img { margin-top:5px; }
 #dialog .avatar { margin-top:10px !important; width:40px; height:40px;}
 .like-post { cursor:pointer; }
+
+#comments { width:100%; }
