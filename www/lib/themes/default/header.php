@@ -47,13 +47,13 @@
 					
 					<div id="dialog">
 						<?php if(isset($user) and is_array($user)) { ?>
-							<span><?php echo $user[0]["name"];?></span>
+							<span><?php echo $user[0]["name"];?></span><br />
 						
 							<img class="avatar" src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" /><br /><br />
 							
 							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
-							<span>Conecta con:</span><br />
+							<span>Conecta con:</span>
 						
 							<a href="/auth/github" title="Sign in with GitHub">
 								<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
