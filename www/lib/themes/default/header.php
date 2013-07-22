@@ -4,9 +4,11 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		 <meta name="viewport" content="width=device-width" />
 		<title><?php print $this->getTitle(); ?></title>
-		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
 		
-		  <link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/foundation.css" />
+		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
+		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/foundation.css" />
+		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/fuentes/stylesheet.css" />
+		
 		<script src="<?php echo $this->themePath; ?>/js/vendor/custom.modernizr.js"></script>
 		
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -19,7 +21,6 @@
 			<div class="large-12 columns">
 				
 			  <ul class="inline-list right">
-				<li><a href="#">Buscar</a></li>
 				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/twitter.jpg"></a></li>
 				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/facebook.jpg"></a></li>
 			<li class="ingreso"><a href="#">Ingresar</a></li>
