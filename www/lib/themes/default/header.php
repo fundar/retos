@@ -40,7 +40,7 @@
 		<ul class="button-group right">
 		<li><a href="/" class="button">Home</a></li>
 		<li><a href="#" class="button">Convocatoria</a></li>
-		<li><a href="#" class="button">Sube tu idea</a></li>
+		<!-- <li><a href="#" class="button">Sube tu idea</a></li> -->
 		<li><a href="/faqs" class="button">Preguntas frecuentes</a></li>
 		</ul>
 		</div>
