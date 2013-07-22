@@ -35,7 +35,7 @@
 			<p>
 				- El objetivo del reto es convocar a la ciudadanía a crear aplicaciones móviles, sitios web y desarrollos de hardware que mediante estrategias de <a href="http://es.wikipedia.org/wiki/Crowdsourcing">tercerización masiva (crowdsourcing)</a>, generen, difundan o analicen datos para mejorar políticas y servicios públicos en materia de movilidad urbana en el Distrito Federal.
 				
-				<br/>- ConectaDF es un reto abierto a todo público. Se podrá participar de manera individual o por equipos.
+				<br/>- ConectaDF es un reto abierto a todo público. Se podrá participar de manera individual o por equipos de hasta 6 integrantes.
 				<br/>- Existen 4 categorías de participación:
 				<br/><br/>Móvil. Aplicaciones para teléfonos celulares o tabletas.
 				<br/>Web. Páginas y aplicaciones para navegadores.
