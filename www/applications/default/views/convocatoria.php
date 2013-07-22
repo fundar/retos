@@ -43,7 +43,7 @@
 				<br/>Híbrido. Alguna combinación de las anteriores categorías
 			
 				<br/><br/>- Los desarrollos deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. El sito <a href="http://conectadf.mx/">conectadf.mx</a> servirá como plataforma de discusión e ideación de propuestas de generación de datos así como de estrategias que puedan incentivar la adopción masiva por parte de la ciudadanía.
-				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviados desde la siguiente URL [Carlos: agregar un <a href="http://conectadf.mx/submit">conectadf.mx/submit</a> con los campos necesarios: Nombre del representante, nombre de particpantes de equipo, ] y deberán incluir lo siguiente.
+				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviado a través del sitio <a href="http://conectadf.mx/">conectadf.mx</a> y deberán incluir lo siguiente.
 				<br/>- Los datos de contacto de los participantes
 				<br/>- Un texto descriptivo de la aplicación donde se detallen como contribuye a la problemática de la movilidad urbana, sus funcionalidades y valor agregado.
 				<br/>- Un video demostrativo del desarrollo en funcionamiento. El video deberá enfocarse en mostrar el grado de ejecución de a idea y los detalles de funcionamiento del desarrollo. Aquellos videos que se enfoquen solamente en 
