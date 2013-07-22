@@ -67,22 +67,8 @@
 
 	<script type="text/javascript">
 		$('#open-ingreso').click(function() {
-			$('#dialog').dialog('open');
+			$('#dialog').dialog();
 		});
-
-
-
-		jQuery(document).ready(function() {
-			jQuery("#dialog").dialog({
-				autoOpen: false,
-				modal: true,
-				open: function(){
-					jQuery('.ui-widget-overlay').bind('click',function(){
-						jQuery('#dialog').dialog('close');
-					})
-				}
-			});
-		}); 
 	</script>
  
   <script>
