@@ -9,7 +9,20 @@
 					<p><strong>Introducción</strong></p>
 					
 					<p>
-						En el contexto internacional del reconocimiento de la movilidad como un derecho humano, así como el creciente potencial del aprovechamiento de datos abiertos para generar información y conocimiento acerca de las problemáticas que afectan a la ciudadanía, la Secretaría de Transporte y Vialidad del Gobierno del Distrito Federal, Fundar, Centro de Análisis e Investigación, El Instituto de Políticas para el Transporte y el Desarrollo y el Laboratorio para la Ciudad convocan a la ciudadanía al reto de movilidad ConectaDF.
+						En el contexto internacional del 
+						<a href="http://mexico.itdp.org/documentos/informe-especial-sobre-el-derecho-a-la-movilidad-en-el-df/">
+							reconocimiento de la movilidad como un derecho humano
+						</a>, así como el creciente potencial del 
+						<a href="http://opendatahandbook.org/es/why-open-data/index.html">
+							aprovechamiento
+						</a> de <a href="http://es.wikipedia.org/wiki/Datos_abiertos">datos abiertos</a> para generar
+						 información y conocimiento acerca de las problemáticas que afectan a la ciudadanía, la  
+						<a href="http://www.setravi.df.gob.mx/index.jsp">
+							Secretaría de Transporte y Vialidad del Gobierno del Distrito Federal
+						</a>, 
+						<a href="http://fundar.org.mx/">Fundar, Centro de Análisis e Investigación</a>, 
+						<a href="http://mexico.itdp.org/">El Instituto de Políticas para el Transporte y el Desarrollo</a> y el 
+						<a href="http://www.labplc.mx/">Laboratorio para la Ciudad</a> convocan a la ciudadanía al reto de movilidad ConectaDF.
 					</p>
 		        </blockquote>
 			</div>
