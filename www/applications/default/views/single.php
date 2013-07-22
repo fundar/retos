@@ -67,7 +67,9 @@
 							</span>
 							
 							<?php if($user and is_array($user)) { ?>
-								- <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
+								<?php if($comment["parent_id"] == 0) { ?>
+									: <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
+								<?php } ?>
 							<?php } ?>
 							
 							<br/>
