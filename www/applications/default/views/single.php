@@ -15,6 +15,7 @@
                 <div class="small-11 small-centered columns top-single"> 
 			        <div class="row top-single">
 					  <div class="large-7 columns ilustracion">
+						  <?php die(var_dump(str_replace("_s.", "_m.", $post["image_url"])));?>
 						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>">
 					  </div>
                       <div class="large-5 columns panel-retos parrafo">
