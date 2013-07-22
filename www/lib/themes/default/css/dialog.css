@@ -21,3 +21,5 @@
   width:200px;
   z-index:10;
 }
+
+.like-post { cursor:pointer; }
