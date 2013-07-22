@@ -49,7 +49,7 @@
 						<?php if(isset($user) and is_array($user)) { ?>
 							<span><?php echo $user[0]["name"];?></span>
 						
-							<img src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" /><br />
+							<img class="avatar" src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" /><br /><br />
 							
 							<a href="/logout" title="logout">logout</a>
 						<?php } else { ?>
