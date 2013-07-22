@@ -21,8 +21,8 @@
 			<div class="large-12 columns">
 				
 			  <ul class="inline-list right">
-				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/twitter.jpg"></a></li>
-				<li><a href="#"><img src="<?php echo $this->themePath; ?>/img/facebook.jpg"></a></li>
+				<li><a href="http://twitter.com/opendatamx" title="OpendataMX Twitter"><img src="<?php echo $this->themePath; ?>/img/twitter.jpg"></a></li>
+				<li><a href="http://twitter.com/opendatamx"><img src="<?php echo $this->themePath; ?>/img/facebook.jpg"></a></li>
 			<li class="ingreso"><a href="#">Ingresar</a></li>
 			  </ul>
 				
