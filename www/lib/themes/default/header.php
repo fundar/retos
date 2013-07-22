@@ -8,12 +8,10 @@
 		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/foundation.css" />
 		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/fuentes/stylesheet.css" />
+		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/dialog.css" />
 		
 		<script src="<?php echo $this->themePath; ?>/js/vendor/custom.modernizr.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-		
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 	</head>
 	<body>
 	
@@ -41,8 +39,17 @@
 						<li class="ingreso">
 							<a href="#" id="open-ingreso"title="ingresar">Ingresar</a>
 						</li>
-					 </ul>
-					 <div id="dialog">Your non-modal dialog</div>
+					</ul>
+					
+					<div id="dialog">
+						<a href="/auth/github" title="Sign in with GitHub">
+							<img src="<?php echo $this->themePath; ?>/img/github-conecta.png">
+						</a>
+						
+						<a href="/auth/twitter" title="Sign in with Twitter">
+							<img src="<?php echo $this->themePath; ?>/img/twitter-conecta.png">
+						</a>
+					</div>
 				</div>
 			</div>
 		</div> 
