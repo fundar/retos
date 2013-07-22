@@ -37,9 +37,10 @@
 						</li>
 						
 						<li class="ingreso">
-							<a href="#">Ingresar</a>
+							<a href="#" id="open-ingreso"title="ingresar">Ingresar</a>
 						</li>
 					 </ul>
+					 <div id="dialog">Your non-modal dialog</div>
 				</div>
 			</div>
 		</div> 

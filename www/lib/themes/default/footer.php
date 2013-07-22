@@ -65,6 +65,26 @@
 	</div> 
 </footer>
 
+	<script type="text/javascript">
+		$('#open-ingreso').click(function() {
+			$('#dialog').dialog('open');
+		});
+
+
+
+		jQuery(document).ready(function() {
+			jQuery("#dialog").dialog({
+				autoOpen: false,
+				modal: true,
+				open: function(){
+					jQuery('.ui-widget-overlay').bind('click',function(){
+						jQuery('#dialog').dialog('close');
+					})
+				}
+			});
+		}); 
+	</script>
+ 
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? '<?php echo $this->themePath; ?>/js/vendor/zepto' : '<?php echo $this->themePath; ?>/js/vendor/jquery') +
