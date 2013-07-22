@@ -9,7 +9,7 @@
 					<p><strong>Introducción</strong></p>
 					
 					<p>
-						En el contexto internacional del 
+						En el contexto local del 
 						<a href="http://mexico.itdp.org/documentos/informe-especial-sobre-el-derecho-a-la-movilidad-en-el-df/">
 							reconocimiento de la movilidad como un derecho humano
 						</a>, así como el creciente potencial del 
