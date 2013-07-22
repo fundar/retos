@@ -62,5 +62,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "faqs",
 		"params"	  => array()
+	),
+	8 => array(
+		"pattern"	  => "/^convocatoria/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "convocatoria",
+		"params"	  => array()
 	)
 );

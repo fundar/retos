@@ -192,6 +192,12 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
+	public function convocatoria() {
+		$vars["view"] = $this->view("convocatoria", true);
+		
+		$this->render("content", $vars);	
+	}
+	
 	/*Validate user & logout*/
 	public function isUser($admin = false) {
 		if(isset($_SESSION['access_token'])) {
