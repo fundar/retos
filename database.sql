@@ -29,6 +29,7 @@ CREATE TABLE comments (
 	comment_id serial,
 	post_id	   integer,
 	user_id	   integer,
+	parent_id  integer default 0,
 	comment	   text,
 	votes 	   integer default 0,
 	status     boolean default false,
