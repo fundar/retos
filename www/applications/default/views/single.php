@@ -18,15 +18,18 @@
 						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>">
 					  </div>
                       <div class="large-5 columns panel-retos parrafo">
+						
 						<div class="panel callout stats  reto">
 							<ul class="social-stats">
 							<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
 							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
 							</ul>			
-			                        </div>
+			            </div>
+						
 						<h4 class="nombredelreto">
 							<?php echo utf8_decode($post["title"]);?>
 						</h4>
+						
 						<p class="elresumen">
 							<?php echo utf8_decode($post["abstract"]);?>
 					  </div>
