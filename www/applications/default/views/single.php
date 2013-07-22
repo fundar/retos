@@ -2,14 +2,8 @@
 	<div class="large-12 columns top-single">
 		        <!-- Contenido-->  
 		        <h3><?php echo utf8_decode($post["title"]);?></h3>
-			<div class="row">
-				<div class="large-12 columns ">				
-				<p class="cita">
-				<?php echo utf8_decode($post["abstract"]);?>	
-				</p>
-				</div>
-			</div>
-		        </div>			
+
+	</div>			
 	
         <div class="row"><!-- Resumen reto--> 
                 <div class="small-11 small-centered columns top-single"> 
@@ -37,11 +31,7 @@
 		</div>		
 		<div class="small-11 small-centered columns top-single"> 		
 			        <!-- Explicación reto-->
-				<p>
-					<?php echo utf8_decode($post["abstract"]);?>
-				</p>
-				
-				<p class="detalle"><?php echo utf8_decode($post["category"]);?></p>
+				<p class="detalle">Categor&iacute;a: <?php echo utf8_decode($post["category"]);?></p>
 				
 				<p class="detalle">DETALLE</p>
 				
