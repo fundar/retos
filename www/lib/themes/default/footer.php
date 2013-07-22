@@ -37,7 +37,7 @@
 		  <div class="small-3 columns">
 
 		<p class="redes fb">&Uacute;nete a nuestra comunidad:<br>
-		<a href="https://www.facebook.com/groups/opendatamx">facebook.com/groups/opendatamx</a></p>
+		<a href="https://www.facebook.com/groups/opendatamx">opendatamx</a></p>
 		</div>
 		<div class="small-3 columns">
 		<p class="redes tw">S&iacute;guenos en:<br>
