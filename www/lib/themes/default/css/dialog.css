@@ -1,15 +1,23 @@
-#dialog { 
-	background-color: #fff;
-    display: none;
-    height: 91px;
-    left: 794px;
-    position: absolute;
-    top: 34px;
-    z-index: 10;
+#dialog {
+  background-color:#FFFFFF;
+  border-bottom-color:#FBFAF8;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-left-color:#FBFAF8;
+  border-left-style:solid;
+  border-left-width:1px;
+  border-right-color:#FBFAF8;
+  border-right-style:solid;
+  border-right-width:1px;
+  box-shadow:#F2F2F2 0 0 5px;
+  display:none;
+  font-size:12px;
+  height:124px;
+  left:784px;
+  padding:6px 14px 0 16px;
+  position:absolute;
+  right:16px;
+  top:30px;
+  width:200px;
+  z-index:10;
 }
-
-#dialog span { float:left; color:#c0c0c0; margin-top:3px; margin-bottom:6px; }
-#dialog a { float:right; margin-top:6px; }
-
-
-.ingreso img { width:20px; height:20px;}
