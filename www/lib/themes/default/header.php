@@ -5,6 +5,7 @@
 		 <meta name="viewport" content="width=device-width" />
 		<title><?php print $this->getTitle(); ?></title>
 		
+		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->themePath; ?>/img/favicon.ico" />
 		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/foundation.css" />
 		<link rel="stylesheet" href="<?php echo $this->themePath; ?>/css/fuentes/stylesheet.css" />
