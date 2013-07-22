@@ -48,42 +48,43 @@
 				</p>	
 			</div>
 		</div>
-	</div><!-- contenido sepués de cita -->	
-	
-	<!-- Comentarios -->
-	<p>Comentarios</p>
-	
-	<div id="comments">
-		<?php if(is_array($comments)) { ?>
-			<?php foreach($comments as $comment) { ?>
-				<div class="comment">
-					<p>
-						<span>
-							<a href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
-								<?php echo utf8_decode($comment["name"]);?>
-							</a>
-						</span>:<br/>
-						<?php echo utf8_decode($comment["comment"]);?>
-					</p>
-				</div>
+		
+		
+		<!-- Comentarios -->
+		<p>Comentarios</p>
+		
+		<div id="comments">
+			<?php if(is_array($comments)) { ?>
+				<?php foreach($comments as $comment) { ?>
+					<div class="comment">
+						<p>
+							<span>
+								<a href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
+									<?php echo utf8_decode($comment["name"]);?>
+								</a>
+							</span>:<br/>
+							<?php echo utf8_decode($comment["comment"]);?>
+						</p>
+					</div>
+				<?php } ?>
+			<?php } else { ?>
+				<p>Se el primero en comentar</p>
 			<?php } ?>
+		</div>
+		
+		
+		<!-- Formulario de comentarios -->
+		<?php if($user and is_array($user)) { ?>
+			<form method="POST" action="">
+				<input type="text"   id="post-comment"      name="comment" value=""/>
+				<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
+				<input type="button" id="send-comment" name="send-comment" value="comentar" />
+			</form>
 		<?php } else { ?>
-			<p>Se el primero en comentar</p>
+			Necesitas estar conectado para comentar
 		<?php } ?>
-	</div>
 	
-	
-	<!-- Formulario de comentarios -->
-	<?php if($user and is_array($user)) { ?>
-		<form method="POST" action="">
-			<input type="text"   id="post-comment"      name="comment" value=""/>
-			<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
-			<input type="button" id="send-comment" name="send-comment" value="comentar" />
-		</form>
-	<?php } else { ?>
-		Necesitas estar conectado para comentar
-	<?php } ?>
-	
+	</div><!-- contenido sepués de cita -->		
 	
 	<!-- JS & Ajax -->
 	<script type="text/javascript">
