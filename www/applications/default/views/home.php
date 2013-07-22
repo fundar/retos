@@ -2,7 +2,7 @@
 	<div class="large-12 columns">
 		<h3>Ideas</h3>	
 		
-		<div class="row top">
+		<div class="row">
 			<?php foreach($posts as $post) { ?>
 				<!-- Retos th. Fila 1 -->  
 				<div class="large-3 small-6 columns">
