@@ -55,7 +55,7 @@
 			<?php if(is_array($comments)) { ?>
 				<?php foreach($comments as $comment) { ?>
 					<?php if($comment["parent_id"] == 0) { ?>
-						<div class="comment">
+						<div class="comment coment_id_<?php echo $comment["comment_id"];?>">
 					<?php } else { ?>
 						<div class="comment2">
 					<?php } ?>
@@ -135,13 +135,25 @@
 			$.post("/reto/" + slug, { slug: vslug, comment: vcomment, parent_id: vparent_id })
 			.done(function(data) {
 				if(data == "true") {
-					html = '<div class="comment"><p><span>';
+					if(vparent_id == 0) {
+						html = '<div class="comment"><p><span>';
+					} else {
+						html = '<div class="comment2"><p><span>';
+					}
+					
 					html += '<a href="<?php echo $user[0]["url"];?>" title="<?php echo utf8_decode($user[0]["name"]);?>">';
 					html += '<?php echo utf8_decode($user[0]["name"]);?></a></span><br/>';
 					html += vcomment + '</p></div>';
 					
 					$("#post-comment").val("");
-					$('#comments').append(html);
+					
+					if(vparent_id == 0) {
+						$('#comments').append(html);
+					} else {
+						$(html).insertAfter('#coment_id_' + vparent_id);
+					}
+					
+					
 				}
 			});
 		}
