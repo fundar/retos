@@ -122,7 +122,7 @@ class Default_Controller extends ZP_Controller {
 				$user = $this->isUser();
 				
 				if($user) {
-					$comment = $this->Default_Model->setComment($user[0]["user_id"], $slug, $_POST["comment"]);
+					$comment = $this->Default_Model->setComment($user[0]["user_id"], $slug, $_POST["comment"], $_POST["parent_id"]);
 					
 					if($comment) {
 						echo "true";

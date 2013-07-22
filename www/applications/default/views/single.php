@@ -57,11 +57,17 @@
 					<div class="comment">
 						<p>
 							<span>
-								<a href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
+								<a class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
 									<?php echo utf8_decode($comment["name"]);?>
 								</a>
-							</span>:<br/>
-							<?php echo utf8_decode($comment["comment"]);?>
+							</span>: 
+							
+							<a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
+							
+							<br/>
+							<span class="comment-<?php echo $comment["comment_id"];?>">
+								<?php echo utf8_decode($comment["comment"]);?>
+							</span>
 						</p>
 					</div>
 				<?php } ?>
@@ -71,9 +77,11 @@
 		
 		<!-- Formulario de comentarios -->
 		<?php if($user and is_array($user)) { ?>
-			<form method="POST" action="">
+			<form method="POST" action="" id="form-comment">
+				<div id="reply-to"></div>
 				<input type="text"   id="post-comment" name="comment" value="" onKeyPress="return checkSubmit(event)"/>
 				<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
+				<input type="hidden" id="post-parent-id" name="post-parent-id" value="0"/>
 				<input type="button" id="send-comment" name="send-comment" value="comentar" />
 			</form>
 		<?php } else { ?>
@@ -92,21 +100,31 @@
 		}
 
 		$(document).ready( function () {
+			$(".reply-comment").click( function () {
+				id = $(this).attr("value");
+				console.log(id);
+				div = '<p>reply to: ' + $(".user-comment-" + id).text() + "</p>";
+				$("#reply-to").html(div);
+				$("#post-parent-id").val(id);
+				return false;
+			});
+			
 			$(".like-post").click( function () {
 				id = $(this).attr("value");
 				like_post(id);
 			});
 			
 			$("#send-comment").click( function () {
-				slug    = $("#post-slug").val();
-				comment = $("#post-comment").val();
+				slug      = $("#post-slug").val();
+				comment   = $("#post-comment").val();
+				parent_id = $("#post-parent-id").val();
 				
-				comment_post(slug, comment);
+				comment_post(slug, comment, parent_id);
 			});
 		});
 		
-		function comment_post(vslug, vcomment) {
-			$.post("/reto/" + slug, { slug: vslug, comment: vcomment })
+		function comment_post(vslug, vcomment, vparent_id) {
+			$.post("/reto/" + slug, { slug: vslug, comment: vcomment, parent_id: vparent_id })
 			.done(function(data) {
 				if(data == "true") {
 					html = '<div class="comment"><p><span>';

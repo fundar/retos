@@ -182,14 +182,14 @@ class Default_Model extends ZP_Model {
 	}
 	
 	/*comments*/
-	public function setComment($user_id, $slug, $comment) {
+	public function setComment($user_id, $slug, $comment, $parent_id) {
 		$post_id = $this->getPostIDBySlug($slug);
 		
 		if(!$post_id) {
 			return false;
 		}
-		$fields  = "post_id, user_id, comment";
-		$values  = $post_id . "," . $user_id . ",'" . $comment . "'";
+		$fields  = "post_id, user_id, comment, parent_id";
+		$values  = $post_id . "," . $user_id . ",'" . $comment . "'," . $parent_id;
 		
 		$query  = "insert into comments (" . $fields .") values (" . $values . ")";
 		$data   = $this->Db->query($query);
