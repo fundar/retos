@@ -62,7 +62,9 @@
 								</a>
 							</span>: 
 							
-							<a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
+							<?php if($user and is_array($user)) { ?>
+								<!-- <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a> -->
+							<?php } ?>
 							
 							<br/>
 							<span class="comment-<?php echo $comment["comment_id"];?>">
