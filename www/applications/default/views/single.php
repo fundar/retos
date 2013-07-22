@@ -69,8 +69,6 @@
 						</p>
 					</div>
 				<?php } ?>
-			<?php } else { ?>
-				<p>Se el primero en comentar</p>
 			<?php } ?>
 		</div>
 		
