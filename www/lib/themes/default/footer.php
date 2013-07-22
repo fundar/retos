@@ -45,9 +45,13 @@
 		</div>
 		<div class="small-3 columns">
 		<p class="redes correo">Si prefieres escrbenos a:<br>
-		<span><a <a href="mailto:contacto@opendata.mx">contacto@opendata.mx</a></span></p>
+		<span><a href="mailto:contacto@opendata.mx">contacto@opendata.mx</a></span></p>
 		</div>
-			 <div class="small-3 columns"><img class="logo-conectaDF" src="<?php echo $this->themePath; ?>/img/ConectaDF_logo-pie.png"></div>
+			<div class="small-3 columns">
+				<a href="/" title="Conectadf.mx">
+					<img class="logo-conectaDF" src="<?php echo $this->themePath; ?>/img/ConectaDF_logo-pie.png">
+				</a>
+			</div>
 		</div>
 		<hr />
 		<div class="row">
