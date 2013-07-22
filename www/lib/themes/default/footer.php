@@ -60,8 +60,8 @@
 		</div>
 		<div class="large-6 columns">
 		  <ul class="inline-list right code">
-			<li><a  href="#">Coded by FundarLabs</a></li>
-			<li><a  href="#">Designed by</a></li>
+			<li><a  href="http://fundar.org.mx" title="Fundar">Coded by FundarLabs</a></li>
+			<li><a  href="http://akora.mx" title="Akora">Designed by Akora</a></li>
 
 		  </ul>
 		</div>
