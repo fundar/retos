@@ -3,7 +3,7 @@
 	
 	<div class="row">
 		<div class="row">
-			<div class="large-1 columns "><img class="mas" src="img/mas-quote.jpg"></div>
+			<div class="large-1 columns "><img class="mas" src="<?php echo $this->themePath; ?>/img/mas-quote.jpg"></div>
 			<div class="large-11 columns">
 				<blockquote>
 					<p><strong>Introducción</strong></p>
@@ -32,7 +32,7 @@
 	</div>		
 	<div class="large-12 columns">
 		<div class="row">
-			 <div class="small-11 small-centered columns"><img src="img/destacado.jpg" style="margin: 50px auto 30px;"></div>
+			 <div class="small-11 small-centered columns"><img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;"></div>
 	        </div>
 			<p>
 			Mauris nisi urna, sodales a bibendum eget, suscipit ac turpis. Vivamus diam tellus, consectetur at dolor non, varius ultricies purus. Etiam varius nulla vitae lorem pulvinar sodales. Vivamus magna mi, dignissim fringilla urna vitae, fringilla pretium lectus. Aliquam pretium orci orci, at iaculis augue egestas ultricies. Pellentesque in massa quis massa consectetur varius. Nulla imperdiet tincidunt mi. Quisque vehicula venenatis suscipit. Suspendisse potenti. Nullam cursus dapibus eros quis malesuada. Praesent non eros massa.
