@@ -5,7 +5,7 @@
  
      
                 <div class="large-12 columns">
-	                <a  href="http://www.setravi.df.gob.mx"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
+	                <a target="_blank" href="http://www.setravi.df.gob.mx"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
 		</div>
 		<div class="row">
 			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br>
@@ -13,14 +13,14 @@
 			</div>
 			
 			<div class="large-6 columns colaboradores bordo">En alianza con:<br>
-				<a href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
-				<a href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
-				<a href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
-				<a href="http://uc.edu.mx/" style="display: none;"><img src="<?php echo $this->themePath; ?>/img/uc.jpg"></a>
+				<a target="_blank" href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
+				<a target="_blank" href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
+				<a target="_blank" href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
+				<a target="_blank" href="http://uc.edu.mx/" style="display: none;"><img src="<?php echo $this->themePath; ?>/img/uc.jpg"></a>
 			</div>
 			
 			<div class="large-3 columns colaboradores">Un evento de:<br>
-				<a href="http://opendata.mx"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a>
+				<a target="_blank" href="http://opendata.mx"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a>
 			</div>
 		</div>
          
@@ -37,11 +37,11 @@
 		  <div class="small-3 columns">
 
 		<p class="redes fb">&Uacute;nete a nuestra comunidad:<br>
-		<a href="https://www.facebook.com/groups/opendatamx">opendatamx</a></p>
+		<a href="https://www.facebook.com/groups/opendatamx" target="_blank">opendatamx</a></p>
 		</div>
 		<div class="small-3 columns">
 		<p class="redes tw">S&iacute;guenos en:<br>
-		<a href="http://twitter.com/opendatamx">twitter.com/opendatamx</a></p>
+		<a href="http://twitter.com/opendatamx" target="_blank">twitter.com/opendatamx</a></p>
 		</div>
 		<div class="small-3 columns">
 		<p class="redes correo">Si prefieres escrbenos a:<br>
