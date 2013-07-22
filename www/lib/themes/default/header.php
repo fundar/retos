@@ -21,17 +21,17 @@
 				<div class="large-12 columns">
 					<ul class="inline-list right">
 						<li>
-							<a class="hashtag" href="https://twitter.com/search?q=%23ConectaDF&src=typd">#ConectaDF</a>
+							<a target="_blank" class="hashtag" href="https://twitter.com/search?q=%23ConectaDF&src=typd">#ConectaDF</a>
 						</li>
 						
 						<li>
-							<a href="http://twitter.com/opendatamx" title="OpendataMX Twitter">
+							<a target="_blank" href="http://twitter.com/opendatamx" title="OpendataMX Twitter">
 								<img src="<?php echo $this->themePath; ?>/img/twitter.jpg">
 							</a>
 						</li>
 						
 						<li>
-							<a href="https://www.facebook.com/groups/opendatamx">
+							<a target="_blank" href="https://www.facebook.com/groups/opendatamx">
 								<img src="<?php echo $this->themePath; ?>/img/facebook.jpg">
 							</a>
 						</li>
