@@ -1,6 +1,6 @@
 <?php if(is_array($posts)) { ?>
 	<div class="large-12 columns">
-		<h3>Ideas</h3>	
+		<h3>Retos</h3>	
 		
 		<div class="row">
 			<?php foreach($posts as $post) { ?>
