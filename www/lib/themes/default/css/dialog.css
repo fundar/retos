@@ -8,4 +8,5 @@
     z-index: 10;
 }
 
-#dialog a { float:left; margin-top:6px; }
+#dialog span { float:left; color:#c0c0c0; margin-top:3px; margin-bottom:6px; }
+#dialog a { float:right; margin-top:6px; }
