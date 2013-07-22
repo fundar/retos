@@ -15,12 +15,12 @@
                 <div class="small-11 small-centered columns top-single"> 
 			        <div class="row top-single">
 					  <div class="large-7 columns ilustracion">
-						<img  src="img/reto-post.jpg">
+						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>">
 					  </div>
-                                          <div class="large-5 columns panel-retos parrafo">
+                      <div class="large-5 columns panel-retos parrafo">
 						<div class="panel callout stats  reto">
 							<ul class="social-stats">
-							<li><p class="like"><?php echo $post["votes"];?></p></li>
+							<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
 							<li><p class="opinion"><?php echo $post["votes"];?> Comentarios</p></li>
 							</ul>			
 			                        </div>
@@ -45,20 +45,7 @@
 				</p>	
 			</div>
 		</div>
-	</div><!-- contenido sepués de cita -->
-	
-	<div class="post">
-		<p><img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" alt="<?php echo $post["title"];?>"></p>
-		<p class="title"><?php echo utf8_decode($post["title"]);?></p>
-		<p class="abstract"><?php echo utf8_decode($post["abstract"]);?></p>
-		<p class="descr"><?php echo utf8_decode($post["descr"]);?></p>
-		<p class="descr">Categoria: <?php echo utf8_decode($post["category"]);?></p>
-		<p>
-			<span class="like-post" value="<?php echo $post["post_id"];?>">Like</span>
-			&nbsp;<span class="votes"><?php echo $post["votes"];?></span>
-		</p>
-	</div>
-	
+	</div><!-- contenido sepués de cita -->	
 	
 	<!-- Comentarios -->
 	<p>Comentarios</p>
