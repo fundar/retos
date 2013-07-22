@@ -111,7 +111,7 @@
 			$(".reply-comment").click( function () {
 				id = $(this).attr("value");
 				console.log(id);
-				div = '<p>reply to: ' + $(".user-comment-" + id).text() + "</p>";
+				div = '<p>Contestar a: ' + $(".user-comment-" + id).text() + "</p>";
 				$("#reply-to").html(div);
 				$("#post-parent-id").val(id);
 				$("#post-comment").focus();
