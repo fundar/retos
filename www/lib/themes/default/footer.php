@@ -67,7 +67,7 @@
 
 	<script type="text/javascript">
 		$('#open-ingreso').click(function() {
-			$('#dialog').toogle();
+			$('#dialog').toggle();
 		});
 	</script>
  
