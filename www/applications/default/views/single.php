@@ -150,7 +150,7 @@
 					if(vparent_id == 0) {
 						$('#comments').append(html);
 					} else {
-						$(html).insertAfter('#coment_id_' + vparent_id);
+						$(html).insertAfter('.coment_id_' + vparent_id);
 					}
 					
 					
