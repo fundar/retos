@@ -38,10 +38,10 @@
 		</div>
 		<div class="large-7 columns">
 		<ul class="button-group right">
-		<li><a href="#" class="button">Home</a></li>
+		<li><a href="/" class="button">Home</a></li>
 		<li><a href="#" class="button">Convocatoria</a></li>
 		<li><a href="#" class="button">Sube tu idea</a></li>
-		<li><a href="#" class="button">Preguntas frecuentes</a></li>
+		<li><a href="/faqs" class="button">Preguntas frecuentes</a></li>
 		</ul>
 		</div>
 		</div>
@@ -50,7 +50,7 @@
 		<!-- End Header and Nav -->
 		  
 		  <!-- Destacado -->
-		 <?php if(!segment(1)) { ?>
+		 <?php if(!segment(0)) { ?>
 			<div class="row">
 			<div class="large-12 columns">
 				<img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;">
