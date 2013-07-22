@@ -37,7 +37,13 @@
 						</li>
 						
 						<li class="ingreso">
-							<a href="#" id="open-ingreso"title="ingresar">Ingresar</a>
+							<?php if(isset($user) and is_array($user)) { ?>
+								<img src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" />
+								<?php echo $user[0]["name"];?> - 
+								<a href="/logout" title="logout">Salir</a>
+							<?php } else { ?>
+								<a href="#" id="open-ingreso"title="ingresar">Ingresar</a>
+							<?php } ?>
 						</li>
 					</ul>
 					

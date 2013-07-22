@@ -187,12 +187,14 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function faqs() {
+		$vars["user"] = $this->isUser();
 		$vars["view"] = $this->view("faqs", true);
 		
 		$this->render("content", $vars);
 	}
 	
 	public function convocatoria() {
+		$vars["user"] = $this->isUser();
 		$vars["view"] = $this->view("convocatoria", true);
 		
 		$this->render("content", $vars);	
