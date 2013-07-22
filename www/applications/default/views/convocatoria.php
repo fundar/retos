@@ -18,7 +18,7 @@
 						</a> de <a href="http://es.wikipedia.org/wiki/Datos_abiertos">datos abiertos</a> para generar
 						 información y conocimiento acerca de las problemáticas que afectan a la ciudadanía, la  
 						<a href="http://www.setravi.df.gob.mx/index.jsp">
-							Secretaría de Transporte y Vialidad del Gobierno del Distrito Federal
+							Secretaría de Transportes y Vialidad del Gobierno del Distrito Federal
 						</a>, 
 						<a href="http://fundar.org.mx/">Fundar, Centro de Análisis e Investigación</a>, 
 						<a href="http://mexico.itdp.org/">El Instituto de Políticas para el Transporte y el Desarrollo</a> y el 
