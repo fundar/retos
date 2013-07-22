@@ -76,7 +76,7 @@
 		<!-- Formulario de comentarios -->
 		<?php if($user and is_array($user)) { ?>
 			<form method="POST" action="">
-				<input type="text"   id="post-comment"      name="comment" value=""/>
+				<input type="text"   id="post-comment" name="comment" value="" onKeyPress="return checkSubmit(event)"/>
 				<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
 				<input type="button" id="send-comment" name="send-comment" value="comentar" />
 			</form>
@@ -88,6 +88,12 @@
 	
 	<!-- JS & Ajax -->
 	<script type="text/javascript">
+		function checkSubmit(e) {
+		   if(e && e.keyCode == 13) {
+			  document.forms[0].submit();
+		   }
+		}
+
 		$(document).ready( function () {
 			$(".like-post").click( function () {
 				id = $(this).attr("value");
