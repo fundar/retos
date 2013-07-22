@@ -114,6 +114,7 @@
 				div = '<p>reply to: ' + $(".user-comment-" + id).text() + "</p>";
 				$("#reply-to").html(div);
 				$("#post-parent-id").val(id);
+				$("#post-comment").focus();
 				return false;
 			});
 			
