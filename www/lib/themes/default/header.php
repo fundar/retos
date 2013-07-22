@@ -38,9 +38,7 @@
 						
 						<li class="ingreso">
 							<?php if(isset($user) and is_array($user)) { ?>
-								<img src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" />
-								<?php echo $user[0]["name"];?> - 
-								<a href="/logout" title="logout">Salir</a>
+								<a href="#" id="open-ingreso"title="ingresar">Bienvenido</a>
 							<?php } else { ?>
 								<a href="#" id="open-ingreso"title="ingresar">Ingresar</a>
 							<?php } ?>
@@ -48,15 +46,23 @@
 					</ul>
 					
 					<div id="dialog">
-						<span>Conecta con:</span>
+						<?php if(isset($user) and is_array($user)) { ?>
+							<span><?php echo $user[0]["name"];?></span>
 						
-						<a href="/auth/github" title="Sign in with GitHub">
-							<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
-						</a>
+							<img src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" />
+							
+							<a href="/logout" title="logout">logout</a>
+						<?php } else { ?>
+							<span>Conecta con:</span>
 						
-						<a href="/auth/twitter" title="Sign in with Twitter">
-							<img src="<?php echo $this->themePath; ?>/css/img/twitter-conecta.png">
-						</a>
+							<a href="/auth/github" title="Sign in with GitHub">
+								<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
+							</a>
+							
+							<a href="/auth/twitter" title="Sign in with Twitter">
+								<img src="<?php echo $this->themePath; ?>/css/img/twitter-conecta.png">
+							</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
