@@ -17,16 +17,30 @@
 	
 		<!-- Header and Nav -->
 		<div id="header">
-		  <div class="row">
-			<div class="large-12 columns">
-				
-			  <ul class="inline-list right">
-				<li><a href="http://twitter.com/opendatamx" title="OpendataMX Twitter"><img src="<?php echo $this->themePath; ?>/img/twitter.jpg"></a></li>
-				<li><a href="http://twitter.com/opendatamx"><img src="<?php echo $this->themePath; ?>/img/facebook.jpg"></a></li>
-			<li class="ingreso"><a href="#">Ingresar</a></li>
-			  </ul>
-				
-			</div>
+			<div class="row">
+				<div class="large-12 columns">
+					<ul class="inline-list right">
+						<li>
+							<a class="hashtag" href="https://twitter.com/search?q=%23ConectaDF&src=typd">#ConectaDF</a>
+						</li>
+						
+						<li>
+							<a href="http://twitter.com/opendatamx" title="OpendataMX Twitter">
+								<img src="<?php echo $this->themePath; ?>/img/twitter.jpg">
+							</a>
+						</li>
+						
+						<li>
+							<a href="http://twitter.com/opendatamx">
+								<img src="<?php echo $this->themePath; ?>/img/facebook.jpg">
+							</a>
+						</li>
+						
+						<li class="ingreso">
+							<a href="#">Ingresar</a>
+						</li>
+					 </ul>
+				</div>
 			</div>
 		</div> 
 		  
