@@ -67,7 +67,7 @@
 
 	<script type="text/javascript">
 		$('#open-ingreso').click(function() {
-			$('#myDialog').dialog('option', 'position', [40, 800]);
+			$('#dialog').dialog('option', 'position', [40, 800]);
 		});
 	</script>
  
