@@ -6,8 +6,12 @@
 			<div class="large-1 columns "><img class="mas" src="img/mas-quote.jpg"></div>
 			<div class="large-11 columns">
 				<blockquote>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus urna, consectetur id nibh eu, pulvinar accumsan sapien nullam non odio
-		                </blockquote>
+					<p><strong>Introducción</strong></p>
+					
+					<p>
+						En el contexto internacional del reconocimiento de la movilidad como un derecho humano, así como el creciente potencial del aprovechamiento de datos abiertos para generar información y conocimiento acerca de las problemáticas que afectan a la ciudadanía, la Secretaría de Transporte y Vialidad del Gobierno del Distrito Federal, Fundar, Centro de Análisis e Investigación, El Instituto de Políticas para el Transporte y el Desarrollo y el Laboratorio para la Ciudad convocan a la ciudadanía al reto de movilidad ConectaDF.
+					</p>
+		        </blockquote>
 			</div>
 						</div>
 
