@@ -24,7 +24,7 @@
 				
 				<br/>- ConectaDF es un reto abierto a todo público. Se podrá participar de manera individual o por equipos.
 				<br/>- Existen 4 categorías de participación:
-				<br/>Móvil. Aplicaciones para teléfonos celulares o tabletas.
+				<br/><br/>Móvil. Aplicaciones para teléfonos celulares o tabletas.
 				<br/>Web. Páginas y aplicaciones para navegadores.
 				<br/>Hardware. Proyectos que involucren sensores electrónicos de especificación abierta (arduino).
 				<br/>Híbrido. Alguna combinación de las anteriores categorías
