@@ -5,7 +5,7 @@
 			<div class="large-12 columns ">	
 						
 				<p class="cita">
-					Sí tienes más preguntas escríbenos a contacto@opendata.mx
+					Sí tienes más preguntas escríbenos a <a href="mailto:contacto@opendata.mx">contacto@opendata.mx</a>
 				</p>
 			
 				<div class="linea-quote"></div>
