@@ -8,4 +8,4 @@
     z-index: 10;
 }
 
-#dialog a { margin-bottom:10px; }
+#dialog a { float:left; margin-top:6px; }
