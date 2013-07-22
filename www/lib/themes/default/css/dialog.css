@@ -22,4 +22,5 @@
   z-index:10;
 }
 
+#dialog img { width:30px; height:30px;}
 .like-post { cursor:pointer; }
