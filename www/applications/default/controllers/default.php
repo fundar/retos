@@ -186,6 +186,12 @@ class Default_Controller extends ZP_Controller {
 		}
 	}
 	
+	public function faqs() {
+		$vars["view"] = $this->view("faqs", true);
+		
+		$this->render("content", $vars);
+	}
+	
 	/*Validate user & logout*/
 	public function isUser($admin = false) {
 		if(isset($_SESSION['access_token'])) {

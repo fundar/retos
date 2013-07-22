@@ -1,63 +1,38 @@
-<?php if(is_array($posts)) { ?>
-	<div class="large-12 columns">
-		<h3>Ideas</h3>	
-		
+<div class="large-12 columns top-single"> <!-- Contenido-->  
+	        <h3>Preguntas Frecuentes</h3>
 		<div class="row">
-			<?php $i=1;?>
-			<?php foreach($posts as $post) { ?>
-				<?php if($i == 5) { ?>
-					<?php $i=0; ?>
-					<div class="row top">
-				<?php } ?>
-				
-				<!-- Retos th. Fila 1 -->  
-				<div class="large-3 small-6 columns">
-					<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
-						<img src="<?php echo get("webURL") . '/' . $post["image_url"];?>" title="<?php echo utf8_decode($post["title"]);?>"/>
-					</a>
-					
-					<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
-						<h6 class="panel">
-							<?php echo utf8_decode($post["title"]);?>
-						</h6>
-					</a>
-					
-					<div class="panel callout stats  reto">
-						<ul class="social-stats">
-							<li>
-								<p class="like like-post vote<?php echo $post["post_id"];?>" value="<?php echo $post["post_id"];?>">
-									<?php echo $post["votes"];?>
-								</p>
-							</li>
-							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
-						</ul>			
-					</div>
-				</div>
-				
-				<?php if($i==0) { ?>
-					</div>
-				<?php } ?>
-				
-				<?php $i++; ?>
-			<?php } ?>
+			<div class="large-12 columns ">				
+			<p class="cita">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacus urna, consectetur id nibh eu, pulvinar accumsan sapien nullam non odio
+			</p>
+		        <div class="linea-quote"></div>
+			</div>
 		</div>
-	</div>
-	
-	<script type="text/javascript">
-		$(document).ready( function () {
-			$(".like-post").click( function () {
-				id = $(this).attr("value");
-				
-				$.ajax({
-					url: "/like/" + id
-				}).done(function (data) {
-					if(data == "false") {
-						
-					} else {
-						$(".vote" + id).text(data);
-					}
-				});
-			});
-		});
-	</script>
-<?php } ?>
+		<div class="row">
+			<!-- preguntas-->  
+			<div class="large-12 columns ">
+				<p class="question">&iquest;Quisque fermentum neque libero, in pulvinar neque adipiscing vel? 					
+				</p>
+				<p>
+Curabitur viverra, tellus a dapibus tristique, tortor est bibendum lacus, a sagittis tortor tortor sit amet odio. Nulla lorem tellus, porttitor sit amet sodales nec, tincidunt nec enim. Maecenas dapibus nibh tortor, in malesuada odio fermentum vel. Aliquam ac tincidunt purus, vel auctor orci. Praesent mollis, erat quis sodales aliquet, dui eros rhoncus enim, quis ullamcorper velit ipsum vitae tellus. Nulla semper metus et dignissim auctor. Vivamus in odio a nulla hendrerit sagittis ut sed leo.
+				</p>
+							<div class="linea-r"></div>
+			</div>
+			<div class="large-12 columns ">
+				<p class="question">&iquest;Quisque fermentum neque libero, in pulvinar neque adipiscing vel. Nullam pretium at tortor vel fermentum? 					
+				</p>
+				<p>
+Curabitur viverra, tellus a dapibus tristique, tortor est bibendum lacus, a sagittis tortor tortor sit amet odio. Nulla lorem tellus, porttitor sit amet sodales nec, tincidunt nec enim. Maecenas dapibus nibh tortor, in malesuada odio fermentum vel. Aliquam ac tincidunt purus, vel auctor orci. Praesent mollis, erat quis sodales aliquet, dui eros rhoncus enim, quis ullamcorper velit ipsum vitae tellus. Nulla semper metus et dignissim auctor. Vivamus in odio a nulla hendrerit sagittis ut sed leo.
+				</p>
+							<div class="linea-r"></div>
+			</div>
+			<div class="large-12 columns ">
+				<p class="question">&iquest;Quisque fermentum neque libero, in pulvinar neque adipiscing vel. Nullam pretium at tortor vel fermentum? 					
+				</p>
+				<p>
+Curabitur viverra, tellus a dapibus tristique, tortor est bibendum lacus, a sagittis tortor tortor sit amet odio. Nulla lorem tellus, porttitor sit amet sodales nec, tincidunt nec enim. Maecenas dapibus nibh tortor, in malesuada odio fermentum vel. Aliquam ac tincidunt purus, vel auctor orci. Praesent mollis, erat quis sodales aliquet, dui eros rhoncus enim, quis ullamcorper velit ipsum vitae tellus. Nulla semper metus et dignissim auctor. Vivamus in odio a nulla hendrerit sagittis ut sed leo.
+				</p>
+							<div class="linea-r"></div>
+			</div>				
+		</div>											
+</div>
