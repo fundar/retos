@@ -68,7 +68,7 @@
 							
 							<?php if($user and is_array($user)) { ?>
 								<?php if($comment["parent_id"] == 0) { ?>
-									: <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">reply</a>
+									: <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">contestar</a>
 								<?php } ?>
 							<?php } ?>
 							
@@ -137,7 +137,7 @@
 				if(data == "true") {
 					html = '<div class="comment"><p><span>';
 					html += '<a href="<?php echo $user[0]["url"];?>" title="<?php echo utf8_decode($user[0]["name"]);?>">';
-					html += '<?php echo utf8_decode($user[0]["name"]);?></a></span>:<br/>';
+					html += '<?php echo utf8_decode($user[0]["name"]);?></a></span><br/>';
 					html += vcomment + '</p></div>';
 					
 					$("#post-comment").val("");
