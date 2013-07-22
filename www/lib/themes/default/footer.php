@@ -9,7 +9,7 @@
 		</div>
 		<div class="row">
 			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br>
-				<a href="http://www.omidyar.com"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a>
+				<a target="_blank" href="http://www.omidyar.com"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a>
 			</div>
 			
 			<div class="large-6 columns colaboradores bordo">En alianza con:<br>
