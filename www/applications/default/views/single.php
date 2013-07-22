@@ -41,6 +41,8 @@
 					<?php echo utf8_decode($post["abstract"]);?>
 				</p>
 				
+				<p class="detalle"><?php echo utf8_decode($post["category"]);?></p>
+				
 				<p class="detalle">DETALLE</p>
 				
 				<p>
