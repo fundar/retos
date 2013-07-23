@@ -75,10 +75,10 @@ class Default_Controller extends ZP_Controller {
 				$user = $this->Persona_Controller->getUser();
 				
 				if($user) {
+					
+				} else {
 					echo json_encode(array('status'=>'failure', 'reason'=> "Error"));
 					die();
-				} else {
-					header('Location:' . get("webURL"));
 				}
 			} else {
 				header('Location:' . get("webURL"));
