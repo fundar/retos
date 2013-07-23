@@ -103,11 +103,11 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
-	public function getAllPost() {
+	public function getAllPost($order = "post_id") {
 		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
 		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts ";
 		$query .= "join categories on posts.category_id=categories.category_id ";
-		$query .= "where posts.status=true order by post_id desc";
+		$query .= "where posts.status=true order by " . $order . " desc";
 		$data   = $this->Db->query($query);
 		
 		return $data;

@@ -1,6 +1,13 @@
 <?php if(is_array($posts)) { ?>
 	<div class="large-12 columns">
-		<h3>Retos</h3>	
+		<a name="retos"></a>
+		<h3>Retos</h3>
+		
+		<p>
+			Ordenar por: 
+			<a href="/ordenar/comentarios/#retos" title="Ordenar por comentarios"<?php echo (segment(0) and segment(1) == "comentarios") ? ' class="bold"' : ""; ?>>comentarios</a> | 
+			<a href="/ordenar/votos/#retos" title="Ordenar por votos"<?php echo (segment(0) and segment(1) == "votos") ? ' class="bold"' : ""; ?>>votos</a>
+		</p>
 		
 		<div class="row">
 			<?php foreach($posts as $post) { ?>

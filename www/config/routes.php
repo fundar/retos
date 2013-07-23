@@ -69,5 +69,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "convocatoria",
 		"params"	  => array()
+	),
+	9 => array(
+		"pattern"	  => "/^ordenar/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "order",
+		"params"	  => array(segment(1))
 	)
 );

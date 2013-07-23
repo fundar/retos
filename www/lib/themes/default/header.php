@@ -123,7 +123,7 @@
 		<div class="large-7 columns">
 		<ul class="button-group right">
 			
-		<li><a href="/" class="button<?php echo (!segment(0)) ? " active-btn" : "";?>">Retos</a></li>
+		<li><a href="/" class="button<?php echo (!segment(0) or segment(0) == "ordenar") ? " active-btn" : "";?>">Retos</a></li>
 		<li><a href="/convocatoria" class="button<?php echo (segment(0) == "convocatoria") ? " active-btn" : "";?>">Convocatoria</a></li>
 		<!-- <li><a href="/add" class="button<?php echo (segment(0) == "add") ? " active-btn" : "";?>">Sube tu idea</a></li> -->
 		<li><a href="/faqs" class="button<?php echo (segment(0) == "faqs") ? " active-btn" : "";?>">Preguntas frecuentes</a></li>
@@ -135,7 +135,7 @@
 		<!-- End Header and Nav -->
 		  
 		  <!-- Destacado -->
-		 <?php if(!segment(0)) { ?>
+		 <?php if(!segment(0) or segment(0) == "ordenar") { ?>
 			<div class="row">
 			<div class="large-12 columns">
 				<img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;">

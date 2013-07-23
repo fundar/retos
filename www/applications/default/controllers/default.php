@@ -29,6 +29,22 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
+	public function order($type = false) {
+		if($type == "comentarios") {
+			$posts = $this->Default_Model->getAllPost("count");
+		} elseif($type == "votos") {
+			$posts = $this->Default_Model->getAllPost("votes");
+		} else {
+			header('Location:' . get("webURL"));
+		}
+		
+		$vars["user"]  = $this->isUser();
+		$vars["posts"] = $posts;
+		$vars["view"]  = $this->view("home", true);
+		
+		$this->render("content", $vars);
+	}
+	
 	public function auth($type = false) {
 		if(isset($_SESSION['access_token'])) {
 			header('Location:' . get("webURL") . "/callback/" . $type);
