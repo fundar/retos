@@ -95,18 +95,18 @@
 							
 							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
-							<span>Conecta con:</span>
+							<span>Conecta:</span>
 						
 							<a href="/auth/github" title="Sign in with GitHub">
-								<img src="<?php echo $this->themePath; ?>/css/img/github-conecta.png">
+								<img src="<?php echo $this->themePath; ?>/css/img/conecta-github-btn.png">
 							</a>
 							
 							<a href="/auth/twitter" title="Sign in with Twitter">
-								<img src="<?php echo $this->themePath; ?>/css/img/twitter-conecta.png">
+								<img src="<?php echo $this->themePath; ?>/css/img/conecta-twitter-btn.png">
 							</a>
 							
 							<a href="#" title="sign in with browser ID" id="login">
-								<img src="https://browserid.org/i/sign_in_green.png" alt="sign in with browser ID">
+								<img src="<?php echo $this->themePath; ?>/css/img/conecta-mozilla-btn.png" alt="sign in with browser ID">
 							</a>
 						<?php } ?>
 					</div>
