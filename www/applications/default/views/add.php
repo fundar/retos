@@ -1,15 +1,18 @@
 <form method="POST" enctype='multipart/form-data' action="">
 	<?php if(isset($error)) { ?>
-		<p>Error en algo!</p>
+		<p>Ocurrio un error!</p>
 	<?php } ?>
+	
+	<br />
 	
 	T&iacute;tulo: <input type="text" name="title" value="" /><br/>
 	
 	Abstract: <textarea name="abstract"></textarea><br/>
 	Descripci&oacute;n: <textarea name="descr"></textarea><br/>
 	
-	Imagen: <input type="file" name="file" /><br/>
+	Imagen (1MB Máximo - 473x335 píxeles): <input type="file" name="file" /><br/>
 	
+	Categoría: 
 	<select name="category_id">
 		<?php foreach($categories as $category) { ?>
 			<option value="<?php echo $category["category_id"];?>">

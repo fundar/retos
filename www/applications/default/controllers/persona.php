@@ -23,7 +23,7 @@ class Persona_Controller extends ZP_Controller {
 			$user["name"]      = $array[0];
 			$user["type"]      = "persona";
 			$user["image_url"] = "";
-			$user["url"]       = "";
+			$user["url"]       = "#";
 			$user["id_user"]   = $email;
 			
 			$_SESSION['access_token'] = $email;
