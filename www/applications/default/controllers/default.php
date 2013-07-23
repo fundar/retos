@@ -16,6 +16,7 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->Github_Controller  = $this->controller("Github_Controller");
 		$this->Twitter_Controller = $this->controller("Twitter_Controller");
+		$this->Persona_Controller = $this->controller("Persona_Controller");
 		
 		$this->Templates->theme();
 	}
@@ -48,6 +49,8 @@ class Default_Controller extends ZP_Controller {
 				$user = $this->Github_Controller->getUser();
 			} elseif($type == "twitter") {
 				$user = $this->Twitter_Controller->getUser();
+			} elseif($type == "persona") {
+				$user = $this->Persona_Controller->getUser();
 			} else {
 				header('Location:' . get("webURL"));
 			}
@@ -68,7 +71,15 @@ class Default_Controller extends ZP_Controller {
 				} else {
 					header('Location:' . get("webURL"));
 				}
+			} elseif($type == "persona") {
+				$user = $this->Persona_Controller->getUser();
 				
+				if($user) {
+					echo json_encode(array('status'=>'failure', 'reason'=> "Error"));
+					die();
+				} else {
+					header('Location:' . get("webURL"));
+				}
 			} else {
 				header('Location:' . get("webURL"));
 			}	
@@ -85,7 +96,11 @@ class Default_Controller extends ZP_Controller {
 			$_SESSION['user_id'] = $user[0]["user_id"];
 		}
 		
-		header('Location:' . get("webURL"));
+		if($type == "persona") {
+			echo json_encode(array('status'=>'okay', 'email' => $user["email"]));
+		} else {
+			header('Location:' . get("webURL"));
+		}
 	}
 	
 	

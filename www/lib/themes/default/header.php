@@ -13,6 +13,47 @@
 		
 		<script src="<?php echo $this->themePath; ?>/js/vendor/custom.modernizr.js"></script>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		
+		<!-- Mozilla Persona -->
+		<script src="http://www.google.com/jsapi?key=ABQIAAAA1XbMiDxx_BTCY2_FkPh06RRaGTYH6UMl8mADNa0YKuWNNa8VNxQEerTAUcfkyrr6OwBovxn7TDAH5Q"></script>
+		<script type="text/javascript">google.load("mootools", "1.4");</script>
+		<script src="https://browserid.org/include.js"></script>
+		<script src="<?php echo $this->themePath; ?>/js/browserID.js"></script>
+		<script type="text/javascript">
+			window.addEvent('domready', function() {
+				$('#login').click(function() {
+					navigator.id.getVerifiedEmail(function(assertion) {
+						if(assertion) {
+							//got an assertion, now send it up to the server for verification
+							verify(assertion);
+						} else {
+							window.location = "<?php echo get("webURL");?>";
+						}
+					});
+				});
+			});
+
+			function verify(assertion) {
+				var browserid = new BrowserID(assertion, {
+					onComplete: function(response) {
+						//if the server successfully verifies the assertion we
+						//updating the UI by calling 'loggedIn()'
+						if(response.status == 'okay') {
+							window.location = "<?php echo get("webURL");?>";
+							//otherwise we handle the login failure
+						} else {
+							failure(response)
+						}    
+					}
+				})
+			}
+
+			function failure(f) {
+				//do stuff with failure
+				alert('Ocurrio un error');
+			}
+		</script>
+   
 	</head>
 	<body>
 	
@@ -62,6 +103,10 @@
 							
 							<a href="/auth/twitter" title="Sign in with Twitter">
 								<img src="<?php echo $this->themePath; ?>/css/img/twitter-conecta.png">
+							</a>
+							
+							<a href="#" title="sign in with browser ID" id="login">
+								<img src="https://browserid.org/i/sign_in_green.png" alt="sign in with browser ID">
 							</a>
 						<?php } ?>
 					</div>
