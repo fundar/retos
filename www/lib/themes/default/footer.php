@@ -2,31 +2,47 @@
 <!-- Footer -->
 <footer id="footer">
     <div class="row">
- 
-     
-                <div class="large-12 columns">
-	                <a target="_blank" href="http://www.setravi.df.gob.mx"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
+		<div class="large-12 columns">
+			<a target="_blank" href="http://www.setravi.df.gob.mx" title="Setravi">
+				<img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg">
+			</a>
 		</div>
+		
 		<div class="row">
 			<div class="large-6 columns colaboradores bordo">En alianza con:<br>
-				<a target="_blank" href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
-				<a target="_blank" href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
-				<a target="_blank" href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
-				<a target="_blank" href="http://datosabiertos.df.gob.mx/"><img src="<?php echo $this->themePath; ?>/img/datos-abiertos-df.jpg"></a>
-				<a target="_blank" href="http://uc.edu.mx/" style="display: none;"><img src="<?php echo $this->themePath; ?>/img/uc.jpg"></a>
+				<a target="_blank" href="http://mexico.itdp.org" title="ITDP México">
+					<img src="<?php echo $this->themePath; ?>/img/itdp.jpg">
+				</a>
+				
+				<a target="_blank" href="http://fundar.org.mx" title="Fundar, Centro de Análisis e Investigación">
+					<img src="<?php echo $this->themePath; ?>/img/fundar.jpg">
+				</a>
+				
+				<a target="_blank" href="http://www.labplc.mx" title="Laboratorio para la ciudad">
+					<img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg">
+				</a>
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				
+				<a target="_blank" href="http://datosabiertos.df.gob.mx/" title="Datos abiertos DF">
+					<img src="<?php echo $this->themePath; ?>/img/datos-abiertos-df.jpg">
+				</a>
+				
+				<a target="_blank" href="http://uc.edu.mx/" title="Universidad de la comunicación">
+					<img src="<?php echo $this->themePath; ?>/img/uc.jpg">
+				</a>
 			</div>
 			
 			<div class="large-6 columns colaboradores">Un evento de:<br>
-				<a target="_blank" href="http://opendata.mx"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a>
+				<a target="_blank" href="http://opendata.mx" title="OpenDataMX">
+					<img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg">
+				</a>
 			</div>
 		</div>
          
-        </div>
-
- 
-
-
+    </div>
 </footer>
+
 <footer id="footer2">
 	<div class="row">
 		<div class="large-12 columns">
