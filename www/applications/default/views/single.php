@@ -44,9 +44,9 @@
 				
 				<p class="detalle">DETALLE</p>
 				
-				<p>
+				<div class="descr">
 					<?php echo utf8_decode($post["descr"]);?>
-				</p>	
+				</div>	
 			</div>
 		</div>
 		
@@ -64,7 +64,7 @@
 					<?php } ?>
 						<p>
 							<span>
-								<a class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
+								<a target="_blank" class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
 									<?php echo utf8_decode($comment["name"]);?>
 								</a>
 							</span>
@@ -111,6 +111,8 @@
 		}
 
 		$(document).ready( function () {
+			$(".descr a").attr("target", "_blank");
+			
 			$(".reply-comment").click( function () {
 				id = $(this).attr("value");
 				console.log(id);
