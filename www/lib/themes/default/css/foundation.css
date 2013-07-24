@@ -172,7 +172,7 @@ select {
     color:#bbb;
 }
 .code {
-    font-size:11px;
+    font-size:11px !important;
     color:#6c6c70;
 }
 .logo-conectaDF {
@@ -183,7 +183,7 @@ select {
   margin-top:10px !important;
 }
 #footer2 {
-    background: url("img/shadow-bottom.jpg") repeat scroll 0 0 #FFFFFF !important;
+    background: url("img/shadow-bottom.jpg") repeat scroll 0 0 #FFFFFF;
     height:auto;
     width: 100%;
 }
@@ -194,12 +194,12 @@ select {
 .colaboradores {
     color: #737F86;
     font-size: 11px;
-    line-height: 32px;
+    line-height: 24px;
     text-align: center;
 }
 .bordo {
     border-right: 1px solid #CFCFCF;
-    height: 175px;
+    height: 105px;
 }
 .redes {
 
@@ -2919,9 +2919,13 @@ label.error {
   float:right;
 }
 .panel-retos{
-    background:#EDEDED;
     height:332px;
     padding-left: 0;
+}
+.el-texto{
+  background:#EDEDED;
+  border-top: 3px solid #EDEDED;
+  height:289px;
 }
 .detalle {
     border-bottom: 1px dotted #191919;
@@ -2970,6 +2974,7 @@ label.error {
 .bottom-retoth{
    margin-bottom:40px;
 }
+img.los-retos{width:100%;}
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
   width: 100%;
@@ -4251,7 +4256,7 @@ kbd {
     display: block;
     float: left;
     list-style: none outside none;
-    margin-left: 0.375em;
+    margin-left: 3.375em;
 }
 .inline-list > li > * {
     color: #BBBBBB;
@@ -4329,7 +4334,17 @@ ul.pagination {
     color: #7F7F7F;
     font-size: 0.8em;
     height: 34px;
-    padding: 0.4em 1.25em;
+}
+.callout2 {
+    background: none repeat scroll 0 0 #E0E0E0;
+    border-color: #E0E0E0;
+    border-style: solid;
+    border-width: 1px;
+    color: #7F7F7F;
+    font-size: 0.8em;
+    height: 43px;
+    padding: 6px;
+
 }
 .reto .social-stats{
     text-align:left;
@@ -4346,7 +4361,7 @@ ul.pagination {
     color:#7F7F7F;
     display: inline-block;
     font-size:11px;
-    padding: 3px 23px;
+    padding: 3px 21px;
     text-decoration: none;
 }
 
@@ -4360,6 +4375,11 @@ ul.pagination {
 .opinion {
     background: url("img/burb.png") no-repeat scroll 1px 0px transparent;
     text-indent: 4px;
+}
+li.vota-tw {
+    left: 53px;
+    position: relative;
+    top: 6px;
 }
 
 
@@ -4812,7 +4832,242 @@ a.th {
 @media only screen and (max-width: 767px) {
   .f-dropdown {
     max-width: 100%;
-    left: 0; } }
+    left: 0; }
+   img.los-retos{
+    width:100%;}
+    
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+}
+
+}
+/** thumbails retos**/
+@media only screen and (max-width: 58.75em) {
+.panel.callout {
+    height: 88px !important;}
+        .reto .social-stats li p {
+    border-right:none;
+    color: #7F7F7F;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 30px;
+    text-decoration: none;
+   }
+    .panel {
+    height: 90px !important;
+    padding: 0.45em 0.55em 0.9em 0.45em;
+   }
+
+}
+@media only screen and (max-width: 767px) {
+   .panel {
+    height: 90px !important;
+    padding: 0.45em 0.55em 0.9em 0.45em;
+   }  
+   .panel.callout {
+    height: 85px !important;}
+    .reto .social-stats li p {
+    border-right:none;
+    color: #7F7F7F;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 30px;
+    text-decoration: none;
+   }
+   
+}
+@media only screen and (max-width: 768px) {
+  .panel.callout {
+    height: 85px !important;}
+    .reto .social-stats li p {
+    border-right:none;
+    color: #7F7F7F;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 30px;
+    text-decoration: none;
+   }
+}
+
+/**single retos **/
+@media only screen and (max-width: 767px) {
+  .parrafo {
+    padding-left: 15px !important;
+    padding-right: 0;
+   }
+
+}
+
+@media only screen and (width: 768px) {
+  .parrafo {
+    padding-left:0 !important;
+    padding-right: 0;
+   }
+    li.vota-tw {
+    left: 24px !important;
+    position: relative;
+    top: 3px !important;
+   }
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+    height: 268px !important;}
+
+}
+
+@media only screen and (max-width: 58.75em) {
+.panel.callout {
+    height: 88px !important;}
+    .reto .social-stats li p {    
+    color: #7F7F7F;
+    display: inline-block;
+    font-size: 11px;
+    padding: 8px 20px;
+    text-decoration: none;
+   }
+   li.vota-tw {
+    left: 24px !important;
+    position: relative;
+    top: 3px !important;
+   }
+   .nombredelreto {
+    font-size: 20px !important;
+    line-height: 24px;
+    padding: 20px 22px 0 !important;
+   }
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+    height: 268px;
+   }
+   .elresumen {
+    padding: 0 22px;
+   }
+   li.vota-tw {
+    left: 271px !important;
+    position:relative;
+   }
+}
+@media only screen and (max-width: 320px) {
+  .panel-retos {
+    height: 100% !important;
+    padding-left: 0;
+   }
+    li.vota-tw {
+    left: 171px !important;
+    position:relative;
+   }
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+    height: 100% !important;
+   }
+}
+@media only screen and (max-width: 480px) {
+
+    li.vota-tw {
+    left: 15px !important;
+    position:relative;
+   }
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+
+   }
+}
+
+@media only screen and (min-width: 440px) {
+
+    li.vota-tw {
+    left: 15px !important;
+    position:relative;
+   }
+   
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+
+   }
+}
+
+@media only screen and (max-width: 280px) {
+
+    .callout2 {
+    background: none repeat scroll 0 0 #E0E0E0;
+    border-color: #E0E0E0;
+    border-style: solid;
+    border-width: 1px;
+    color: #7F7F7F;
+    font-size: 0.8em;
+    height: 130px !important;
+    padding: 6px;
+    }    
+    li.vota-tw {
+    left: 0px !important;
+    position:relative;
+   }
+   .el-texto {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-top: 3px solid #EDEDED;
+    height: 100%;
+    padding-bottom:17px;
+    
+   }
+}
+
+/** footer2 **/
+@media only screen and (max-width: 480px) {
+  #footer2 {
+      background:none !important;
+      height: auto;
+      width: 100%;
+  }
+  .small-3 {
+    float:left;
+    width: 100% !important;
+   }
+}
+@media only screen and (max-width: 480px) {
+    .small-3 {
+    float:left;
+    width: 100% !important;
+   }
+   #footer2 {
+    background-image:none ;
+   }
+  
+   .logo-conectaDF {
+    display: inherit;
+    float: none;
+    margin: 20px auto;}
+    
+}
+/** footer1 **/
+@media only screen and (max-width: 480px) {
+  .bordo {
+    border-right: 1px solid #CFCFCF;
+    height: 183px !important;
+   }
+
+}
+
+@media only screen and (min-width: 767px) {
+  .bordo {
+    border-right: 1px solid #CFCFCF;
+    height: 151px !important;
+   }
+
+   #footer2{
+    background-image:none !important;
+   }
+ 
+}
+
+
+
 /* Foundation Dropdowns */
 .f-dropdown {
   position: absolute;
@@ -4899,3 +5154,4 @@ a.th {
     max-width: 500px; }
   .f-dropdown.large {
     max-width: 800px; }
+    
