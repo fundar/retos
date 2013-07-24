@@ -76,5 +76,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "order",
 		"params"	  => array(segment(1))
+	),
+	10 => array(
+		"pattern"	  => "/^mis-retos/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "myPosts",
+		"params"	  => array()
 	)
 );

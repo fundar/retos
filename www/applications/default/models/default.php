@@ -62,7 +62,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	/*Posts*/
-	public function addPost($user) {	
+	public function addPost($user) {
 		$data["user_id"]     = $user[0]["user_id"];
 		$data["category_id"] = $_POST["category_id"];
 		$data["title"]       = $_POST["title"];
@@ -95,6 +95,45 @@ class Default_Model extends ZP_Model {
 		return false;
 	}
 	
+	public function editPost($user) {
+		$post_id 			 = $_POST["post_id"];
+		$data["category_id"] = $_POST["category_id"];
+		$data["title"]       = $_POST["title"];
+		$data["abstract"]    = $_POST["abstract"];
+		$data["descr"]       = $_POST["descr"];
+		
+		if($data["title"] == "") {
+			return array("error" => true);
+		} elseif($data["abstract"] == "") {
+			return array("error" => true);
+		} elseif($data["descr"] == "") {
+			return array("error" => true);
+		} elseif($data["category_id"] == "") {
+			return array("error" => true);
+		} elseif($_POST["post_id"] == "") {
+			return array("error" => true);
+		}
+		
+		$data["slug"] = slug($data["title"]);
+		
+		if($_FILES["file"]["name"] == "") {
+			
+		} else {
+			$data["image_url"]   = $this->upload();
+			
+			if(!$data["image_url"]) {
+				return array("error" => true);
+			}
+		}
+		
+		$result = $this->Db->update("posts", $data, "post_id=" . $post_id);
+		
+		if($result) {
+			return $this->getPost($post_id);
+		}
+		
+		return false;
+	}
 	
 	public function getPost($post_id) {
 		$query  = "select * from posts where post_id=" . $post_id . " and status=true";
@@ -118,6 +157,29 @@ class Default_Model extends ZP_Model {
 		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts join categories on posts.category_id=categories.category_id ";
 		$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
 		$data   = $this->Db->query($query);
+		
+		if($data and is_array($data)) {
+			return $data[0];
+		}
+		
+		return false;
+	}
+	
+	public function getEditPostBySlug($slug, $user) {
+		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
+		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts join categories on posts.category_id=categories.category_id ";
+		
+		if(is_array($user)) {
+			if($user[0]["admin"] == "t") {
+				$query .= "where slug='" . $slug . "' limit 1";
+			} else {
+				$query .= "where slug='" . $slug . "' and posts.status=true and user_id=" . $user[0]["user_id"] . "limit 1";
+			}
+		} else {
+			return false;
+		}
+		
+		$data = $this->Db->query($query);
 		
 		if($data and is_array($data)) {
 			return $data[0];

@@ -1,9 +1,12 @@
 <?php if($post and is_array($post)) { ?>
 	<div class="large-12 columns top-single">
-		        <!-- Contenido-->  
-		        <h3><?php echo utf8_decode($post["title"]);?></h3>
-
-	</div>			
+		<!-- Contenido-->
+		<h3><?php echo utf8_decode($post["title"]); ?></h3>
+		
+		<?php if(is_array($user) and $user[0]["admin"] == "t") { ?>
+			<a href="/edit/<?php echo $post["slug"]; ?>" title="Edit">Editar</a>
+		<?php } ?>
+	</div>
 	
         <div class="row"><!-- Resumen reto--> 
                 <div class="small-11 small-centered columns top-single"> 
@@ -172,7 +175,7 @@
 		}
 	</script>
 <?php } else { ?>
-	<p>
+	<br/><p>
 		Contenido no disponible!
 	</p>
 <?php } ?>

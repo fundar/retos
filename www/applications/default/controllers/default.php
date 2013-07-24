@@ -190,18 +190,40 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
-	public function edit($slug) {
+	public function edit($slug = false) {
 		$user = $this->isUser(true);
 		
-		if($user) {
-			$vars["user"] = $user;
-			$vars["post"] = $this->Default_Model->getPostBySlug($slug);
-			$vars["view"] = $this->view("single", true);
+		if($user and $slug) {
+			if(isset($_POST["send"])) {
+				$post = $this->Default_Model->editPost($user);
+				
+				if(is_array($post) and isset($post["error"])) {
+					$vars["error"] = $post["error"];
+				} else {
+					header('Location:' . get("webURL") . "/reto/" . $post[0]["slug"]);
+				}
+			}
+			
+			$vars["user"]	    = $user;
+			$vars["categories"] = $this->Default_Model->categories();
+			$vars["post"] 		= $this->Default_Model->getEditPostBySlug($slug, $user);
+			$vars["view"] 		= $this->view("edit", true);
 			
 			$this->render("content", $vars);
 		} else {
 			header('Location:' . get("webURL"));
 		}
+	}
+	
+	public function myPosts() {
+		$user = $this->isUser();
+		
+		if($user) {
+			
+		} else {
+			header('Location:' . get("webURL"));
+		}	
+		
 	}
 	
 	public function like($post_id) {
