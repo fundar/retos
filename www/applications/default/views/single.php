@@ -11,21 +11,24 @@
         <div class="row"><!-- Resumen reto--> 
                 <div class="small-11 small-centered columns top-single"> 
 			        <div class="row top-single">
-					  <div class="large-7 columns ilustracion">
-						<img src="<?php echo get("webURL") . '/' . str_replace("_s.", "_m.", $post["image_url"]);?>" alt="<?php echo $post["title"];?>">
-					  </div>
-                      <div class="large-5 columns panel-retos parrafo">
+					  
+						<div class="large-7 columns ilustracion">
+							<img src="<?php echo get("webURL") . '/' . str_replace("_s.", "_m.", $post["image_url"]);?>" alt="<?php echo $post["title"];?>">
+						</div>
+					  
+						<div class="large-5 columns panel-retos parrafo">
 						
-						<div class="panel callout stats  reto">
-							<ul class="social-stats">
-							<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
-							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
-							<li class="vota-tw">
-								<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo utf8_decode($post["title"]);?> #ConectaDF" data-via="opendatamx" data-lang="en">Tweet</a>
-								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-							</li>
-							</ul>		
-			            </div>
+							<div class="panel callout stats reto">
+								<ul class="social-stats">
+								<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
+								<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
+								<li class="vota-tw">
+									<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo utf8_decode($post["title"]);?> #ConectaDF" data-via="opendatamx" data-lang="en">Tweet</a>
+									<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+								</li>
+								</ul>		
+							</div>
+							
 						<div class="el-texto">
 							<h4 class="nombredelreto">
 								<?php echo utf8_decode($post["title"]);?>

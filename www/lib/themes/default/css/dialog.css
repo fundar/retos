@@ -35,3 +35,6 @@
 
 .active-btn { border-top: 6px solid #fee800; color: #bbb; }
 .bold { font-weight:bold; }
+
+.category-img {  float:left; position:absolute; z-index: 2; }
+img.los-retos { position:relative; }
