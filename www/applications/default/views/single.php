@@ -20,19 +20,20 @@
 							<ul class="social-stats">
 							<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
 							<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
-							<li>
+							<li class="vota-tw">
 								<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo utf8_decode($post["title"]);?> #ConectaDF" data-via="opendatamx" data-lang="en">Tweet</a>
 								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 							</li>
 							</ul>		
 			            </div>
-						
-						<h4 class="nombredelreto">
-							<?php echo utf8_decode($post["title"]);?>
-						</h4>
-						
-						<p class="elresumen">
-							<?php echo utf8_decode($post["abstract"]);?>
+						<div class="el-texto">
+							<h4 class="nombredelreto">
+								<?php echo utf8_decode($post["title"]);?>
+							</h4>
+							
+							<p class="elresumen">
+								<?php echo utf8_decode($post["abstract"]);?>
+							</p>
 					  </div>
 				</div>
 		</div>		
