@@ -8,18 +8,15 @@
 	                <a target="_blank" href="http://www.setravi.df.gob.mx"> <img class="logo-1" src="<?php echo $this->themePath; ?>/img/setravi-logo.jpg"></a>
 		</div>
 		<div class="row">
-			<div class="large-3 columns colaboradores bordo">Con el apoyo de:<br>
-				<a target="_blank" href="http://www.omidyar.com"><img src="<?php echo $this->themePath; ?>/img/omidyar-network.jpg"></a>
-			</div>
-			
 			<div class="large-6 columns colaboradores bordo">En alianza con:<br>
 				<a target="_blank" href="http://mexico.itdp.org"><img src="<?php echo $this->themePath; ?>/img/itdp.jpg"></a>
 				<a target="_blank" href="http://fundar.org.mx"><img src="<?php echo $this->themePath; ?>/img/fundar.jpg"></a>
 				<a target="_blank" href="http://www.labplc.mx"><img src="<?php echo $this->themePath; ?>/img/laboratorio-para-la-ciudad.jpg"></a>
+				<a target="_blank" href="http://datosabiertos.df.gob.mx/"><img src="<?php echo $this->themePath; ?>/img/datos-abiertos-df.jpg"></a>
 				<a target="_blank" href="http://uc.edu.mx/" style="display: none;"><img src="<?php echo $this->themePath; ?>/img/uc.jpg"></a>
 			</div>
 			
-			<div class="large-3 columns colaboradores">Un evento de:<br>
+			<div class="large-6 columns colaboradores">Un evento de:<br>
 				<a target="_blank" href="http://opendata.mx"><img src="<?php echo $this->themePath; ?>/img/OpenDataMX.jpg"></a>
 			</div>
 		</div>
