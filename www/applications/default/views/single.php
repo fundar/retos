@@ -56,53 +56,53 @@
 		
 		
 		<!-- Comentarios -->
-		<p>Comentarios</p>
-		
-		<div id="comments">
-			<?php if(is_array($comments)) { ?>
-				<?php foreach($comments as $comment) { ?>
-					<?php if($comment["parent_id"] == 0) { ?>
-						<div class="comment coment_id_<?php echo $comment["comment_id"];?>">
-					<?php } else { ?>
-						<div class="comment2">
-					<?php } ?>
-						<p>
-							<span>
-								<a target="_blank" class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
-									<?php echo utf8_decode($comment["name"]);?>
-								</a>
-							</span>
-							
-							<?php if($user and is_array($user)) { ?>
-								<?php if($comment["parent_id"] == 0) { ?>
-									: <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">contestar</a>
+		<div class="row">
+			<p>Comentarios</p>
+			<div id="comments">
+				<?php if(is_array($comments)) { ?>
+					<?php foreach($comments as $comment) { ?>
+						<?php if($comment["parent_id"] == 0) { ?>
+							<div class="comment coment_id_<?php echo $comment["comment_id"];?>">
+						<?php } else { ?>
+							<div class="comment2">
+						<?php } ?>
+							<p>
+								<span>
+									<a target="_blank" class="user-comment-<?php echo $comment["comment_id"];?>" href="<?php echo $comment["url"];?>" title="<?php echo utf8_decode($comment["name"]);?>">
+										<?php echo utf8_decode($comment["name"]);?>
+									</a>
+								</span>
+								
+								<?php if($user and is_array($user)) { ?>
+									<?php if($comment["parent_id"] == 0) { ?>
+										: <a href="#" class="reply-comment" value="<?php echo $comment["comment_id"];?>">contestar</a>
+									<?php } ?>
 								<?php } ?>
-							<?php } ?>
-							
-							<br/>
-							<span class="comment-<?php echo $comment["comment_id"];?>">
-								<?php echo utf8_decode($comment["comment"]);?>
-							</span>
-						</p>
-					</div>
+								
+								<br/>
+								<span class="comment-<?php echo $comment["comment_id"];?>">
+									<?php echo utf8_decode($comment["comment"]);?>
+								</span>
+							</p>
+						</div>
+					<?php } ?>
 				<?php } ?>
+			</div>
+			
+			
+			<!-- Formulario de comentarios -->
+			<?php if($user and is_array($user)) { ?>
+				<form method="POST" action="" id="form-comment">
+					<div id="reply-to"></div>
+					<input type="text"   id="post-comment" name="comment" value="" onKeyPress="return checkSubmit(event)"/>
+					<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
+					<input type="hidden" id="post-parent-id" name="post-parent-id" value="0"/>
+					<input type="button" id="send-comment" name="send-comment" value="comentar" />
+				</form>
+			<?php } else { ?>
+				Necesitas estar conectado para comentar
 			<?php } ?>
 		</div>
-		
-		
-		<!-- Formulario de comentarios -->
-		<?php if($user and is_array($user)) { ?>
-			<form method="POST" action="" id="form-comment">
-				<div id="reply-to"></div>
-				<input type="text"   id="post-comment" name="comment" value="" onKeyPress="return checkSubmit(event)"/>
-				<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
-				<input type="hidden" id="post-parent-id" name="post-parent-id" value="0"/>
-				<input type="button" id="send-comment" name="send-comment" value="comentar" />
-			</form>
-		<?php } else { ?>
-			Necesitas estar conectado para comentar
-		<?php } ?>
-	
 	</div><!-- contenido sepués de cita -->		
 	
 	<!-- JS & Ajax -->
