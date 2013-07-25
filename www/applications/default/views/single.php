@@ -56,7 +56,7 @@
 		
 		
 		<!-- Comentarios -->
-		<div class="row">
+		<div class="small-11 small-centered">
 			<p>Comentarios</p>
 			<div id="comments">
 				<?php if(is_array($comments)) { ?>
