@@ -68,6 +68,7 @@ class Default_Model extends ZP_Model {
 		$data["title"]       = $_POST["title"];
 		$data["abstract"]    = $_POST["abstract"];
 		$data["descr"]       = $_POST["descr"];
+		$data["status"]      = "false";
 		$data["image_url"]   = $this->upload();
 		
 		if($data["title"] == "") {
@@ -136,7 +137,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getPost($post_id) {
-		$query  = "select * from posts where post_id=" . $post_id . " and status=true";
+		$query  = "select * from posts where post_id=" . $post_id;
 		$data   = $this->Db->query($query);
 		
 		return $data;
