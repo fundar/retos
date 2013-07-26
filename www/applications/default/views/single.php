@@ -58,7 +58,9 @@
 		<!-- Comentarios -->
 		<div class="small-11 small-centered columns">
 			<div class="row">
-				<p>Comentarios</p>
+				
+				<br/><br/><p>Comentarios</p>
+				
 				<div id="comments">
 					<?php if(is_array($comments)) { ?>
 						<?php foreach($comments as $comment) { ?>
