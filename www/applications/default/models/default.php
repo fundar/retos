@@ -152,11 +152,17 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
-	public function getPostBySlug($slug) {
+	public function getPostBySlug($slug, $user = false) {
 		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
 		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts join categories on posts.category_id=categories.category_id ";
-		$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
-		$data   = $this->Db->query($query);
+			
+		if($user and isset($user[0]["user_id"])) {
+			$query .= "where slug='" . $slug . "' and posts.user_id=" . $user[0]["user_id"] . " limit 1";
+		} else {
+			$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
+		}
+		
+		$data = $this->Db->query($query);
 		
 		if($data and is_array($data)) {
 			return $data[0];
@@ -241,6 +247,16 @@ class Default_Model extends ZP_Model {
 		} else {
 			return false;
 		}
+	}
+	
+	public function getAllPostByUser($user_id) {
+		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
+		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts ";
+		$query .= "join categories on posts.category_id=categories.category_id ";
+		$query .= "where posts.user_id=" . $user_id . " order by post_id desc";
+		$data   = $this->Db->query($query);
+		
+		return $data;
 	}
 	
 	/*comments*/

@@ -177,7 +177,7 @@ class Default_Controller extends ZP_Controller {
 		}
 		
 		$vars["user"] = $this->isUser();
-		$vars["post"] = $this->Default_Model->getPostBySlug($slug);
+		$vars["post"] = $this->Default_Model->getPostBySlug($slug, $vars["user"]);
 		
 		if(isset($vars["post"]["post_id"])) {
 			$vars["comments"] = $this->Default_Model->getCommentsByPost($vars["post"]["post_id"]);
@@ -219,7 +219,11 @@ class Default_Controller extends ZP_Controller {
 		$user = $this->isUser();
 		
 		if($user) {
+			$vars["posts"] = $this->Default_Model->getAllPostByUser($user[0]["user_id"]);
+			$vars["user"]  = $this->isUser();
+			$vars["view"]  = $this->view("home-user", true);
 			
+			$this->render("content", $vars);
 		} else {
 			header('Location:' . get("webURL"));
 		}	
