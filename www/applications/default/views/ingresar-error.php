@@ -1,1 +1,1 @@
-<p>Necesitas ingresar para subir tu idea</p>
+<br/><br/><p>Necesitas ingresar para subir tu idea</p>
