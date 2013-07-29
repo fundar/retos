@@ -68,6 +68,8 @@
 				<br/>- No existe un número de lugares predeterminado. Se otorgará acceso al programa de incubación/mentorship a todos aquellos proyectos que alcanzen los critrerios descritos anteriormente. 
 
 				<br/>- Los participantes cuyos proyectos sean seleccionados podrán hacer uso comercial de los desarrollos y datos generados al final del programa de incubación/mentorship  bajo la única condición de otorgar a las instituciones convocantes acceso automatizado a los datos generados por las aplicaciones. 
+				
+				<br/>- Cualquier situación no contemplada en estas bases será resuelta por el jurado y su decisión será inapelable.
 			</p>				
 	</div>										
 </div>
