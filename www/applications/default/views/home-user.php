@@ -32,7 +32,7 @@
 					</div>
 					
 					<?php if($post["status"] == "f") { ?>
-						<p class="color-red">Pendiente de aprobaci&oacute;n</p>
+						<div class="color-red" style="height:0px;">Pendiente de aprobaci&oacute;n</div>
 					<?php } ?>
 				</div>
 			<?php } ?>
