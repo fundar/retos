@@ -1,17 +1,17 @@
-	<h3>
-		Editar - 
-		<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
-			<?php echo utf8_decode($post["title"]);?>
-		</a>
-	</h3>
-	
-	<?php if(isset($error)) { ?>
-		<p>Ocurrio un error!</p>
-	<?php } ?>
-	
-	<br />
-	
 	<?php if($post and is_array($post)) { ?>
+		<h3>
+			Editar - 
+			<a href="/reto/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
+				<?php echo utf8_decode($post["title"]);?>
+			</a>
+		</h3>
+		
+		<?php if(isset($error)) { ?>
+			<p>Ocurrio un error!</p>
+		<?php } ?>
+		
+		<br />
+	
 		<script type="text/javascript" src="<?php echo $this->themePath; ?>/js/tinymce/tinymce.min.js"></script>
 		<script type="text/javascript">
 			tinymce.init({
