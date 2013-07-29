@@ -250,12 +250,22 @@ class Default_Model extends ZP_Model {
 		}
 	}
 	
-	public function getAllPostByUser($user_id) {
-		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
-		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts ";
-		$query .= "join categories on posts.category_id=categories.category_id ";
-		$query .= "where posts.user_id=" . $user_id . " order by post_id desc";
-		$data   = $this->Db->query($query);
+	public function getAllPostByUser($user) {
+		$user_id = $user[0]["user_id"];
+		$admin   = $user[0]["admin"];
+
+		$queryc  = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
+		$query   = "select posts.*, categories.name as category, " . $queryc . " from posts ";
+		$query  .= "join categories on posts.category_id=categories.category_id ";
+		
+		if($admin == "f") {
+			$query .= "where posts.user_id=" . $user_id . " order by post_id desc";
+		} else {
+			$query .= "where order by post_id desc";
+		}
+		
+		
+		$data = $this->Db->query($query);
 		
 		return $data;
 	}
