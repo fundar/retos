@@ -32,7 +32,7 @@
 					</div>
 					
 					<?php if($post["status"] == "f") { ?>
-						<div class="color-red" style="height:0px; font-size:10px;">
+						<div class="color-red" style="height:0px; font-size:14px;">
 							Pendiente de aprobaci&oacute;n - 
 							<a href="/edit/<?php echo $post["slug"];?>" title="<?php echo utf8_decode($post["title"]);?>">
 								Editar
