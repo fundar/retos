@@ -56,4 +56,6 @@
 			});
 		});
 	</script>
+<?php } else { ?>
+	<br/><br/><p>Aun no has agregado una. <a href="/add" title="Agregar idea">Agregar idea</a></p>
 <?php } ?>
