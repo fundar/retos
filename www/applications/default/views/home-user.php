@@ -57,5 +57,5 @@
 		});
 	</script>
 <?php } else { ?>
-	<br/><br/><p>Aun no has agregado una. <a href="/add" title="Agregar idea">Agregar idea</a></p>
+	<br/><br/><p>Aun no has agregado una. <a href="/add" title="Agregar idea">Sube tu idea</a></p>
 <?php } ?>
