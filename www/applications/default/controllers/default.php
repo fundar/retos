@@ -142,7 +142,9 @@ class Default_Controller extends ZP_Controller {
 			
 			$this->render("content", $vars);
 		} else {
-			header('Location:' . get("webURL"));
+			$vars["view"] = $this->view("ingresar-error", true);
+			
+			$this->render("content", $vars);
 		}
 	}
 	
