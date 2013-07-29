@@ -261,7 +261,7 @@ class Default_Model extends ZP_Model {
 		if($admin == "f") {
 			$query .= "where posts.user_id=" . $user_id . " order by post_id desc";
 		} else {
-			$query .= "where order by post_id desc";
+			$query .= "order by post_id desc";
 		}
 		
 		
