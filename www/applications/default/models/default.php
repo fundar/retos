@@ -157,8 +157,11 @@ class Default_Model extends ZP_Model {
 		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
 		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts join categories on posts.category_id=categories.category_id ";
 			
-	
-		$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
+		if($user[0]["admin"] == "t") {
+			$query .= "where slug='" . $slug . "' limit 1";
+		} else {
+			$query .= "where slug='" . $slug . "' and posts.status=true limit 1";
+		}
 		
 		
 		$data = $this->Db->query($query);
@@ -178,7 +181,7 @@ class Default_Model extends ZP_Model {
 			if($user[0]["admin"] == "t") {
 				$query .= "where slug='" . $slug . "' limit 1";
 			} else {
-				$query .= "where slug='" . $slug . "' and posts.status=true and user_id=" . $user[0]["user_id"] . "limit 1";
+				$query .= "where slug='" . $slug . "' and user_id=" . $user[0]["user_id"] . "limit 1";
 			}
 		} else {
 			return false;
