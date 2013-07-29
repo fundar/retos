@@ -129,7 +129,7 @@
 			
 		<li><a href="/" class="button<?php echo (!segment(0) or segment(0) == "ordenar") ? " active-btn" : "";?>">Retos</a></li>
 		<li><a href="/convocatoria" class="button<?php echo (segment(0) == "convocatoria") ? " active-btn" : "";?>">Convocatoria</a></li>
-		<!-- <li><a href="/add" class="button<?php echo (segment(0) == "add") ? " active-btn" : "";?>">Sube tu idea</a></li> -->
+		<li><a href="/add" class="button<?php echo (segment(0) == "add") ? " active-btn" : "";?>">Sube tu idea</a></li>
 		<li><a href="/faqs" class="button<?php echo (segment(0) == "faqs") ? " active-btn" : "";?>">Preguntas frecuentes</a></li>
 		</ul>
 		</div>
