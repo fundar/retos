@@ -39,6 +39,7 @@
 			</p>
 			
 			<?php if($user[0]["admin"] == "t") { ?>
+				Status:
 				<select name="status">
 					<option value="true">Aprobado</option>
 					<option value="false">Pendiente</option>
