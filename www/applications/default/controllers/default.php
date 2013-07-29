@@ -123,7 +123,7 @@ class Default_Controller extends ZP_Controller {
 	/*Posts*/
 	public function add() {
 		/*quitar el true cuando ya pueden subir todos los usuarios*/
-		$user = $this->isUser(true);
+		$user = $this->isUser();
 		
 		if($user) {
 			if(isset($_POST["send"])) {
