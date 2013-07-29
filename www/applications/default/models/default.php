@@ -117,6 +117,10 @@ class Default_Model extends ZP_Model {
 		
 		$data["slug"] = slug($data["title"]);
 		
+		if($user[0]["admin"] == "t") {
+			$data["status"] = $_POST["status"];
+		}
+		
 		if($_FILES["file"]["name"] == "") {
 			
 		} else {

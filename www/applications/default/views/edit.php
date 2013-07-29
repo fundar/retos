@@ -38,6 +38,13 @@
 				Imagen (1MB Máximo - 473x335 píxeles): <input type="file" name="file" /><br/>
 			</p>
 			
+			<?php if($user[0]["admin"] == "t") { ?>
+				<select name="status">
+					<option value="true">Aprobado</option>
+					<option value="false">Pendiente</option>
+				</select><br/>
+			<?php } ?>
+			
 			Categoría: 
 			<select name="category_id">
 				<?php foreach($categories as $category) { ?>

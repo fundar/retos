@@ -192,7 +192,7 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function edit($slug = false) {
-		$user = $this->isUser(true);
+		$user = $this->isUser();
 		
 		if($user and $slug) {
 			if(isset($_POST["send"])) {
