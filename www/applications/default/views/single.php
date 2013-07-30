@@ -48,6 +48,12 @@
 					<p>
 						<a href="http://twitter.com/opendatamx" title="OpenDataMx" target="_blank" >OpenDataMX</a>
 					</p>
+				<?php } elseif($post["type_user"] == "persona") { ?>
+					<p>
+						<a href="<?php echo $post["url"];?>" title="ConectaDF" target="_blank">
+							<?php echo $post["url"];?>
+						</a>
+					</p>
 				<?php } else { ?>
 					<p><?php echo utf8_decode($post["name_user"]);?></p>
 				<?php } ?>
