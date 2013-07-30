@@ -50,12 +50,14 @@
 					</p>
 				<?php } elseif($post["type_user"] == "persona") { ?>
 					<p>
+						<?php echo utf8_decode($post["name_user"]);?>
+					</p>
+				<?php } else { ?>
+					<p>
 						<a href="<?php echo $post["url"];?>" title="ConectaDF" target="_blank">
 							<?php echo $post["url"];?>
 						</a>
 					</p>
-				<?php } else { ?>
-					<p><?php echo utf8_decode($post["name_user"]);?></p>
 				<?php } ?>
 				
 				<p class="detalle">Categor&iacute;a:</p>
