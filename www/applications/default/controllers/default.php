@@ -130,15 +130,20 @@ class Default_Controller extends ZP_Controller {
 				$post = $this->Default_Model->addPost($user);
 				
 				if(is_array($post) and isset($post["error"])) {
-					$vars["error"] = $post["error"];
+					$vars["error"] 		= $post["error"];
+					$vars["user"]       = $user;
+					$vars["categories"] = $this->Default_Model->categories();
+					$vars["view"]       = $this->view("add", true);
 				} else {
-					header('Location:' . get("webURL") . "/reto/" . $post[0]["slug"]);
+					$vars["user"] = $user;
+					$vars["view"] = $this->view("add-successful", true);
+					// header('Location:' . get("webURL") . "/reto/" . $post[0]["slug"]);
 				}
+			} else {
+				$vars["user"]       = $user;
+				$vars["categories"] = $this->Default_Model->categories();
+				$vars["view"]       = $this->view("add", true);
 			}
-			
-			$vars["user"]       = $user;
-			$vars["categories"] = $this->Default_Model->categories();
-			$vars["view"]       = $this->view("add", true);
 			
 			$this->render("content", $vars);
 		} else {
