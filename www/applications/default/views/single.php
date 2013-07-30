@@ -41,7 +41,17 @@
 				</div>
 		</div>		
 		<div class="small-11 small-centered columns top-single"> 		
-			        <!-- Explicación reto-->
+			    <!-- Explicación reto-->
+				<p class="detalle">Usuario:</p>
+				
+				<?php if($post["admin"] == "t") { ?>
+					<p>
+						<a href="http://twitter.com/opendatamx" title="OpenDataMx" target="_blank" >OpenDataMX</a>
+					</p>
+				<?php } else { ?>
+					<p><?php echo utf8_decode($post["name_user"]);?></p>
+				<?php } ?>
+				
 				<p class="detalle">Categor&iacute;a:</p>
 				
 				<p><?php echo utf8_decode($post["category"]);?></p>

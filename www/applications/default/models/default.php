@@ -159,7 +159,9 @@ class Default_Model extends ZP_Model {
 	
 	public function getPostBySlug($slug, $user = false) {
 		$queryc = "(select count(*) from comments where comments.post_id=posts.post_id) as count";
-		$query  = "select posts.*, categories.name as category, " . $queryc . " from posts join categories on posts.category_id=categories.category_id ";
+		$query  = "select posts.*, users.admin, users.name as name_user, categories.name as category, " . $queryc . " from posts ";
+		$query .= "join users on posts.user_id=users.user_id ";
+		$query .= "join categories on posts.category_id=categories.category_id ";
 			
 		if($user[0]["admin"] == "t") {
 			$query .= "where slug='" . $slug . "' limit 1";
