@@ -29,6 +29,18 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
+	
+	public function submit() {
+		if(isset($_POST["send"])) {
+		
+		} else {
+			$vars["categories"] = $this->Default_Model->categories();
+			$vars["view"] 	    = $this->view("submit", true);
+		
+			$this->render("content", $vars);
+		}
+	}
+	
 	public function order($type = false) {
 		if($type == "comentarios") {
 			$posts = $this->Default_Model->getAllPost("count");

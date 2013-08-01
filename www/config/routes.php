@@ -83,5 +83,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "myPosts",
 		"params"	  => array()
+	),
+	11 => array(
+		"pattern"	  => "/^submit/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "submit",
+		"params"	  => array()
 	)
 );
