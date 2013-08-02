@@ -22,7 +22,7 @@
 	
 	Nombre del representante*: <input type="text" name="name" value="<?php echo (isset($_POST["name"])) ? $_POST["name"]: ""; ?>" /><br/>
 	Correo del representante*: <input type="text" name="email" value="<?php echo (isset($_POST["email"])) ? $_POST["email"]: ""; ?>" /><br/>
-	Nombres de los integrantes*: <textarea name="names"></<?php echo (isset($_POST["names"])) ? $_POST["names"]: ""; ?>textarea><br/>
+	Nombres de los integrantes*: <textarea name="names"><?php echo (isset($_POST["names"])) ? $_POST["names"]: ""; ?></textarea><br/>
 	
 	Nombre del proyecto*: <input type="text" name="title" value="<?php echo (isset($_POST["title"])) ? $_POST["title"]: ""; ?>" /><br/>
 	Descripci&oacute;n*: <textarea name="descr" class="editme"><?php echo (isset($_POST["descr"])) ? $_POST["descr"]: ""; ?></textarea><br/>
