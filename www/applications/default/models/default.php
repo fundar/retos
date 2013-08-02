@@ -63,8 +63,6 @@ class Default_Model extends ZP_Model {
 	
 	/*Projects*/
 	public function addProject() {
-		
-		die(var_dump($_POST));
 		$data["name"]      = $_POST["name"];
 		$data["email"]     = $_POST["email"];
 		$data["names"]     = $_POST["names"];
