@@ -20,15 +20,15 @@
 	
 	<br />
 	
-	Nombre del representante*: <input type="text" name="name" value="" /><br/>
-	Correo del representante*: <input type="text" name="email" value="" /><br/>
-	Nombres de los integrantes*: <textarea name="names"></textarea><br/>
+	Nombre del representante*: <input type="text" name="name" value="<?php echo (isset($_POST["name"])) ? $_POST["name"]: ""; ?>" /><br/>
+	Correo del representante*: <input type="text" name="email" value="<?php echo (isset($_POST["email"])) ? $_POST["email"]: ""; ?>" /><br/>
+	Nombres de los integrantes*: <textarea name="names"></<?php echo (isset($_POST["names"])) ? $_POST["names"]: ""; ?>textarea><br/>
 	
-	Nombre del proyecto*: <input type="text" name="title" value="" /><br/>
-	Descripci&oacute;n*: <textarea name="descr" class="editme"></textarea><br/>
+	Nombre del proyecto*: <input type="text" name="title" value="<?php echo (isset($_POST["title"])) ? $_POST["title"]: ""; ?>" /><br/>
+	Descripci&oacute;n*: <textarea name="descr" class="editme"><?php echo (isset($_POST["descr"])) ? $_POST["descr"]: ""; ?></textarea><br/>
 	
-	Url del video explicando el proyecto*: <textarea name="url-video"></textarea><br/>
-	Url del demo o algun otro recurso demostrativo (opcional): <textarea name="url-demo"></textarea><br/>
+	Url del video explicando el proyecto*: <input type="text" name="url-video" value="<?php echo (isset($_POST["url-video"])) ? $_POST["url-video"]: ""; ?>" /><br/>
+	Url del demo o algun otro recurso demostrativo (opcional): <input type="text" name="url-demo" value="<?php echo (isset($_POST["url-demo"])) ? $_POST["url-demo"]: ""; ?>" /><br/>
 	
 	Categor&iacute;a*: 
 	<select name="category_id">
