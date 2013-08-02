@@ -13,9 +13,7 @@
 	
 <form method="POST" enctype='multipart/form-data' action="">
 	<?php if(isset($error)) { ?>
-		<p>
-			<?php echo $error;?>
-		</p>
+		<p class="color-red"><?php echo $error;?></p>
 	<?php } ?>
 	
 	<br />
