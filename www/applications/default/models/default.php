@@ -74,7 +74,7 @@ class Default_Model extends ZP_Model {
 		
 		if($data["name"] == "") {
 			return array("error" => "Necesitas escribir el nombre del representante");
-		} elseif($data["email"] == "") {
+		} elseif(!isEmail($data["email"])) {
 			return array("error" => "Necesitas escribir el email del representante");
 		} elseif($data["names"] == "") {
 			return array("error" => "Necesitas escribir los nombres de los integrantes");
