@@ -63,13 +63,14 @@ class Default_Model extends ZP_Model {
 	
 	/*Projects*/
 	public function addProject() {
-		$data["name"]      = $_POST["name"];
-		$data["email"]     = $_POST["email"];
-		$data["names"]     = $_POST["names"];
-		$data["title"]     = $_POST["title"];
-		$data["descr"]     = $_POST["descr"];
-		$data["url-video"] = $_POST["url-video"];
-		$data["url-demo"]  = $_POST["url-demo"];
+		$data["category_id"] = $_POST["category_id"];
+		$data["name"]        = $_POST["name"];
+		$data["email"]       = $_POST["email"];
+		$data["names"]       = $_POST["names"];
+		$data["title"]       = $_POST["title"];
+		$data["descr"]       = $_POST["descr"];
+		$data["url_video"]   = $_POST["url-video"];
+		$data["url_demo"]    = $_POST["url-demo"];
 		
 		if($data["name"] == "") {
 			return array("error" => "Necesitas escribir el nombre del representante");
@@ -81,11 +82,16 @@ class Default_Model extends ZP_Model {
 			return array("error" => "Necesitas escribir el nombre del proyecto");
 		} elseif($data["descr"] == "") {
 			return array("error" => "Necesitas escribir la descripción del proyecto");
-		} elseif($data["url-video"] == "") {
+		} elseif($data["url_video"] == "") {
 			return array("error" => "Necesitas escribir la url del video del proyecto");
 		} elseif(!isset($_POST["terminos"])) {
 			return array("error" => "Necesitas aceptar los términos y condiciones");
 		}
+		
+		$result = $this->Db->insert("projects", $data, "project_id");
+		
+		die(var_dump($result));
+		return $result;
 	}
 	
 	

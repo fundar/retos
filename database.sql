@@ -11,6 +11,20 @@ CREATE TABLE users (
 	PRIMARY KEY(user_id)
 );
 
+CREATE TABLE projects (
+	project_id	serial,
+	category_id integer,
+	name	    varchar(255),
+	email	    varchar(255),
+	names	    text,
+	title	    varchar(255),
+	descr	  	text,
+	url_video 	varchar(255),
+	url_demo 	varchar(255),
+	status    	boolean default true,
+	PRIMARY KEY(project_id)
+);
+
 CREATE TABLE posts (
 	post_id     serial,
 	user_id		integer,
