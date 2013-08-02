@@ -32,13 +32,19 @@ class Default_Controller extends ZP_Controller {
 	
 	public function submit() {
 		if(isset($_POST["send"])) {
-		
+			$project = $this->Default_Model->addProject($user);
+				
+			if(is_array($project) and isset($project["error"])) {
+			
+			} else {
+				$vars["view"] = $this->view("submit-successful", true);
+			}
 		} else {
 			$vars["categories"] = $this->Default_Model->categories();
 			$vars["view"] 	    = $this->view("submit", true);
-		
-			$this->render("content", $vars);
 		}
+		
+		$this->render("content", $vars);
 	}
 	
 	public function order($type = false) {

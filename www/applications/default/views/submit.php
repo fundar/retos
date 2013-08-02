@@ -25,8 +25,8 @@
 	Nombre del proyecto*: <input type="text" name="title" value="" /><br/>
 	Descripci&oacute;n*: <textarea name="descr" class="editme"></textarea><br/>
 	
-	Url del video explicando el proyecto*: <textarea name="names"></textarea><br/>
-	Url del demo o algun otro recurso demostrativo (opcional): <textarea name="names"></textarea><br/>
+	Url del video explicando el proyecto*: <textarea name="url-video"></textarea><br/>
+	Url del demo o algun otro recurso demostrativo (opcional): <textarea name="url-demo"></textarea><br/>
 	
 	Categor&iacute;a*: 
 	<select name="category_id">
@@ -36,6 +36,9 @@
 			</option>
 		<?php } ?>
 	</select>
+	
+	<br/>
+	<input type="checkbox" name="terminos"value="ok" /> Acepto términos y condiciones
 	
 	<br/>
 	*Campo obligatorio

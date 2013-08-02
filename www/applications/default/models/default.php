@@ -61,6 +61,34 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
+	/*Projects*/
+	public function addProject() {
+		$data["user_id"]     = $user[0]["user_id"];
+		$data["category_id"] = $_POST["category_id"];
+		$data["title"]       = $_POST["title"];
+		$data["abstract"]    = $_POST["abstract"];
+		$data["descr"]       = $_POST["descr"];
+		$data["status"]      = "false";
+		$data["image_url"]   = $this->upload();
+		
+		if($data["name"] == "") {
+			return array("error" => "Necesitas escribir el nombre del representante");
+		} elseif($data["email"] == "") {
+			return array("error" => true);
+		} elseif($data["names"] == "") {
+			return array("error" => true);
+		} elseif($data["title"] == "") {
+			return array("error" => true);
+		} elseif($data["descr"] == "") {
+			return array("error" => true);
+		} elseif($data["url-video"] == "") {
+			return array("error" => true);
+		} elseif($data["url-demo"] == "") {
+			return array("error" => true);
+		}
+	}
+	
+	
 	/*Posts*/
 	public function addPost($user) {
 		$data["user_id"]     = $user[0]["user_id"];
