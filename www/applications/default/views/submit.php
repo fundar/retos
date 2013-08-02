@@ -18,16 +18,17 @@
 	
 	<br />
 	
-	Nombre del representante: <input type="text" name="name" value="" /><br/>
-	Nombres de los integrantes: <textarea name="names"></textarea><br/>
+	Nombre del representante*: <input type="text" name="name" value="" /><br/>
+	Correo del representante*: <input type="text" name="email" value="" /><br/>
+	Nombres de los integrantes*: <textarea name="names"></textarea><br/>
 	
-	Nombre del proyecto: <input type="text" name="title" value="" /><br/>
-	Descripci&oacute;n: <textarea name="descr" class="editme"></textarea><br/>
+	Nombre del proyecto*: <input type="text" name="title" value="" /><br/>
+	Descripci&oacute;n*: <textarea name="descr" class="editme"></textarea><br/>
 	
-	Url del video explicando el proyecto: <textarea name="names"></textarea><br/>
-	url del proyecto: <textarea name="names"></textarea><br/>
+	Url del video explicando el proyecto*: <textarea name="names"></textarea><br/>
+	Url del demo o algun otro recurso demostrativo (opcional): <textarea name="names"></textarea><br/>
 	
-	Categoría: 
+	Categor&iacute;a*: 
 	<select name="category_id">
 		<?php foreach($categories as $category) { ?>
 			<option value="<?php echo $category["category_id"];?>">
@@ -37,6 +38,7 @@
 	</select>
 	
 	<br/>
+	*Campo obligatorio
 	
 	<input type="submit" name="send" value="Agregar" />
 </form>
