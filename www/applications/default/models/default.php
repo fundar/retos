@@ -90,7 +90,6 @@ class Default_Model extends ZP_Model {
 		
 		$result = $this->Db->insert("projects", $data, "project_id");
 		
-		die(var_dump($result));
 		return $result;
 	}
 	
