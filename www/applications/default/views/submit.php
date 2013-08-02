@@ -14,7 +14,7 @@
 <form method="POST" enctype='multipart/form-data' action="">
 	<?php if(isset($error)) { ?>
 		<p>
-			<?php echo utf8_encode($error);?>
+			<?php echo $error;?>
 		</p>
 	<?php } ?>
 	
