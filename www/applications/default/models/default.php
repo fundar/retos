@@ -63,13 +63,15 @@ class Default_Model extends ZP_Model {
 	
 	/*Projects*/
 	public function addProject() {
-		$data["user_id"]     = $user[0]["user_id"];
-		$data["category_id"] = $_POST["category_id"];
-		$data["title"]       = $_POST["title"];
-		$data["abstract"]    = $_POST["abstract"];
-		$data["descr"]       = $_POST["descr"];
-		$data["status"]      = "false";
-		$data["image_url"]   = $this->upload();
+		
+		die(var_dump($_POST));
+		$data["name"]      = $_POST["name"];
+		$data["email"]     = $_POST["email"];
+		$data["names"]     = $_POST["names"];
+		$data["title"]     = $_POST["title"];
+		$data["descr"]     = $_POST["descr"];
+		$data["url-video"] = $_POST["url-video"];
+		$data["url-demo"]  = $_POST["url-demo"];
 		
 		if($data["name"] == "") {
 			return array("error" => "Necesitas escribir el nombre del representante");
@@ -83,7 +85,7 @@ class Default_Model extends ZP_Model {
 			return array("error" => true);
 		} elseif($data["url-video"] == "") {
 			return array("error" => true);
-		} elseif($data["url-demo"] == "") {
+		} elseif($data["terminos"] == "") {
 			return array("error" => true);
 		}
 	}

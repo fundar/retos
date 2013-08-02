@@ -38,7 +38,7 @@
 	</select>
 	
 	<br/>
-	<input type="checkbox" name="terminos"value="ok" /> Acepto términos y condiciones
+	<input type="checkbox" name="terminos" value="ok" /> Acepto términos y condiciones
 	
 	<br/>
 	*Campo obligatorio
