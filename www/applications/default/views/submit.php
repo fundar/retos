@@ -13,7 +13,9 @@
 	
 <form method="POST" enctype='multipart/form-data' action="">
 	<?php if(isset($error)) { ?>
-		<p>Ocurrio un error!</p>
+		<p>
+			<?php echo utf8_decode($error);?>
+		</p>
 	<?php } ?>
 	
 	<br />
@@ -38,7 +40,7 @@
 	</select>
 	
 	<br/>
-	<input type="checkbox" name="terminos" value="ok" /> Acepto términos y condiciones
+	<input type="checkbox" name="terminos" value="ok" /> Acepto t&eacute;rminos y condiciones
 	
 	<br/>
 	*Campo obligatorio

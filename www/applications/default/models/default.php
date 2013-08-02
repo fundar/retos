@@ -76,17 +76,17 @@ class Default_Model extends ZP_Model {
 		if($data["name"] == "") {
 			return array("error" => "Necesitas escribir el nombre del representante");
 		} elseif($data["email"] == "") {
-			return array("error" => true);
+			return array("error" => "Necesitas escribir el email del representante");
 		} elseif($data["names"] == "") {
-			return array("error" => true);
+			return array("error" => "Necesitas escribir los nombres de los integrantes");
 		} elseif($data["title"] == "") {
-			return array("error" => true);
+			return array("error" => "Necesitas escribir el nombre del proyecto");
 		} elseif($data["descr"] == "") {
-			return array("error" => true);
+			return array("error" => "Necesitas escribir la descripción del proyecto");
 		} elseif($data["url-video"] == "") {
-			return array("error" => true);
-		} elseif($data["terminos"] == "") {
-			return array("error" => true);
+			return array("error" => "Necesitas escribir la url del video del proyecto");
+		} elseif(!isset($_POST["terminos"])) {
+			return array("error" => "Necesitas aceptar los términos y condiciones");
 		}
 	}
 	
