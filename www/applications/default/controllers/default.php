@@ -31,6 +31,8 @@ class Default_Controller extends ZP_Controller {
 	
 	
 	public function submit() {
+		$this->title("Sube tu proyecto");
+		
 		if(isset($_POST["send"])) {
 			$project = $this->Default_Model->addProject($user);
 				
@@ -142,6 +144,8 @@ class Default_Controller extends ZP_Controller {
 	
 	/*Posts*/
 	public function add() {
+		$this->title("Sube tu idea");
+		
 		/*quitar el true cuando ya pueden subir todos los usuarios*/
 		$user = $this->isUser();
 		
@@ -208,6 +212,7 @@ class Default_Controller extends ZP_Controller {
 		$vars["post"] = $this->Default_Model->getPostBySlug($slug, $vars["user"]);
 		
 		if(isset($vars["post"]["post_id"])) {
+			$this->title(utf8_decode($vars["post"]["title"]));
 			$vars["comments"] = $this->Default_Model->getCommentsByPost($vars["post"]["post_id"]);
 		} else {
 			$vars["comments"] = false;
@@ -219,6 +224,8 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function edit($slug = false) {
+		$this->title("Editar idea");
+		
 		$user = $this->isUser();
 		
 		if($user and $slug) {
@@ -244,6 +251,8 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function myPosts() {
+		$this->title("Mis ideas");
+		
 		$user = $this->isUser();
 		
 		if($user) {
@@ -272,6 +281,8 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function faqs() {
+		$this->title("Preguntas frecuentes");
+		
 		$vars["user"] = $this->isUser();
 		$vars["view"] = $this->view("faqs", true);
 		
@@ -279,6 +290,8 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function convocatoria() {
+		$this->title("Convocatoria");
+		
 		$vars["user"] = $this->isUser();
 		$vars["view"] = $this->view("convocatoria", true);
 		
