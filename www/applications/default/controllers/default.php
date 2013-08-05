@@ -36,6 +36,7 @@ class Default_Controller extends ZP_Controller {
 		
 		if($user) {
 			if($user[0]["admin"] == "t") {
+				$vars["user"]     = $this->isUser();
 				$vars["projects"] = $this->Default_Model->getProjects();
 				$vars["view"]     = $this->view("projects", true);
 				
