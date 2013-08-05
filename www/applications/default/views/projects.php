@@ -9,7 +9,7 @@
 					<div class="row">
 						<p><strong><?php echo utf8_decode($project["title"]);?></strong></p>
 						
-						<p>Descripci&oacute;n: <?php echo utf8_decode($project["descr"]);?></p>
+						<p>Descripci&oacute;n: <?php echo utf8_decode($project["descr"]);?></p><br/>
 						
 						<p>
 							Categor&iacute;a: <?php echo $project["name_category"];?><br/>
@@ -24,7 +24,7 @@
 							Integrantes: <?php echo utf8_decode($project["names"]);?>
 						</p>
 					</div>
-				</div>
+				</div><br/><br/><br/>
 			<?php } ?>
 		</div>
 	</div>
