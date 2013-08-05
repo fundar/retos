@@ -34,7 +34,7 @@
 	<br/>
 	
 	Url del demo o algun otro recurso demostrativo: <input type="text" name="url-demo" value="<?php echo (isset($_POST["url-demo"])) ? $_POST["url-demo"]: ""; ?>" />
-	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como Kickfolio o TestFlight).</p>
+	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).</p>
 	
 	<br/>
 	Categor&iacute;a*: 
@@ -45,7 +45,7 @@
 			</option>
 		<?php } ?>
 	</select>
-	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).</p>
+	<p>Sí tu aplicación ya está en algúna tienda en línea (appstore, Google Play, etc) debes usar la categoría Apps pre-existentes)</p>
 	
 	<br/><br/><br/>
 	<p>
