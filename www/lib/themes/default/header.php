@@ -97,10 +97,10 @@
 							
 							<a href="/add" title="Agregar reto">Agregar reto</a><br/><br/>
 							
-							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/><br/>
+							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/>
 							
 							<?php if($user[0]["admin"] == "t") { ?>
-								<a href="/projects/#retos" title="Proyectos">Proyectos</a><br/><br/>
+								<a href="/proyectos/#retos" title="Proyectos">Proyectos</a><br/>
 							<?php } ?>
 							
 							<a href="/logout" title="logout">Salir</a>
