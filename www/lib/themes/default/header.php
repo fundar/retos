@@ -99,6 +99,10 @@
 							
 							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/><br/>
 							
+							<?php if($user[0]["admin"] == "t") { ?>
+								<a href="/projects/#retos" title="Proyectos">Proyectos</a><br/><br/>
+							<?php } ?>
+							
 							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
 							<span>Conecta:</span>

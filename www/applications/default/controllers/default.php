@@ -30,6 +30,21 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	
+	public function projects() {
+		$this->title("Sube tu proyecto");
+		
+		$user = $this->isUser(true);
+		
+		if($user) {
+			$vars["projects"] = $this->Default_Model->getProjects();
+			$vars["view"]     = $this->view("projects", true);
+			
+			$this->render("content", $vars);
+		} else {
+			header('Location:' . get("webURL"));
+		}
+	}
+	
 	public function submit() {
 		$this->title("Sube tu proyecto");
 		
