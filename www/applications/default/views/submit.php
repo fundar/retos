@@ -43,7 +43,7 @@
 		<?php } ?>
 	</select>
 	
-	<br/>
+	<br/><br/><br/>
 	<p>
 		El envío de esta propuesta no implica cesión de derechos de autor en los desarrollos.<br/>
 		El envío de la propuesta implica que, de resultar seleccionada, los participantes aceptan facilitar a las instituciones convocantes un esquema automatizado de acceso a los datos generados por el uso de los desarrollos. Dichos datos quedarán licenciados en términos de la licencia ODC Open Database License (ODbL) <a href="http://opendatacommons.org/licenses/odbl/">http://opendatacommons.org/licenses/odbl/</a><br/>
