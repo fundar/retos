@@ -53,6 +53,7 @@
 	
 	<br/>
 	*Campo obligatorio
+	<br/><br/>
 	
-	<input type="submit" name="send" value="Agregar" />
+	<input type="submit" name="send" value="Enviar" />
 </form>
