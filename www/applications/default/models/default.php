@@ -66,7 +66,6 @@ class Default_Model extends ZP_Model {
 		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id";
 		$data  = $this->Db->query($query);
 		
-		die(var_dump($data));
 		return $data;
 	}
 	

@@ -97,7 +97,7 @@
 							
 							<a href="/add" title="Agregar reto">Agregar reto</a><br/><br/>
 							
-							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/>
+							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/><br/>
 							
 							<?php if($user[0]["admin"] == "t") { ?>
 								<a href="/proyectos/#retos" title="Proyectos">Proyectos</a><br/>
