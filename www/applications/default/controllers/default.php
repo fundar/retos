@@ -29,9 +29,8 @@ class Default_Controller extends ZP_Controller {
 		$this->render("content", $vars);
 	}
 	
-	
 	public function projects() {
-		$this->title("Sube tu proyecto");
+		$this->title("Proyectos");
 		
 		$user = $this->isUser(true);
 		
