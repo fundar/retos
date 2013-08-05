@@ -52,6 +52,8 @@ class Default_Controller extends ZP_Controller {
 	public function submit() {
 		$this->title("Sube tu proyecto");
 		
+		$vars["user"] = $this->isUser();
+		
 		if(isset($_POST["send"])) {
 			$project = $this->Default_Model->addProject($user);
 				
