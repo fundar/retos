@@ -32,13 +32,17 @@ class Default_Controller extends ZP_Controller {
 	public function projects() {
 		$this->title("Proyectos");
 		
-		$user = $this->isUser(true);
+		$user = $this->isUser();
 		
 		if($user) {
-			$vars["projects"] = $this->Default_Model->getProjects();
-			$vars["view"]     = $this->view("projects", true);
-			
-			$this->render("content", $vars);
+			if($user[0]["admin"] == "t") {
+				$vars["projects"] = $this->Default_Model->getProjects();
+				$vars["view"]     = $this->view("projects", true);
+				
+				$this->render("content", $vars);
+			} else {
+				header('Location:' . get("webURL"));
+			}
 		} else {
 			header('Location:' . get("webURL"));
 		}
