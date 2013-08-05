@@ -26,7 +26,7 @@
 					</p>
 		        </blockquote>
 			</div>
-
+		</div>
 		
 		<!-- Contenido-->  
 		<div class="large-12 columns">
