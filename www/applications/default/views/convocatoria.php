@@ -26,7 +26,6 @@
 					</p>
 		        </blockquote>
 			</div>
-						<Como resultado de un gran número de solicitudes, se ha abierto una nueva categoría  de participación para desarrollos que ya existan en el mercado en tiendas en línea (appstore, Google Play, etc.) y cuyos creadores tienen el interés de abrir sus datos. Las aplicaciones de esta categoría no competirán con el resto de las categorías y de ser seleccionadas recibirán acceso a campañas de difusión con una estrategia integral de medios. Como en el caso de las otras categorías, se requerirá el otorgamiento de acceso automatizado a los datos asociados a la movilidad urbana que el desarrollo genere./div>
 
 		
 		<!-- Contenido-->  
