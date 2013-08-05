@@ -28,7 +28,7 @@
 	
 	<br/>
 	
-	Url del video explicando el proyecto*: <input type="text" name="url-video" value="<?php echo (isset($_POST["url-video"])) ? $_POST["url-video"]: ""; ?>" /><
+	Url del video explicando el proyecto*: <input type="text" name="url-video" value="<?php echo (isset($_POST["url-video"])) ? $_POST["url-video"]: ""; ?>" />
 	<p>Trata de que tu video no pase de 3 minutos. Intenta ejemplificar el uso cotidiano y no dejes fuera los detalles importantes de valor agreado que distingan a tu propuesta.</p>
 	
 	<br/>
@@ -45,7 +45,7 @@
 			</option>
 		<?php } ?>
 	</select>
-	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como Kickfolio o TestFlight).</p>
+	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).</p>
 	
 	<br/><br/><br/>
 	<p>
