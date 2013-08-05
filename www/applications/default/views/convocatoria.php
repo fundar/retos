@@ -26,7 +26,7 @@
 					</p>
 		        </blockquote>
 			</div>
-						</div>
+						<Como resultado de un gran número de solicitudes, se ha abierto una nueva categoría  de participación para desarrollos que ya existan en el mercado en tiendas en línea (appstore, Google Play, etc.) y cuyos creadores tienen el interés de abrir sus datos. Las aplicaciones de esta categoría no competirán con el resto de las categorías y de ser seleccionadas recibirán acceso a campañas de difusión con una estrategia integral de medios. Como en el caso de las otras categorías, se requerirá el otorgamiento de acceso automatizado a los datos asociados a la movilidad urbana que el desarrollo genere./div>
 
 		
 		<!-- Contenido-->  
@@ -50,7 +50,14 @@
 				<br/>- Cualquier otro recurso de demostración que los participantes consideren necesarios para la mejor evaluación de la idea propuesta por parte del jurado. (se sugieren servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).
 			</p>
 		</div>		
-	</div>		
+	</div>	
+		
+	<div class="large-12 columns">
+		<p>
+			Como resultado de un gran número de solicitudes, se ha abierto una nueva categoría  de participación para desarrollos que ya existan en el mercado en tiendas en línea (appstore, Google Play, etc.) y cuyos creadores tienen el interés de abrir sus datos. Las aplicaciones de esta categoría no competirán con el resto de las categorías y de ser seleccionadas recibirán acceso a campañas de difusión con una estrategia integral de medios. Como en el caso de las otras categorías, se requerirá el otorgamiento de acceso automatizado a los datos asociados a la movilidad urbana que el desarrollo genere.
+		</p>
+	</div>
+	
 	<div class="large-12 columns">
 		<div class="row">
 			 <div class="small-11 small-centered columns"><img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;"></div>

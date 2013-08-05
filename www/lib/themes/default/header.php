@@ -2,8 +2,10 @@
 <html lang="<?php print get("webLang"); ?>">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		 <meta name="viewport" content="width=device-width" />
-		<title><?php print $this->getTitle(); ?></title>
+		<meta name="viewport" content="width=device-width" />
+		<title>
+			<?php print $this->getTitle(); ?>
+		</title>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->themePath; ?>/img/favicon.ico" />
 		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
