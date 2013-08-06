@@ -53,7 +53,7 @@
 		
 	<div class="large-12 columns">
 		<div class="row">
-			<a name="top"></a>
+			<a name="nueva-categoria"></a>
 			<p>
 				Como resultado de un gran número de solicitudes, se ha abierto una nueva categoría  de participación para desarrollos que ya existan en el mercado en tiendas en línea (appstore, Google Play, etc.) y cuyos creadores tienen el interés de abrir sus datos. Las aplicaciones de esta categoría no competirán con el resto de las categorías y de ser seleccionadas recibirán acceso a campañas de difusión con una estrategia integral de medios. Como en el caso de las otras categorías, las aplicaciones deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. Análogamente, para acceder a los incentivos de esta categoría, los participantes deberán otorgar a las instituciones convocantes acceso automatizado a los datos generados por las aplicaciones.
 			</p>
