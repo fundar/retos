@@ -31,21 +31,21 @@
 	
 	<br/>
 	
-	Url del video explicando el proyecto*:<br/>
-	Trata de que tu video no pase de 3 minutos. Intenta ejemplificar el uso cotidiano y no dejes fuera los detalles importantes de valor agreado que distingan a tu propuesta.</br>
+	Url del video explicando el proyecto*:
+	<p>Trata de que tu video no pase de 3 minutos. Intenta ejemplificar el uso cotidiano y no dejes fuera los detalles importantes de valor agreado que distingan a tu propuesta.</p>
 	<input type="text" name="url-video" value="<?php echo (isset($_POST["url-video"])) ? $_POST["url-video"]: ""; ?>" />
 	
 	
 	<br/>
 	
-	Url del demo o algun otro recurso demostrativo: <br/>
-	El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).<br/>
+	Url del demo o algun otro recurso demostrativo:
+	<p>El demo es opcional pero si se incluye es un factor que puede ayudar positivamente a la decisión de los jueces (sugerimos servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).</p>
 	<input type="text" name="url-demo" value="<?php echo (isset($_POST["url-demo"])) ? $_POST["url-demo"]: ""; ?>" />
 	
 	
 	<br/>
-	Categor&iacute;a*:<br/>
-	Sí tu aplicación ya está en algúna tienda en línea (appstore, Google Play, etc) debes usar la categoría Apps pre-existentes)<br/>
+	Categor&iacute;a*:
+	<p>Sí tu aplicación ya está en algúna tienda en línea (appstore, Google Play, etc) debes usar la categoría Apps pre-existentes)</p>
 	<select name="category_id">
 		<?php foreach($categories as $category) { ?>
 			<option value="<?php echo $category["category_id"];?>">
