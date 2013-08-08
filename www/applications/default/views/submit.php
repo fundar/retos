@@ -54,7 +54,6 @@
 		<?php } ?>
 	</select>
 	
-	
 	<br/>
 	<input type="checkbox" name="terminos" value="ok" /> He leído, entiendo y acepto los términos de participación
 	
