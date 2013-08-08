@@ -2,8 +2,10 @@
 <html lang="<?php print get("webLang"); ?>">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		 <meta name="viewport" content="width=device-width" />
-		<title><?php print $this->getTitle(); ?></title>
+		<meta name="viewport" content="width=device-width" />
+		<title>
+			<?php print $this->getTitle(); ?>
+		</title>
 		
 		<link rel="shortcut icon" type="image/x-icon" href="<?php echo $this->themePath; ?>/img/favicon.ico" />
 		<link href="<?php echo $this->themePath; ?>/css/auth-buttons.css" rel="stylesheet">
@@ -95,7 +97,13 @@
 							
 							<a href="/add" title="Agregar reto">Agregar reto</a><br/><br/>
 							
-							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/><br/>
+							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/>
+							
+							<?php if($user[0]["admin"] == "t") { ?>
+								<a href="/proyectos/#retos" title="Proyectos">Proyectos</a><br/>
+							<?php } else { ?>
+								<br/>
+							<?php } ?>
 							
 							<a href="/logout" title="logout">Salir</a>
 						<?php } else { ?>
@@ -128,9 +136,9 @@
 		<ul class="button-group right">
 			
 		<li><a href="/" class="button<?php echo (!segment(0) or segment(0) == "ordenar") ? " active-btn" : "";?>">Retos</a></li>
-		<li><a href="/convocatoria" class="button<?php echo (segment(0) == "convocatoria") ? " active-btn" : "";?>">Convocatoria</a></li>
+		<li><a href="/convocatoria/#nueva-categoria" class="button<?php echo (segment(0) == "convocatoria") ? " active-btn" : "";?>">Convocatoria</a></li>
 		<li><a href="/add" class="button<?php echo (segment(0) == "add") ? " active-btn" : "";?>">Sube tu idea</a></li>
-		<li><a href="/submit" class="button<?php echo (segment(0) == "submit") ? " active-btn" : "";?>">Sube tu proyecto</a></li>
+		<li><a href="/submit" class="button<?php echo (segment(0) == "submit") ? " active-btn" : "";?>">Env&iacute;a tu proyecto</a></li>
 		<li><a href="/faqs" class="button<?php echo (segment(0) == "faqs") ? " active-btn" : "";?>">Preguntas frecuentes</a></li>
 		</ul>
 		</div>

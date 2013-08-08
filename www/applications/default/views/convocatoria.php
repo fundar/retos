@@ -26,8 +26,7 @@
 					</p>
 		        </blockquote>
 			</div>
-						</div>
-
+		</div>
 		
 		<!-- Contenido-->  
 		<div class="large-12 columns">
@@ -43,14 +42,24 @@
 				<br/>Híbrido. Alguna combinación de las anteriores categorías
 			
 				<br/><br/>- Los desarrollos deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. El sito <a href="http://conectadf.mx/">conectadf.mx</a> servirá como plataforma de discusión e ideación de propuestas de generación de datos así como de estrategias que puedan incentivar la adopción masiva por parte de la ciudadanía.
-				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviado a través del sitio <a href="http://conectadf.mx/">conectadf.mx</a> y deberán incluir lo siguiente.
+				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviado a través del sitio <a href="http://conectadf.mx/submit">conectadf.mx/submit</a> y deberán incluir lo siguiente.
 				<br/>- Los datos de contacto de los participantes
 				<br/>- Un texto descriptivo de la aplicación donde se detallen como contribuye a la problemática de la movilidad urbana, sus funcionalidades y valor agregado.
 				<br/>- Un video demostrativo del desarrollo en funcionamiento. El video deberá enfocarse en mostrar el grado de ejecución de a idea y los detalles de funcionamiento del desarrollo. Aquellos videos que se enfoquen solamente en 
 				<br/>- Cualquier otro recurso de demostración que los participantes consideren necesarios para la mejor evaluación de la idea propuesta por parte del jurado. (se sugieren servicios de distribución de demos como <a href="https://app.io/">Kickfolio</a> o <a href="https://testflightapp.com/">TestFlight</a>).
 			</p>
 		</div>		
-	</div>		
+	</div>	
+		
+	<div class="large-12 columns">
+		<div class="row">
+			<a name="nueva-categoria"></a>
+			<p>
+				Como resultado de un gran número de solicitudes, se ha abierto una nueva categoría  de participación para desarrollos que ya existan en el mercado en tiendas en línea (appstore, Google Play, etc.) y cuyos creadores tienen el interés de abrir sus datos. Las aplicaciones de esta categoría no competirán con el resto de las categorías y de ser seleccionadas recibirán acceso a campañas de difusión con una estrategia integral de medios. Como en el caso de las otras categorías, las aplicaciones deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. Análogamente, para acceder a los incentivos de esta categoría, los participantes deberán otorgar a las instituciones convocantes acceso automatizado a los datos generados por las aplicaciones.
+			</p>
+		</div>
+	</div>
+	
 	<div class="large-12 columns">
 		<div class="row">
 			 <div class="small-11 small-centered columns"><img src="<?php echo $this->themePath; ?>/img/destacado.jpg" style="margin: 50px auto 30px;"></div>
