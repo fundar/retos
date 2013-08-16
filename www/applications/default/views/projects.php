@@ -12,7 +12,7 @@
 						<p>Descripci&oacute;n: <?php echo utf8_decode($project["descr"]);?></p><br/>
 						
 						<p>
-							Categor&iacute;a: <?php echo $project["name_category"];?><br/>
+							Categor&iacute;a: <?php echo utf8_decode($project["name_category"]);?><br/>
 							Url del video: <?php echo $project["url_video"];?><br/>
 							Url del demo: <?php echo $project["url_demo"];?><br/>
 						</p>
