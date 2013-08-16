@@ -22,11 +22,11 @@
 							Correo: <?php echo utf8_decode($project["email"]);?><br/><br/>
 							
 							Integrantes: <?php echo utf8_decode($project["names"]);?>
-						</p><br/><br/><br/>
+						</p><br/><br/>
 					</div>
 				</div>
 				
-				<hr>
+				<hr><br/>
 			<?php } ?>
 		</div>
 	</div>
