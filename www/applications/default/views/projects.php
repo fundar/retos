@@ -25,6 +25,8 @@
 						</p><br/><br/><br/>
 					</div>
 				</div>
+				
+				<hr>
 			<?php } ?>
 		</div>
 	</div>
