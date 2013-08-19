@@ -26,7 +26,7 @@
 	
 	
 	Descripci&oacute;n*:
-	<p>Asegúrate de explicar como contribuyes a la problemática de la movilidad urbana así como el tipo de datos asociados que se generarían, analizarían o difundirían. Explica las funcionalidades con detalle y el valor agregado par los usuarios, los convocantes u otro actor relacionado con la problemática. Comenta qué tipo de modelo de sustentabilidad podría aplicarse a la propuesta.</p>
+	<p>Asegúrate de explicar como contribuyes a la problemática de la movilidad urbana así como el tipo de datos asociados que se generarían, analizarían o difundirían. Explica las funcionalidades con detalle y el valor agregado para los usuarios, los convocantes u otro actor relacionado con la problemática. Comenta qué tipo de modelo de sustentabilidad podría aplicarse a la propuesta.</p>
 	<textarea name="descr" class="editme"><?php echo (isset($_POST["descr"])) ? $_POST["descr"]: ""; ?></textarea>
 	
 	<br/>
