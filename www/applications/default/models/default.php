@@ -325,6 +325,10 @@ class Default_Model extends ZP_Model {
 	
 	/*comments*/
 	public function setComment($user_id, $slug, $comment, $parent_id) {
+		if(isInjection($comment)) {
+			return false;
+		}
+		
 		$post_id = $this->getPostIDBySlug($slug);
 		
 		if(!$post_id) {
