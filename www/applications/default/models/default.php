@@ -100,7 +100,7 @@ class Default_Model extends ZP_Model {
 		if($result) {
 			$to       = $data["email"];
 			$subject  = "Gracias por enviar tu proyecto a ConectaDF";
-			$message  = "Gracias por enviar tu proyecto a ConectaDF.":
+			$message  = "Gracias por enviar tu proyecto a ConectaDF.";
 			$message .= "Los jueces evaluarán tu propuesta de acuerdo a las bases. De requerir información adicional acerca de tu proyecto nos pondremos en contacto contigo,";
 			$message .= " de manera que te pedimos estés pendiente a partir del 22 de agosto y hasta el 27, día en que serán anunciados los proyectos seleccionados.<br/><br/>";
 			$message .= "Saludos<br/>";
