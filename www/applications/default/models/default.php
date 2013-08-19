@@ -97,6 +97,7 @@ class Default_Model extends ZP_Model {
 		
 		$result = $this->Db->insert("projects", $data, "project_id");
 		
+		/*
 		if($result) {
 			$to       = $data["email"];
 			$subject  = "Gracias por enviar tu proyecto a ConectaDF";
@@ -110,6 +111,7 @@ class Default_Model extends ZP_Model {
 			
 			mail($to,$subject,$message,$headers);
 		}
+		*/
 		
 		return $result;
 	}
