@@ -76,6 +76,12 @@ function isInjection($text, $count = 1) {
 			return TRUE;
 		} elseif(substr_count($text, "<iframe") >= $count) {
 			return TRUE;
+		} elseif(substr_count($text, "echo") >= $count) {
+			return TRUE;
+		} elseif(substr_count($text, "<?") >= $count) {
+			return TRUE;
+		} elseif(substr_count($text, "<?php") >= $count) {
+			return TRUE;
 		} elseif(substr_count($text, "<img") >= $count) {
 			return TRUE;
 		}	
