@@ -42,7 +42,7 @@
 				<br/>Híbrido. Alguna combinación de las anteriores categorías
 			
 				<br/><br/>- Los desarrollos deberán generar datos que ayuden a mejorar el transporte público y la movilidad urbana. El sito <a href="http://conectadf.mx/">conectadf.mx</a> servirá como plataforma de discusión e ideación de propuestas de generación de datos así como de estrategias que puedan incentivar la adopción masiva por parte de la ciudadanía.
-				<br/>- El reto queda abierto desde su publicación y hasta el 21 de agosto de 2013. Los desarrollos deberán ser enviado a través del sitio <a href="http://conectadf.mx/submit">conectadf.mx/submit</a> y deberán incluir lo siguiente.
+				<br/>- El reto queda abierto desde su publicación y hasta el 23 de agosto de 2013. Los desarrollos deberán ser enviado a través del sitio <a href="http://conectadf.mx/submit">conectadf.mx/submit</a> y deberán incluir lo siguiente.
 				<br/>- Los datos de contacto de los participantes
 				<br/>- Un texto descriptivo de la aplicación donde se detallen como contribuye a la problemática de la movilidad urbana, sus funcionalidades y valor agregado.
 				<br/>- Un video demostrativo del desarrollo en funcionamiento. El video deberá enfocarse en mostrar el grado de ejecución de a idea y los detalles de funcionamiento del desarrollo. Aquellos videos que se enfoquen solamente en 
@@ -70,7 +70,7 @@
 			<p>
 				- Las propuestas serán juzgadas de acuerdo a los criterios de impacto potencial sobre la problemática particular a la que se dirigen, creatividad de la propuesta para la generación/análisis de datos, uso innovador de la tecnología, así como la calidad general de ejecución del desarrollo.
 
-				<br/>- El jurado estará conformado por personalidades reconocidas en los ámbitos de las políticas públicas de movilidad y la innovación tecnológica. El fallo del jurado será inapelable y público el día 24 de agosto en el Laboratorio para la ciudad.
+				<br/>- El jurado estará conformado por personalidades reconocidas en los ámbitos de las políticas públicas de movilidad y la innovación tecnológica. El fallo del jurado será inapelable y será dado a conocer el día 27 de agosto en el Laboratorio para la ciudad. 
 
 				<br/>- Los participantes cuyos proyectos sean seleccionados obtendrán acceso a un programa de incubación/mentorship otorgado por las instituciones convocantes el cual permitirá perfeccionar el desarrollo, formar estrategias de adopción e implementación, así como garantizar acceso a infraestructura y recursos necesarios para maximizar su impacto. Dicho programa tendrá una duración mínima de 3 meses y máxima de un año contados a partir de la publicación del veredicto. 
 
