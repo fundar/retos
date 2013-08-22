@@ -165,9 +165,12 @@ class Default_Controller extends ZP_Controller {
 	
 	/*Posts*/
 	public function add() {
-		$this->title("Sube tu idea");
+		header('Location:' . get("webURL"));
+		
+		//$this->title("Sube tu idea");
 		
 		/*quitar el true cuando ya pueden subir todos los usuarios*/
+		/*
 		$user = $this->isUser();
 		
 		if($user) {
@@ -196,6 +199,7 @@ class Default_Controller extends ZP_Controller {
 			
 			$this->render("content", $vars);
 		}
+		*/
 	}
 	
 	public function viewPost($slug) {
