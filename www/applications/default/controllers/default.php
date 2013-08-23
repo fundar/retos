@@ -57,7 +57,11 @@ class Default_Controller extends ZP_Controller {
 		if(isset($_POST["send"])) {
 			$project = $this->Default_Model->addProject($user);
 				
-			if(is_array($project) and isset($project["error"])) {
+			if(is_array($project) and isset($project["error"]) or $project == false) {
+				if($project == false) {
+					$project["error"] = "Ocurrio un error, revisa todos los campos";
+				}
+				
 				$vars["error"] 	    = $project["error"];
 				$vars["categories"] = $this->Default_Model->categories();
 				$vars["view"]  		= $this->view("submit", true);
