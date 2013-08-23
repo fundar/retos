@@ -50,6 +50,9 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function submit() {
+		header('Location:' . get("webURL"));
+		
+		/*
 		$this->title("Sube tu proyecto");
 		
 		$vars["user"] = $this->isUser();
@@ -74,6 +77,7 @@ class Default_Controller extends ZP_Controller {
 		}
 		
 		$this->render("content", $vars);
+		*/
 	}
 	
 	public function order($type = false) {

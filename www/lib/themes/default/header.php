@@ -137,8 +137,8 @@
 			
 		<li><a href="/" class="button<?php echo (!segment(0) or segment(0) == "ordenar") ? " active-btn" : "";?>">Retos</a></li>
 		<li><a href="/convocatoria/#nueva-categoria" class="button<?php echo (segment(0) == "convocatoria") ? " active-btn" : "";?>">Convocatoria</a></li>
-		<li><a href="/submit" class="button<?php echo (segment(0) == "submit") ? " active-btn" : "";?>">Env&iacute;a tu proyecto</a></li>
 		<li><a href="/faqs" class="button<?php echo (segment(0) == "faqs") ? " active-btn" : "";?>">Preguntas frecuentes</a></li>
+		<li><a href="#" class="button">Gracias por participar</a></li>
 		</ul>
 		</div>
 		</div>
