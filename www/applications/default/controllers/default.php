@@ -259,6 +259,7 @@ class Default_Controller extends ZP_Controller {
 		$user = $this->isUser();
 		
 		if($user and $slug) {
+			/*
 			if(isset($_POST["send"])) {
 				$post = $this->Default_Model->editPost($user);
 				
@@ -268,7 +269,7 @@ class Default_Controller extends ZP_Controller {
 					header('Location:' . get("webURL") . "/reto/" . $post[0]["slug"]);
 				}
 			}
-			
+			*/
 			$vars["user"]	    = $user;
 			$vars["categories"] = $this->Default_Model->categories();
 			$vars["post"] 		= $this->Default_Model->getEditPostBySlug($slug, $user);
