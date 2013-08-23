@@ -75,7 +75,7 @@ class Default_Model extends ZP_Model {
 		$data["email"]       = $_POST["email"];
 		$data["names"]       = $_POST["names"];
 		$data["title"]       = $_POST["title"];
-		$data["descr"]       = $_POST["descr"];
+		$data["descr"]       = str_replace("'", '"',$_POST["descr"]);
 		$data["url_video"]   = $_POST["url-video"];
 		$data["url_demo"]    = $_POST["url-demo"];
 		
