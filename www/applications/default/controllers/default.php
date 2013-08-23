@@ -209,6 +209,7 @@ class Default_Controller extends ZP_Controller {
 	public function viewPost($slug) {
 		
 		/*Comentarios - Ajax*/
+		/*
 		if(isset($_POST["comment"]) and isset($_POST["slug"])) {
 			if($_POST["comment"] != "" and $slug == $_POST["slug"]) {
 				$user = $this->isUser();
@@ -230,7 +231,7 @@ class Default_Controller extends ZP_Controller {
 			
 			die();
 		}
-		
+		*/
 		
 		/*view post*/
 		if($slug == "") {
@@ -297,6 +298,7 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function like($post_id) {
+		/*
 		if(is_numeric($post_id)) {
 			if(isset($_COOKIE['vote_' . $post_id])) {
 				echo "false";
@@ -307,6 +309,7 @@ class Default_Controller extends ZP_Controller {
 		} else {
 			echo "false";
 		}
+		*/
 	}
 	
 	public function faqs() {

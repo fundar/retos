@@ -20,7 +20,7 @@
 						
 							<div class="panel callout stats reto">
 								<ul class="social-stats">
-								<li><p class="like votes like-post" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
+								<li><p class="like votes" value="<?php echo $post["post_id"];?>"><?php echo $post["votes"];?></p></li>
 								<li><p class="opinion"><?php echo $post["count"];?> Comentarios</p></li>
 								<li class="vota-tw">
 									<a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo utf8_decode($post["title"]);?> #ConectaDF" data-via="opendatamx" data-lang="en">Tweet</a>
@@ -109,99 +109,9 @@
 						<?php } ?>
 					<?php } ?>
 				</div>
-				
-				
-				<!-- Formulario de comentarios -->
-				<?php if($user and is_array($user)) { ?>
-					<form method="POST" action="" id="form-comment">
-						<div id="reply-to"></div>
-						<input type="text"   id="post-comment" name="comment" value="" onKeyPress="return checkSubmit(event)"/>
-						<input type="hidden" id="post-slug"    name="post-slug" value="<?php echo $post["slug"];?>"/>
-						<input type="hidden" id="post-parent-id" name="post-parent-id" value="0"/>
-						<input type="button" id="send-comment" name="send-comment" value="comentar" />
-					</form>
-				<?php } else { ?>
-					Necesitas estar conectado para comentar
-				<?php } ?>
 			</div>
 		</div>
 	</div><!-- contenido sepués de cita -->		
-	
-	<!-- JS & Ajax -->
-	<script type="text/javascript">
-		function checkSubmit(e) {
-		   if(e && e.keyCode == 13) {
-			  $("#send-comment").click();
-			  return false;
-		   }
-		}
-
-		$(document).ready( function () {
-			$(".descr a").attr("target", "_blank");
-			
-			$(".reply-comment").click( function () {
-				id = $(this).attr("value");
-				console.log(id);
-				div = '<p>Contestar a: ' + $(".user-comment-" + id).text() + "</p>";
-				$("#reply-to").html(div);
-				$("#post-parent-id").val(id);
-				$("#post-comment").focus();
-				return false;
-			});
-			
-			$(".like-post").click( function () {
-				id = $(this).attr("value");
-				like_post(id);
-			});
-			
-			$("#send-comment").click( function () {
-				slug      = $("#post-slug").val();
-				comment   = $("#post-comment").val();
-				parent_id = $("#post-parent-id").val();
-				
-				comment_post(slug, comment, parent_id);
-			});
-		});
-		
-		function comment_post(vslug, vcomment, vparent_id) {
-			$.post("/reto/" + slug, { slug: vslug, comment: vcomment, parent_id: vparent_id })
-			.done(function(data) {
-				if(data == "true") {
-					if(vparent_id == 0) {
-						html = '<div class="comment"><p><span>';
-					} else {
-						html = '<div class="comment2"><p><span>';
-					}
-					
-					html += '<a href="<?php echo $user[0]["url"];?>" title="<?php echo utf8_decode($user[0]["name"]);?>">';
-					html += '<?php echo utf8_decode($user[0]["name"]);?></a></span><br/>';
-					html += vcomment + '</p></div>';
-					
-					$("#post-comment").val("");
-					
-					if(vparent_id == 0) {
-						$('#comments').append(html);
-					} else {
-						$(html).insertAfter('.coment_id_' + vparent_id);
-					}
-					
-					
-				}
-			});
-		}
-		
-		function like_post(id) {
-			$.ajax({
-				url: "/like/" + id
-			}).done(function (data) {
-				if(data == "false") {
-					
-				} else {
-					$(".votes").text(data);
-				}
-			});
-		}
-	</script>
 <?php } else { ?>
 	<br/><p>
 		Contenido no disponible!

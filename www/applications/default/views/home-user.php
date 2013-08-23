@@ -20,10 +20,10 @@
 						</h6>
 					</a>
 					
-					<div class="panel callout stats  reto">
+					<div class="panel callout stats reto">
 						<ul class="social-stats">
 							<li>
-								<p class="like like-post vote<?php echo $post["post_id"];?>" value="<?php echo $post["post_id"];?>">
+								<p class="like vote<?php echo $post["post_id"];?>" value="<?php echo $post["post_id"];?>">
 									<?php echo $post["votes"];?>
 								</p>
 							</li>
@@ -43,24 +43,4 @@
 			<?php } ?>
 		</div>
 	</div>
-	
-	<script type="text/javascript">
-		$(document).ready( function () {
-			$(".like-post").click( function () {
-				id = $(this).attr("value");
-				
-				$.ajax({
-					url: "/like/" + id
-				}).done(function (data) {
-					if(data == "false") {
-						
-					} else {
-						$(".vote" + id).text(data);
-					}
-				});
-			});
-		});
-	</script>
-<?php } else { ?>
-	<br/><br/><p>Aun no has agregado una. <a href="/add" title="Agregar idea">Sube tu idea</a></p>
 <?php } ?>
