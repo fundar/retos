@@ -11,7 +11,7 @@
 				<a href="/project/<?php echo $offset - 1;?>">Anterior</a> 
 			<?php } ?>
 			
-			<?php if($offset+1 < 37) { ?>
+			<?php if($offset+1 < 38) { ?>
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
@@ -52,7 +52,7 @@
 				<a href="/project/<?php echo $offset - 1;?>">Anterior</a> 
 			<?php } ?>
 			
-			<?php if($offset+1 < 37) { ?>
+			<?php if($offset+1 < 38) { ?>
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
