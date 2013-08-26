@@ -49,6 +49,28 @@ class Default_Controller extends ZP_Controller {
 		}
 	}
 	
+	public function project($offset = 0) {
+		$this->title("Proyectos");
+		
+		$user = $this->isUser();
+		
+		if($user) {
+			if($user[0]["admin"] == "t") {
+				$vars["user"]     = $this->isUser();
+				$vars["projects"] = $this->Default_Model->getProject($offset);
+				$vars["offset"]   = $offset;
+				$vars["view"]     = $this->view("project", true);
+				
+				
+				$this->render("content", $vars);
+			} else {
+				header('Location:' . get("webURL"));
+			}
+		} else {
+			header('Location:' . get("webURL"));
+		}
+	}
+	
 	public function submit() {
 		header('Location:' . get("webURL"));
 		

@@ -69,6 +69,17 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
+	public function getProject($offset = 0) {
+		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1 offset " . $offset;
+		$data  = $this->Db->query($query);
+		
+		if($data) {
+			return $data[0];
+		} else {
+			return false;
+		}
+	}
+	
 	public function addProject() {
 		$data["category_id"] = $_POST["category_id"];
 		$data["name"]        = $_POST["name"];
