@@ -27,7 +27,15 @@
 		<br/>
 		
 		<p>
-			<a href="/project/<?php echo $offset - 1;?>">Anterior</a> | <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
+			<?php if($offset-1 == -1) { ?>
+			
+			<?php } else { ?>
+				<a href="/project/<?php echo $offset - 1;?>">Anterior</a> 
+			<?php } ?>
+			
+			<?php if($offset+1 < 37) { ?>
+				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
+			<?php } ?>
 		</p>
 		
 		<p>
