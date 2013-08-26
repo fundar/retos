@@ -30,6 +30,10 @@
 			<a href="/project/<?php echo $offset - 1;?>">Anterior</a> | <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 		</p>
 		
+		<p>
+			<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+		</p>
+		
 	</div>
 <?php } else { ?>
 	<br/><br/><p>Aun no han agregado proyectos.</p>
