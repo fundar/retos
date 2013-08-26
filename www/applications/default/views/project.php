@@ -28,7 +28,7 @@
 		<br/>
 		
 		<p>
-			<a href="/proyecto/<?php echo $offset - 1;?>">Anterior</a> | <a href="/proyecto/<?php echo $offset + 1;?>">Siguiente</a>
+			<a href="/project/<?php echo $offset - 1;?>">Anterior</a> | <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 		</p>
 		
 	</div>

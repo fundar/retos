@@ -98,8 +98,8 @@ $routes = array(
 		"method"	  => "projects",
 		"params"	  => array()
 	),
-	12 => array(
-		"pattern"	  => "/^proyecto/",
+	13 => array(
+		"pattern"	  => "/^project/",
 		"application" => "default",
 		"controller"  => "default",
 		"method"	  => "project",
