@@ -71,9 +71,9 @@ class Default_Model extends ZP_Model {
 	
 	public function getProject($offset = 0) {
 		if($offset==0) {
-			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1";
+			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id order by project_id asc limit 1";
 		} else {
-			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1 offset " . $offset;
+			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id order by project_id asc limit 1 offset " . $offset;
 		}
 		
 		$data = $this->Db->query($query);
@@ -86,7 +86,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getProjectsList() {
-		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id";
+		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id order by project_id asc";
 		$data  = $this->Db->query($query);
 		
 		return $data;
