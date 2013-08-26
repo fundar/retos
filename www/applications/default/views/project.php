@@ -15,7 +15,9 @@
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
-			<a style="float:right;" href="/project/">Primero</a> | <a style="float:right;" href="/project/36">Último</a>
+			<div style="float:right;">
+				<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+			</div>
 		</p>
 		<div class="row">
 			<div class="large-12 columns">
