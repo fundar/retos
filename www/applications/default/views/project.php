@@ -41,10 +41,9 @@
 					</p><br/><br/>
 				</div>
 			</div>
-		</div>
-		<br/>
+		</div><br/>
 		
-		<p>
+		<div>
 			<?php if($offset-1 == -1) { ?>
 			
 			<?php } else { ?>
@@ -55,8 +54,10 @@
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
-		</p>
+			<span style="float:right;">
+				<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+			</span>
+		</div>
 	</div>
 <?php } else { ?>
 	<br/><br/><p>Aun no han agregado proyectos.</p>
