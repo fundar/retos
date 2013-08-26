@@ -86,7 +86,7 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getProjectsList() {
-		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id order by project_id desc";
+		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id";
 		$data  = $this->Db->query($query);
 		
 		return $data;
