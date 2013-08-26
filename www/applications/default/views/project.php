@@ -52,7 +52,7 @@
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
-			- - - - - - <a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
 		</p>
 	</div>
 <?php } else { ?>
