@@ -29,8 +29,8 @@
 					
 					<p>
 						Categor&iacute;a: <?php echo utf8_decode($project["name_category"]);?><br/>
-						Url del video: <?php echo $project["url_video"];?><br/>
-						Url del demo: <?php echo $project["url_demo"];?><br/>
+						Url del video: <a target="_blank" href="<?php echo $project["url_video"];?>"><?php echo $project["url_video"];?></a><br/>
+						Url del demo: <a target="_blank" href="<?php echo $project["url_demo"];?>"><?php echo $project["url_demo"];?></a><br/>
 					</p>
 					
 					<p>
