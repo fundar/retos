@@ -1,12 +1,11 @@
 <?php if(is_array($project)) { ?>
 	<div class="large-12 columns">
 		<a name="retos"></a>
-		<h3>Proyectos</h3>
 		
 		<div class="row">
 			<div class="large-12 columns">
 				<div class="row">
-					<p><strong><?php echo utf8_decode($project["title"]);?></strong></p>
+					<h3><?php echo utf8_decode($project["title"]);?></h3>
 					
 					<p>Descripci&oacute;n: <?php echo utf8_decode($project["descr"]);?></p><br/>
 					
