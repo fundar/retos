@@ -14,12 +14,9 @@
 			<?php if($offset+1 < 37) { ?>
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
+			
+			- - - - - - <a href="/project/">Primero</a> | <a href="/project/36">Último</a>
 		</p>
-		
-		<p>
-			<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
-		</p>
-		
 		<div class="row">
 			<div class="large-12 columns">
 				<div class="row">
@@ -54,12 +51,9 @@
 			<?php if($offset+1 < 37) { ?>
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
+			
+			- - - - - - <a href="/project/">Primero</a> | <a href="/project/36">Último</a>
 		</p>
-		
-		<p>
-			<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
-		</p>
-		
 	</div>
 <?php } else { ?>
 	<br/><br/><p>Aun no han agregado proyectos.</p>
