@@ -95,12 +95,11 @@
 						
 							<img class="avatar" src="<?php echo $user[0]["image_url"];?>" alt="<?php echo $user[0]["name"];?>" /><br /><br />
 							
-							<a href="/add" title="Agregar reto">Agregar reto</a><br/><br/>
-							
 							<a href="/mis-ideas/#retos" title="Mis ideas">Mis ideas</a><br/>
 							
 							<?php if($user[0]["admin"] == "t") { ?>
 								<a href="/project" title="Proyectos">Proyectos</a><br/>
+								<a href="/list" title="Listado">Listado</a><br/>
 							<?php } else { ?>
 								<br/>
 							<?php } ?>

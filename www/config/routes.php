@@ -104,5 +104,12 @@ $routes = array(
 		"controller"  => "default",
 		"method"	  => "project",
 		"params"	  => array(segment(1))
+	),
+	14 => array(
+		"pattern"	  => "/^list/",
+		"application" => "default",
+		"controller"  => "default",
+		"method"	  => "getProjectsList",
+		"params"	  => array(segment(1))
 	)
 );

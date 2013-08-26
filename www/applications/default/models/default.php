@@ -85,6 +85,13 @@ class Default_Model extends ZP_Model {
 		}
 	}
 	
+	public function getProjectsList() {
+		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id order by project_id desc";
+		$data  = $this->Db->query($query);
+		
+		return $data;
+	}
+	
 	public function addProject() {
 		$data["category_id"] = $_POST["category_id"];
 		$data["name"]        = $_POST["name"];

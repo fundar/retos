@@ -71,6 +71,26 @@ class Default_Controller extends ZP_Controller {
 		}
 	}
 	
+	public function getProjectsList() {
+		$this->title("Proyectos");
+		
+		$user = $this->isUser();
+		
+		if($user) {
+			if($user[0]["admin"] == "t") {
+				$vars["user"]     = $this->isUser();
+				$vars["projects"] = $this->Default_Model->getProjects();
+				$vars["view"]     = $this->view("list", true);
+				
+				$this->render("content", $vars);
+			} else {
+				header('Location:' . get("webURL"));
+			}
+		} else {
+			header('Location:' . get("webURL"));
+		}
+	}
+	
 	public function submit() {
 		header('Location:' . get("webURL"));
 		
