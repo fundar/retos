@@ -70,10 +70,15 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getProject($offset = 0) {
-		$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1 offset " . $offset;
+		if($offset==0) {
+			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1";
+		} else {
+			$query = "select projects.*, categories.name as name_category from projects join categories on projects.category_id=categories.category_id limit 1 offset " . $offset;
+		}
+		
 		$data  = $this->Db->query($query);
 		
-		die(var_dump($query));
+		die(var_dump($data));
 		
 		if($data) {
 			return $data[0];
