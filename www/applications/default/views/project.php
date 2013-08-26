@@ -2,6 +2,24 @@
 	<div class="large-12 columns">
 		<a name="retos"></a>
 		
+		<a href="/list" title="Listado">Listado</a><br/><br/>
+		
+		<p>
+			<?php if($offset-1 == -1) { ?>
+			
+			<?php } else { ?>
+				<a href="/project/<?php echo $offset - 1;?>">Anterior</a> 
+			<?php } ?>
+			
+			<?php if($offset+1 < 37) { ?>
+				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
+			<?php } ?>
+		</p>
+		
+		<p>
+			<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+		</p>
+		
 		<div class="row">
 			<div class="large-12 columns">
 				<div class="row">
