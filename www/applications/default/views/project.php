@@ -43,6 +43,8 @@
 			</div>
 		</div><br/>
 		
+		<a href="/list" title="Listado">Listado</a><br/><br/>
+		
 		<div>
 			<?php if($offset-1 == -1) { ?>
 			
