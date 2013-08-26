@@ -15,7 +15,7 @@
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
-			- - - - - - <a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+			<a style="float:right;" href="/project/">Primero</a> | <a href="/project/36">Último</a>
 		</p>
 		<div class="row">
 			<div class="large-12 columns">
@@ -52,7 +52,7 @@
 				| <a href="/project/<?php echo $offset + 1;?>">Siguiente</a>
 			<?php } ?>
 			
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/project/">Primero</a> | <a href="/project/36">Último</a>
 		</p>
 	</div>
 <?php } else { ?>
