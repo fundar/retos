@@ -1,6 +1,18 @@
 <?php if(is_array($posts)) { ?>
 	<div class="large-12 columns">
 		<a name="retos"></a>
+		
+		<div>
+			<p style="color:#A63838;">Atento aviso.</p>
+			
+			<p>
+				Debido a la amplia respuesta que tuvo la convocatoria de ConectaDF, 
+				tanto en cantidad y calidad de proyectos, se amplia el periodo de evaluación del jurado de conectaDF. 
+				Daremos a conocer la nueva fecha a la brevedad.
+			</p>
+		</div><br/><br/>
+		
+		
 		<h3>Retos</h3>
 		
 		<p>
